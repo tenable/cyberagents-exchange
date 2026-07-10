@@ -34,6 +34,7 @@ agents_used:
     role: "Human checkpoint — CISO reviews maturity findings, approves narrative framing, and delivers board-ready briefing with Aristaeus-generated supporting materials"
     type: "info"
 date_added: 2026-06-25
+visibility: example
 ---
 
 ## From Threat Data to Board Confidence

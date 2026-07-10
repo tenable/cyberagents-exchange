@@ -4,10 +4,8 @@ author: "nreynolds-pub-git"
 github_url: "https://github.com/nreynolds-pub-git/exposureiq"
 description: "AI-powered mitigation guidance for Tenable One vulnerabilities with privacy-preserving, self-hosted architecture"
 license: "MIT"
-type: "tool"
 tier: "unreviewed"
 tags: ["vulnerability-management", "cve-enrichment", "tenable", "mitigation-guidance", "self-hosted", "privacy-preserving", "fastapi"]
-framework: "Custom"
 integrations: ["Tenable", "Anthropic", "CrowdStrike", "SentinelOne", "Wiz"]
 date_added: 2026-06-30
 ---

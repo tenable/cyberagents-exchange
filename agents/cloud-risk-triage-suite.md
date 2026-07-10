@@ -4,10 +4,8 @@ author: "wingchurn-tenable"
 github_url: "https://github.com/wingchurn-tenable/cloud-risk-triage"
 description: "Autonomous Tenable Cloud Security posture sweep: critical findings, cleanup, AI risk & toxic combinations."
 license: "MIT"
-type: "agent"
 tier: "unreviewed"
 tags: [cloud-security, tenable, cspm, ai-spm, soc, posture, cnapp]
-framework: "Claude Code Plugin"
 integrations: [Tenable, AWS, Azure, GCP]
 date_added: 2026-06-30
 ---

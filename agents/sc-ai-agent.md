@@ -4,10 +4,8 @@ author: "ayuksel-tenb"
 github_url: "https://github.com/ayuksel-tenb/sc-agent"
 description: "A Chrome extension that adds an in-page AI vulnerability analyst to Tenable Security Center, analyzing findings in any language and triggering your own automation playbooks."
 license: "BSD-3-Clause"
-type: "agent"
 tier: "unreviewed"
 tags: ["vulnerability-management", "browser-extension", "chatops", "triage", "remediation", "tenable"]
-framework: "Anthropic API"
 integrations: ["Tenable", "Anthropic"]
 date_added: 2026-07-06
 ---

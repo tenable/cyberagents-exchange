@@ -4,10 +4,8 @@ author: "ethodder"
 github_url: "https://github.com/ethodder/nessus-agents-ai"
 description: "An autonomous AI agent that monitors the health of Tenable Nessus Agents and reports to Slack."
 license: "MIT"
-type: "agent"
 tier: "unreviewed"
 tags: ["monitoring", "nessus-agents", "slack", "vulnerability-management", "tenable", "ai-agent", "security"]
-framework: "LiteLLM"
 integrations: ["Tenable"]
 date_added: 2026-06-15
 ---
