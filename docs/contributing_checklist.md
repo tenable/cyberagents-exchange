@@ -24,7 +24,7 @@ A submission is rejected outright, at any tier, if it involves any of the follow
 
 ## Shared / Controlled Vocabularies
 
-Several frontmatter fields must use values from a controlled vocabulary. These fields are: `tier`, `type` (agents), `integrations`, `compatible_platforms` (skills), `compatible_clients` / `transport` / `auth_method` / `runtime` (MCP servers), and the playbook `playbook_type` and `agents_used[].type`.
+Several frontmatter fields must use values from a controlled vocabulary. These fields are: `tier`, `integrations`, `compatible_platforms` (skills), `compatible_clients` / `transport` / `auth_method` / `runtime` (MCP servers), and the playbook `playbook_type` and `agents_used[].type`.
 
 **Policy:** every controlled-vocabulary value must match the current vocabulary defined in [`validator.py`](../validator.py). A genuinely new value (e.g., a vendor or platform not yet listed) is allowed **only if the same pull request also updates `validator.py`** to add it, inserted alphabetically. Reviewers verify field values against the live `validator.py` at review time, so this document never lists the values themselves.
 
@@ -50,7 +50,7 @@ Both reviewers confirm all of the following are present.
 **The submission (the pull request itself):**
 
 - [ ] Adds exactly ONE new markdown file.
-- [ ] The file is in the correct content directory for its kind: agents → `agents/`, MCP servers → `mcp-servers/`, skills → `skills/`, playbooks → `playbooks/`. The kind is determined by the directory (and validated by that directory's schema in `validator.py`). Only `agents/` listings carry a frontmatter `type` field (`agent`, `tool`, or `mcp-server`); note that an agent with `type: mcp-server` still lives in `agents/`, not `mcp-servers/`.
+- [ ] The file is in the correct content directory for its kind: agents → `agents/`, MCP servers → `mcp-servers/`, skills → `skills/`, playbooks → `playbooks/`. The kind is determined by the directory (and validated by that directory's schema in `validator.py`).
 - [ ] Filename is a valid slug (lowercase, hyphens, no spaces or special characters) with no conflict against existing files.
 - [ ] Pull request title follows `Add listing: <Name>`.
 - [ ] Frontmatter passes `validator.py` schema validation for its type (all required fields present and valid).
@@ -59,6 +59,7 @@ Both reviewers confirm all of the following are present.
 - [ ] `date_added` is a real, plausible date (not the `2026-01-01` template default, not absurdly in the future).
 - [ ] No leftover template placeholders remain (e.g., `your-github-username`, `tag1`/`tag2`, example URLs, stub body text).
 - [ ] The body contains real "What it does" / "How it works" content, not the template stub.
+- [ ] If `visibility: example` is present in frontmatter, this is flagged prominently for maintainer attention (example listings are hidden from browse, leaderboard, and home page — only accessible via direct link).
 
 **The linked repository:**
 
@@ -72,7 +73,7 @@ Both reviewers confirm all of the following are present.
 The submission file must be congruent with the linked repository.
 
 - [ ] `github_url` and `author` match the actual repository remote and owner.
-- [ ] `name`, `description`, `type`, and `integrations` match what the repository actually is.
+- [ ] `name`, `description`, and `integrations` match what the repository actually is.
 - [ ] Type-specific fields are congruent with the repository:
   - **Skill** — declared `compatible_platforms` and `invocation` are supported by repository signals (e.g., `SKILL.md`, platform rule files).
   - **MCP server** — `runtime` matches the manifest (node → `package.json`, python → `pyproject.toml`, etc.); `transport` matches the code (a stdio/http server transport is actually present); `tools_exposed` and `auth_method` are congruent with the code.
