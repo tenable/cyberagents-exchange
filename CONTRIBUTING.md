@@ -49,7 +49,7 @@ Copy the appropriate template from the [`templates/`](https://github.com/tenable
 
 | Type | Template | Target Directory |
 |------|----------|------------------|
-| Agent or Tool | `templates/agent-template.md` | `agents/` |
+| Agent | `templates/agent-template.md` | `agents/` |
 | Skill | `templates/skill-template.md` | `skills/` |
 | MCP Server | `templates/mcp-server-template.md` | `mcp-servers/` |
 | Playbook | `templates/playbook-template.md` | `playbooks/` |
@@ -67,7 +67,7 @@ Several fields use a **controlled vocabulary** — a fixed set of allowed values
 
 If you need a value that isn't in the vocabulary yet (a new integration, platform, or client), see [Adding to the Controlled Vocabulary](#adding-to-the-controlled-vocabulary) below.
 
-#### Agent or Tool
+#### Agent
 
 ```yaml
 ---
@@ -76,16 +76,13 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what it does."
 license: "MIT"
-type: "agent"
 tier: "unreviewed"
 tags: ["tag1", "tag2"]
-framework: "Claude Code"
 integrations: ["Tenable"]
 date_added: 2026-07-09
 ---
 ```
 
-- `type` must be `agent`, `tool`, or `mcp-server` (note: agents with `type: mcp-server` still go in the `agents/` directory, not `mcp-servers/`)
 - `tier` is always `unreviewed` for new submissions
 - `integrations` uses a controlled vocabulary — see `validator.py` for the full list
 
@@ -208,7 +205,7 @@ Reviewers will also verify:
 - No secrets exist anywhere in the git history
 - Your README covers the required topics (purpose, prerequisites, how to run, outputs, limitations)
 - Installation instructions are accurate — referenced files, packages, and commands actually exist
-- The metadata in your listing (name, description, integrations, type) accurately reflects what's actually in the repository
+- The metadata in your listing (name, description, integrations) accurately reflects what's actually in the repository
 - Claims in your listing body are supported by the README or repository content
 - The project follows reasonable coding standards and doesn't contain malicious, deceptive, or unauthorized behavior
 
