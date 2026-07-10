@@ -47,13 +47,12 @@ class Entry(BaseModel):
         ]
     ]
     date_added: date
+    visibility: Literal["example"] | None = None
+    last_reviewed: date | None = None
 
 
 class Agent(Entry):
     """Agent Exchange Entry"""
-
-    type: Literal["agent", "tool", "mcp-server"]
-    framework: str
 
 
 class Skill(Entry):
