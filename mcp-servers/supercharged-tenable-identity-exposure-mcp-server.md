@@ -1,0 +1,122 @@
+---
+name: "Tenable Identity Exposure MCP Server"
+author: "taherkaraki"
+github_url: "https://github.com/taherkaraki/tie-mcp-server"
+description: "Supercharged Tenable Identity Exposure MCP: AD search, ACL decoding, attack-path analysis and identity 360 view"
+license: "MIT"
+tier: "unreviewed"
+tags: ["active-directory", "identity-security", "attack-paths", "indicators-of-exposure", "mcp", "tenable", "security", "identity-exposure", "identity exposure", "indicators-of-attack", "tie"]
+integrations: ["Tenable"]
+date_added: 2026-07-13
+transport: "stdio"
+runtime: "node"
+auth_method: "api-key"
+compatible_clients: ["Claude Desktop", "Claude Code", "Cursor", "Continue"]
+tools_exposed:
+  - name: "query_ad_objects"
+    description: "Search all AD objects with a typed filter expression (admincount>0 AND isbreached=true) evaluated in-memory over a cached snapshot; no server-side filter exists in the TIE API."
+  - name: "get_ad_object"
+    description: "Look up one AD object by DN, SID, or samAccountName; optionally decode its ntSecurityDescriptor into readable ACEs with resolved trustees and named rights."
+  - name: "get_topology"
+    description: "Discover the environment as a Forest -> Domain tree, returning infrastructure and directory IDs used by other tools."
+  - name: "get_preferred_profile"
+    description: "Return the user's preferred (default) configuration profile so profile-scoped tools query the right lens."
+  - name: "get_blast_radius"
+    description: "Control-graph forward reachability: everything a principal can reach by chaining membership, ACL rights, delegation, SID history, GPO, DCSync, and password reuse."
+  - name: "get_control_paths"
+    description: "Shortest control path between two principals, returned as the explicit edge chain (how X can take over Y)."
+  - name: "get_asset_exposure"
+    description: "Control-graph reverse reachability: every principal that can reach a protected asset or the Tier-0 set, each with its shortest inbound path."
+  - name: "get_tier0"
+    description: "Compute the derived Tier-0 set: privileged groups plus everyone who can become privileged, each with its escalation path."
+  - name: "get_identity_360"
+    description: "Every Indicator-of-Exposure deviance concerning one AD object across three layers (filed-on-target, risky-trustee, container-inherited), enriched with severity/remediation bands and Tenable deeplinks, sorted worst-first."
+  - name: "get_identity_360_summary"
+    description: "Batch per-identity deviance counts by severity band (for report badges); drill into any identity with get_identity_360."
+  - name: "AD object"
+    description: "List, get, and search Active Directory objects by directory, infrastructure, checker, or event."
+  - name: "Profile"
+    description: "List, create, get, update, delete, clone, unstage, and commit configuration profiles (analysis lenses)."
+  - name: "Deviance"
+    description: "List, get, export, update, and search Indicator-of-Exposure deviances by directory, checker, event, or AD object."
+  - name: "Checker"
+    description: "List and get Indicator-of-Exposure checkers (the IOE definitions)."
+  - name: "Checker option"
+    description: "List and create per-profile checker options, including severity (O-CRITICITY) and enablement."
+  - name: "Reason"
+    description: "List and get deviance reasons (why a checker fired)."
+  - name: "Category"
+    description: "List and get checker categories."
+  - name: "Attack"
+    description: "List and export Indicators of Attack."
+  - name: "Attack type"
+    description: "List available attack types."
+  - name: "Attack type configuration"
+    description: "Get and update attack-type detection configuration."
+  - name: "Attack type option"
+    description: "List and create per-profile attack-type options."
+  - name: "Directory"
+    description: "List, create, get, update, and delete directories (domains)."
+  - name: "Infrastructure"
+    description: "List, create, get, update, and delete infrastructures (forests)."
+  - name: "Topology"
+    description: "Get the forest/domain topology graph."
+  - name: "Event"
+    description: "Get and search directory-change events."
+  - name: "Alert"
+    description: "List, get, and update alerts."
+  - name: "Dashboard"
+    description: "List, create, get, update, and delete dashboards."
+  - name: "Widget"
+    description: "List, create, get, update, delete, and configure dashboard widgets."
+  - name: "User"
+    description: "List, create, get, update, delete users; change password; login/logout; and set user roles."
+  - name: "Role"
+    description: "List, create, get, update, delete, clone roles and set role permissions."
+  - name: "Score"
+    description: "Get security scores."
+  - name: "Metrics"
+    description: "Get product metrics."
+  - name: "Cloud statistics"
+    description: "Get cloud statistics."
+  - name: "Email notifier"
+    description: "List, create, get, update, delete, and test email notifiers."
+  - name: "Syslog"
+    description: "List, create, get, update, delete, and test syslog outputs."
+  - name: "License"
+    description: "Get and update the product license."
+  - name: "Lockout policy"
+    description: "Get and update the account lockout policy."
+  - name: "LDAP configuration"
+    description: "Get and update LDAP authentication configuration."
+  - name: "SAML configuration"
+    description: "Get, update, and generate SAML authentication configuration."
+  - name: "Application setting"
+    description: "Get and update application settings."
+  - name: "Preference"
+    description: "Get and update user preferences."
+  - name: "API key"
+    description: "Get and create API keys."
+  - name: "Report access token"
+    description: "Get and refresh report access tokens."
+  - name: "Relay"
+    description: "Get relay configuration."
+  - name: "About"
+    description: "Get product version and build information."
+resources_exposed: []
+prompts_exposed: []
+---
+
+The TIE MCP Server exposes Tenable Identity Exposure to AI agents as a set of Model Context Protocol tools. Beyond 1:1 coverage of the TIE API, it adds a query engine, security-descriptor decoding, a cross-object control graph, and a per-identity deviance "360" view — turning raw API responses into something an LLM can actually reason over.
+
+## What it does
+
+- **In-memory AD object search.** TIE has no server-side filter on `/api/ad-objects`; this server scans the directory once, builds a typed index, and answers expression queries (`admincount>0 AND isbreached=true`) in milliseconds — cached and reused across a session.
+- **Permission decoding.** Turns the dense `ntSecurityDescriptor` SDDL blob into structured ACEs with trustee SIDs resolved to names, rights named, and object-types resolved via the live schema.
+- **Attack-path analysis.** Builds a control graph (group membership, ACL rights, delegation, SID history, GPO, DCSync, password reuse) and answers blast-radius, shortest control-path, asset-exposure, and derived-Tier-0 questions.
+- **Identity 360.** For any AD object, returns every Indicator-of-Exposure deviance concerning it across three layers — filed on it, where it is the risky ACE trustee on another object, and inherited from a container — sorted by severity with deeplinks back into the Tenable UI.
+- **Full API coverage.** 131 auto-generated tools grouped by resource (Profile, Deviance, Directory, User, Role, …), plus 10 hand-built convenience tools.
+
+## How it works
+
+A single cached snapshot of the directory powers the query engine, the control graph, and the deviance index; all three share a TTL and warm at startup. Tool handlers are transport-agnostic, and the server enforces per-tool safety controls (read / write / destructive) so a client can advertise only the tools it should. Facts, not verdicts: it reports reachability, edges, and Tenable's own findings without re-scoring.
