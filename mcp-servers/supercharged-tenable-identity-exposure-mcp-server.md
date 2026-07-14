@@ -1,5 +1,5 @@
 ---
-name: "Tenable Identity Exposure MCP Server"
+name: "Supercharged Tenable Identity Exposure MCP Server"
 author: "taherkaraki"
 github_url: "https://github.com/taherkaraki/tie-mcp-server"
 description: "Supercharged Tenable Identity Exposure MCP: AD search, ACL decoding, attack-path analysis and identity 360 view"
