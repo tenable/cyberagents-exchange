@@ -4,10 +4,11 @@ author: "itschrisyo"
 github_url: "https://github.com/itschrisyo/bod-26-04-risk-tiering"
 description: "Computes CISA BOD 26-04 remediation tiers for Tenable vulnerability findings using the directive's 4-variable model."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["bod-26-04", "cisa", "vulnerability-management", "compliance", "risk-tiering", "kev", "tenable"]
 integrations: ["Tenable"]
 date_added: 2026-07-16
+contribution_agreement_date: 2026-07-16T16:40:40Z
 compatible_platforms: ["Claude Code"]
 invocation: "/bod-26-04-risk-tiering"
 ---
