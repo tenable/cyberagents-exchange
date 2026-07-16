@@ -6,8 +6,10 @@ description: "An autonomous AI agent that monitors the health of Tenable Nessus 
 license: "MIT"
 tier: "contributed"
 tags: ["monitoring", "nessus-agents", "slack", "vulnerability-management", "tenable", "ai-agent", "security"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-06-15
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 ---
 
 Nessus Agent Companion is a focused, single-purpose AI agent for Tenable Nessus Agent health monitoring and maintenance. It connects to Tenable Vulnerability Management via the Tenable MCP server, monitors your agent fleet on a scheduled heartbeat, and uses an LLM to analyze changes, correlate risks, and communicate findings to your team in Slack.

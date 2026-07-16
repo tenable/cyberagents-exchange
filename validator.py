@@ -43,6 +43,7 @@ class Entry(BaseModel):
             "Snyk",
             "Splunk",
             "Tenable",
+            "Tenable Hexa AI MCP",
             "Wiz",
         ]
     ]
@@ -57,6 +58,14 @@ class Entry(BaseModel):
     def cta_requires_hexa_mcp(self):
         if self.cta and not self.works_with_tenable_hexa_mcp:
             raise ValueError("cta requires works_with_tenable_hexa_mcp to be true")
+        return self
+
+    @model_validator(mode="after")
+    def hexa_mcp_requires_integration(self):
+        if self.works_with_tenable_hexa_mcp and "Tenable Hexa AI MCP" not in self.integrations:
+            raise ValueError(
+                "works_with_tenable_hexa_mcp requires 'Tenable Hexa AI MCP' in integrations"
+            )
         return self
 
 

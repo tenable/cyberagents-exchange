@@ -6,8 +6,10 @@ description: "An MCP server for orchestrating Tenable MSSP child container workf
 license: "MIT"
 tier: "contributed"
 tags: ["mssp", "vulnerability-management", "tenable-vm", "exposure-management", "tenable-one"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-06-23
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 transport: "stdio"
 runtime: "python"
 auth_method: "none"
