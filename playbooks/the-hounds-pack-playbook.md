@@ -5,7 +5,7 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/the-hounds-harness"
 description: "A skill-packaged playbook for The Hounds — 18 exposure-management specialists that hunt, tag, and calibrate risk over Tenable navi."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, exposure-management, navi, playbook, claude-skills, asset-tagging, vulnerability-management]
 integrations: [Tenable, Anthropic]
 agents_used:
@@ -64,6 +64,7 @@ agents_used:
     role: "Enforces the AI Contract governance policy."
     type: "info"
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:28:14Z
 ---
 
 The Hounds is a pack of exposure-management specialists — "hounds" — that run over
