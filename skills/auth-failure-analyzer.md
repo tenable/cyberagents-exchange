@@ -4,10 +4,11 @@ author: "nsolimini"
 github_url: "https://github.com/nsolimini/auth-failure-skill"
 description: "Diagnoses Tenable Nessus authentication failures by analyzing plugin output from scan results or live MCP lookups, identifying root causes and providing actionable remediation steps."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["authentication", "nessus", "credentialed-scanning", "troubleshooting", "windows", "smb", "wmi", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-11
+contribution_agreement_date: 2026-07-11T15:22:16Z
 compatible_platforms: ["Claude Code", "Claude Desktop"]
 invocation: "analyze auth failures on [hostname/IP/asset ID/scan ID]"
 ---
