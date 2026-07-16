@@ -4,10 +4,11 @@ author: "taherkaraki"
 github_url: "https://github.com/taherkaraki/tie-mcp-server"
 description: "Supercharged Tenable Identity Exposure MCP: AD search, ACL decoding, attack-path analysis and identity 360 view"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["active-directory", "identity-security", "attack-paths", "indicators-of-exposure", "mcp", "tenable", "security", "identity-exposure", "identity exposure", "indicators-of-attack", "tie"]
 integrations: ["Tenable"]
 date_added: 2026-07-13
+contribution_agreement_date: 2026-07-14T15:27:08Z
 transport: "stdio"
 runtime: "node"
 auth_method: "api-key"
