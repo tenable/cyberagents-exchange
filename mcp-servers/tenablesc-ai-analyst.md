@@ -4,7 +4,7 @@ author: "ayuksel-tenb"
 github_url: "https://github.com/ayuksel-tenb/tenablesc-ai-analyst"
 description: "An MCP server that turns Tenable Security Center into a conversational vulnerability analyst — query exposure, top risks, remediation, hosts, plugins and feed health in plain language."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "security-center", "vulnerability-management", "vulnerability-analysis", "mcp"]
 integrations: ["Tenable"]
 date_added: 2026-06-18

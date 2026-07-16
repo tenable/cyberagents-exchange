@@ -4,7 +4,7 @@ author: "knethteo"
 github_url: "https://github.com/knethteo/tie-ioa-investigator-ai-skill"
 description: "Triages Tenable Identity Exposure IoA alerts as false positive, true positive, or false negative with a 1–10 confidence score."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["identity-exposure", "ioa", "false-positive", "active-directory", "triage", "kerberos", "dcsync"]
 integrations: ["Tenable"]
 date_added: 2026-06-22

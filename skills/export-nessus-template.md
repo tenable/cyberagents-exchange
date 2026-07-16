@@ -4,7 +4,7 @@ author: "silee-tenable"
 github_url: "https://github.com/silee-tenable/export-nessus-template"
 description: "Export scans and policies from Nessus, Tenable.io, or Tenable.sc to Tenable.io, preserving configurations, targets, and schedules"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "nessus", "vulnerability-scanning", "migration", "scan-automation", "security"]
 integrations: ["Tenable"]
 date_added: 2026-07-07

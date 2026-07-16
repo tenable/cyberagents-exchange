@@ -5,7 +5,7 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what this n8n workflow does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["n8n", "tag1", "tag2"]
 integrations: []
 workflow_diagram: |
@@ -14,6 +14,8 @@ workflow_diagram: |
     B --> C[Step 2]
     C --> D[Output]
 date_added: 2026-01-01
+contribution_agreement_date: 2026-01-01T00:00:00Z
+works_with_tenable_hexa_mcp: false
 ---
 
 Describe what this n8n workflow does and how to deploy it.

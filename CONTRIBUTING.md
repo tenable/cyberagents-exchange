@@ -18,9 +18,13 @@ Make sure your project meets these requirements:
 
 ### Contribution Agreement
 
-By submitting a listing, you agree to the [CyberAgents Contribution Agreement](https://github.com/tenable/cyberagents-exchange/blob/main/docs/CyberAgents_Contribution_Agreement). If you submit manually (not via the submission builder skill), you must include the following statement in your pull request description:
+By submitting a listing, you agree to the [CyberAgents Contribution Agreement](https://github.com/tenable/cyberagents-exchange/blob/main/docs/CyberAgents_Contribution_Agreement). If you submit manually (not via the submission builder skill), you must:
 
-> I have reviewed and accept the [CyberAgents Contribution Agreement](https://github.com/tenable/cyberagents-exchange/blob/main/docs/CyberAgents_Contribution_Agreement).
+1. Include the following statement in your pull request description:
+
+   > I have reviewed and accept the [CyberAgents Contribution Agreement](https://github.com/tenable/cyberagents-exchange/blob/main/docs/CyberAgents_Contribution_Agreement).
+
+2. Set the `contribution_agreement_date` field in your listing frontmatter to the ISO 8601 date and time when you accepted the agreement (e.g., `2026-07-09T14:30:00Z`).
 
 ## The Recommended Way: Submission Builder Skill
 
@@ -76,15 +80,19 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what it does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tag1", "tag2"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-09T14:30:00Z
+works_with_tenable_hexa_mcp: false
 ---
 ```
 
-- `tier` is always `unreviewed` for new submissions
+- `tier` is always `contributed` for new submissions
 - `integrations` uses a controlled vocabulary — see `validator.py` for the full list
+- `contribution_agreement_date` — the ISO 8601 date and time when you accepted the Contribution Agreement (e.g., `2026-07-09T14:30:00Z`)
+- `works_with_tenable_hexa_mcp` — optional boolean; set to `true` if your submission integrates with Tenable products via the [Tenable Hexa MCP](https://github.com/tenable/hexa-mcp). Omit or set to `false` if it uses other Tenable APIs (VM, Security Center, etc.) or does not integrate with Tenable at all
 
 #### Skill
 
@@ -95,10 +103,12 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what it does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tag1", "tag2"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-09T14:30:00Z
+works_with_tenable_hexa_mcp: false
 compatible_platforms: ["Claude Code"]
 invocation: "your-skill-name"
 ---
@@ -116,10 +126,12 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what it does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tag1", "tag2"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-09T14:30:00Z
+works_with_tenable_hexa_mcp: false
 compatible_clients: ["Claude Code", "Claude Desktop"]
 transport: "stdio"
 runtime: "python"
@@ -146,10 +158,12 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what it does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tag1", "tag2"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-09T14:30:00Z
+works_with_tenable_hexa_mcp: false
 playbook_type: "standard"
 agents_used:
   - name: "Agent Name"

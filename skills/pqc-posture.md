@@ -4,7 +4,7 @@ author: "knethteo"
 github_url: "https://github.com/knethteo/pqc-posture"
 description: "Post-Quantum Cryptography readiness skill and dashboard for Tenable Vulnerability Management — type /pqc-posture in Claude Code for an instant fleet posture summary"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["pqc", "post-quantum", "cryptography", "vulnerability-management", "dashboard", "tenable"]
 integrations: ["Tenable"]
 date_added: 2026-06-22

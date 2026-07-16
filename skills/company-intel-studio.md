@@ -4,7 +4,7 @@ author: "pramseier-tenb"
 github_url: "https://github.com/pramseier-tenb/company-intel-studio"
 description: "Generate competitive company intelligence briefs with live HTML dashboards and polished PDFs."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["company-intelligence", "competitive-analysis", "research", "dashboard", "pdf-generation", "briefing"]
 integrations: ["Anthropic"]
 date_added: 2026-06-22
