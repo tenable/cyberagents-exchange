@@ -4,7 +4,7 @@ author: "knethteo"
 github_url: "https://github.com/knethteo/tenable-identity-exposure-mcp"
 description: "MCP server exposing the Tenable Identity Exposure (TIE) API as tools for LLM clients."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "identity-exposure", "active-directory", "ioe", "ioa", "security"]
 integrations: ["Tenable"]
 date_added: 2026-07-08

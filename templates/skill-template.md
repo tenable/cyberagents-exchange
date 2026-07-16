@@ -4,10 +4,12 @@ author: "your-github-username"
 github_url: "https://github.com/your-username/your-repo"
 description: "A one-line description of what your skill does."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tag1", "tag2"]
 integrations: ["Tenable"]
 date_added: 2026-01-01
+contribution_agreement_date: 2026-01-01T00:00:00Z
+works_with_tenable_hexa_mcp: false
 compatible_platforms: ["Claude Code"]
 invocation: "/your-command"
 ---

@@ -18,7 +18,7 @@ A submission is rejected outright, at any tier, if it involves any of the follow
 
 | Tier | Label | `tier` value in frontmatter | Status |
 |------|-------|------------------------------|--------|
-| 1 | Unreviewed / Contributed | `unreviewed` | Active |
+| 1 | Contributed | `contributed` | Active |
 | 2 | Community Reviewed | `community-reviewed` | Criteria TBD |
 | 3 | Tenable Vetted | `certified` | Criteria TBD |
 
@@ -28,7 +28,7 @@ Several frontmatter fields must use values from a controlled vocabulary. These f
 
 **Policy:** every controlled-vocabulary value must match the current vocabulary defined in [`validator.py`](../validator.py). A genuinely new value (e.g., a vendor or platform not yet listed) is allowed **only if the same pull request also updates `validator.py`** to add it, inserted alphabetically. Reviewers verify field values against the live `validator.py` at review time, so this document never lists the values themselves.
 
-## Tier 1 — Unreviewed / Contributed
+## Tier 1 — Contributed
 
 **What it signals:** this submission has been received and meets the minimum listing bar. Two Tenable employees, working from this checklist, must both sign off — as sequential GitHub reviews. Reviewer 1 reviews and approves, then requests a second reviewer via GitHub. Reviewer 2 independently reviews and, on approval, notes that two approvals are met and the pull request will be merged. Any missing requirement is returned as a `REQUEST_CHANGES` review with specific feedback. The official decision log is the GitHub pull request review(s).
 
@@ -55,8 +55,10 @@ Both reviewers confirm all of the following are present.
 - [ ] Pull request title follows `Add listing: <Name>`.
 - [ ] Frontmatter passes `validator.py` schema validation for its type (all required fields present and valid).
 - [ ] All controlled-vocabulary fields validate against the live `validator.py` (see Shared / Controlled Vocabularies).
-- [ ] `tier` is `unreviewed`.
+- [ ] `tier` is `contributed`.
 - [ ] `date_added` is a real, plausible date (not the `2026-01-01` template default, not absurdly in the future).
+- [ ] `contribution_agreement_date` is present and is a valid ISO 8601 datetime (e.g., `2026-07-09T14:30:00Z`). Must not be the template default (`2026-01-01T00:00:00Z`), not absurdly in the future, and not before the repository was created.
+- [ ] If `works_with_tenable_hexa_mcp` is present, it is a boolean (`true` or `false`). If `true`, the linked repository should demonstrate integration with the Tenable Hexa MCP (not other Tenable APIs such as VM or Security Center).
 - [ ] No leftover template placeholders remain (e.g., `your-github-username`, `tag1`/`tag2`, example URLs, stub body text).
 - [ ] The body contains real "What it does" / "How it works" content, not the template stub.
 - [ ] If `visibility: example` is present in frontmatter, this is flagged prominently for maintainer attention (example listings are hidden from browse, leaderboard, and home page — only accessible via direct link).

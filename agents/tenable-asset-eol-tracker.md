@@ -4,7 +4,7 @@ author: "djames-tenb"
 github_url: "https://github.com/djames-tenb/tenable-asset-eol-tracker"
 description: "Self-hosted web portal that syncs Tenable VM assets and tracks OS and application end-of-life status across five interactive views — zero dependencies, instant load, encrypted credentials"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["eol", "vulnerability-management", "asset-management", "end-of-life", "tenable-vm", "python", "endoflife-date", "lifecycle", "patch-management", "dashboard", "software-inventory", "cpe", "os-lifecycle", "security-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-20

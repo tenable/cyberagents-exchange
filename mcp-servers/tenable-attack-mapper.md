@@ -4,7 +4,7 @@ author: "ayuksel-tenb"
 github_url: "https://github.com/ayuksel-tenb/tenable-attack-mapper"
 description: "An MCP server that maps Tenable Security Center findings to MITRE ATT&CK, lets you analyze exposure by tactic or technique in plain language, and exports a VPR-scored ATT&CK Navigator layer you can open in a local matrix viewer."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["mitre-attack", "attack-mapping", "navigator", "vulnerability-management", "purple-team", "tenable", "mcp"]
 integrations: ["Tenable", "NVD"]
 date_added: 2026-06-20

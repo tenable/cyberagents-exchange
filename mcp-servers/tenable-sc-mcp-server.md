@@ -4,7 +4,7 @@ author: "Ahmad Jaber (ABMJ)"
 github_url: "https://github.com/ABMJ/tenable-sc-mcp-server"
 description: "Production MCP bridge to Tenable Security Center with intelligent tools for vulnerability management and asset discovery"
 license: "GPL-3.0-only"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["security", "vulnerability-management", "tenable", "security-center", "vulnerability-scanning", "t.sc", "t.sc+", "tenable-security-center-plus-mcp"]
 integrations: ["Tenable"]
 date_added: 2026-06-19

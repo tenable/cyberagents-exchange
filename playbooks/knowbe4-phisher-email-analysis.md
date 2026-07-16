@@ -5,7 +5,7 @@ author: "disassembledd"
 github_url: "https://github.com/disassembledd/knowbe4-phisher-email-analysis"
 description: "Agent-empowered n8n workflow that pulls outstanding reported emails from PhishER for AI-driven analysis, tagging, and comment submission."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["knowbe4", "phisher", "email-analysis", "n8n"]
 integrations: ["KnowBe4"]
 workflow_diagram: |

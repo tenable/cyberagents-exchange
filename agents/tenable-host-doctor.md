@@ -4,7 +4,7 @@ author: "ddangthatscrazy"
 github_url: "https://github.com/ddangthatscrazy/tenable-host-doctor"
 description: "Diagnoses why a single host failed a Tenable credentialed scan, from its .nessus export."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "nessus", "vulnerability-management", "credentialed-scan", "troubleshooting"]
 integrations: ["Tenable"]
 date_added: 2026-06-18
