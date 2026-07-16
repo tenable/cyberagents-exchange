@@ -43,6 +43,7 @@ class Entry(BaseModel):
             "Snyk",
             "Splunk",
             "Tenable",
+            "Tenable Hexa AI MCP",
             "Wiz",
         ]
     ]

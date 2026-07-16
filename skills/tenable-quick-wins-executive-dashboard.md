@@ -6,8 +6,10 @@ description: "Executive dashboard that prioritizes remediation to cut Tenable On
 license: "MIT"
 tier: "contributed"
 tags: ["tenable-one", "exposure-management", "executive-dashboard", "quick-wins", "vulnerability-prioritization", "ciso"]
-integrations: ["Tenable", "Anthropic"]
+integrations: ["Tenable", "Tenable Hexa AI MCP", "Anthropic"]
 date_added: 2026-06-30
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 compatible_platforms: ["Claude Desktop"]
 invocation: "/tenable-quick-wins-dashboard"
 ---

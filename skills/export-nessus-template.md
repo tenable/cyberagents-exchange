@@ -6,8 +6,10 @@ description: "Export scans and policies from Nessus, Tenable.io, or Tenable.sc t
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "nessus", "vulnerability-scanning", "migration", "scan-automation", "security"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-07
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 compatible_platforms: ["Claude Code"]
 invocation: "/export-nessus-template"
 ---

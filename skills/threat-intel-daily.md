@@ -6,8 +6,10 @@ description: "A daily, fully-sourced cyber threat intelligence briefing for CISO
 license: "MIT"
 tier: "contributed"
 tags: ["threat-intelligence", "ciso", "cti", "vulnerability-management", "tenable", "security-automation"]
-integrations: ["Tenable", "Anthropic"]
+integrations: ["Tenable", "Tenable Hexa AI MCP", "Anthropic"]
 date_added: 2026-06-18
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 compatible_platforms: ["Claude Code"]
 invocation: "/threat-intel-daily"
 ---
