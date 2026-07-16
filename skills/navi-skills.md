@@ -4,10 +4,11 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/navi-claude-skills"
 description: "A 13-skill Claude skill set for driving the Tenable navi CLI and the navi_* MCP tools."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, navi, vulnerability-management, claude-skills, mcp, asset-tagging, exposure-management]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:28:05Z
 compatible_platforms: [Claude Code, Claude Desktop, Claude Cowork]
 invocation: "navi"
 ---
