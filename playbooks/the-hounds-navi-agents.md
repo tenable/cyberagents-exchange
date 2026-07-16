@@ -5,7 +5,7 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/the-hounds-repo"
 description: "The executable harness for The Hounds — a local console that runs the exposure-management agent pack over Tenable navi."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, exposure-management, navi, playbook, python, console, vulnerability-management]
 integrations: [Tenable, Anthropic]
 agents_used:
@@ -64,6 +64,7 @@ agents_used:
     role: "Enforces the AI Contract governance policy."
     type: "info"
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:28:19Z
 ---
 
 The Hounds — navi-agents is the executable harness for the pack: a local console
