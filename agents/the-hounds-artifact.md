@@ -4,10 +4,11 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/the-hounds-artifact"
 description: "Single-file console artifact that runs The Hounds exposure-management pack over Tenable navi via navi-mcp."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, exposure-management, navi, artifact, console, vulnerability-management]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:28:01Z
 ---
 
 The Hounds — Artifact packages everything needed to stand up the single-file **navi agent
