@@ -4,10 +4,11 @@ author: "spacebar-tenb"
 github_url: "https://github.com/spacebar-tenb/cyber-risk-quantifier"
 description: "FAIR-aligned cyber risk quantification — transforms Tenable vulnerability data into board-ready financial risk PDFs"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["cyber-risk", "fair-model", "risk-quantification", "vulnerability-management", "pdf-reporting", "tenable"]
 integrations: ["Tenable"]
 date_added: 2026-07-16
+contribution_agreement_date: 2026-07-16T12:44:04Z
 ---
 
 Cyber Risk Quantifier is a Python CLI that takes Tenable One Vulnerability Management scan exports and produces board-ready PDF reports with defensible, per-exposure financial risk estimates using the FAIR (Factor Analysis of Information Risk) framework.
