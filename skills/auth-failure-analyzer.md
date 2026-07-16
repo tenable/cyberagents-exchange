@@ -6,9 +6,11 @@ description: "Diagnoses Tenable Nessus authentication failures by analyzing plug
 license: "MIT"
 tier: "contributed"
 tags: ["authentication", "nessus", "credentialed-scanning", "troubleshooting", "windows", "smb", "wmi", "vulnerability-management"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-11
 contribution_agreement_date: 2026-07-11T15:22:16Z
+works_with_tenable_hexa_mcp: true
+cta: "T1"
 compatible_platforms: ["Claude Code", "Claude Desktop"]
 invocation: "analyze auth failures on [hostname/IP/asset ID/scan ID]"
 ---
