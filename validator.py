@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import re
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Literal, Type, get_args
 
@@ -19,7 +19,7 @@ class Entry(BaseModel):
     github_url: HttpUrl
     description: str
     license: str
-    tier: Literal["unreviewed", "community-reviewed", "certified"]
+    tier: Literal["contributed", "community-reviewed", "certified"]
     tags: list[str]
     integrations: list[
         Literal[
@@ -43,12 +43,22 @@ class Entry(BaseModel):
             "Snyk",
             "Splunk",
             "Tenable",
+            "Tenable Hexa AI MCP",
             "Wiz",
         ]
     ]
     date_added: date
+    contribution_agreement_date: datetime | None = None
     visibility: Literal["example"] | None = None
     last_reviewed: date | None = None
+    works_with_tenable_hexa_mcp: bool | None = None
+    cta: Literal["T1"] | None = None
+
+    @model_validator(mode="after")
+    def cta_requires_hexa_mcp(self):
+        if self.cta and not self.works_with_tenable_hexa_mcp:
+            raise ValueError("cta requires works_with_tenable_hexa_mcp to be true")
+        return self
 
 
 class Agent(Entry):
