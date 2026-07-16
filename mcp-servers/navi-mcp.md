@@ -4,10 +4,11 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/navi-mcp"
 description: "MCP server exposing the Tenable navi CLI (Tenable VM / Tenable One) as 19 tools, plus companion Claude skills."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, navi, mcp, vulnerability-management, exposure-management, asset-tagging, fastmcp]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:28:10Z
 transport: "both"
 runtime: "python"
 auth_method: "none"
