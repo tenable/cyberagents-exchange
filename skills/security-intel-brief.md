@@ -4,7 +4,7 @@ author: "pramseier-tenb"
 github_url: "https://github.com/pramseier-tenb/security-intel-brief"
 description: "Build a leadership-ready security intelligence brief (PDF) for selected vendors and software products, down to specific versions"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["vulnerability-research", "cve", "security-reporting", "threat-intelligence", "pdf-reports"]
 integrations: ["NVD"]
 date_added: 2026-06-15

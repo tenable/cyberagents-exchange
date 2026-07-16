@@ -4,7 +4,7 @@ author: "rafansmpj"
 github_url: "https://github.com/rafansmpj/Tenable-CloudeDesktop-QUICK-WINS"
 description: "Executive dashboard that prioritizes remediation to cut Tenable One Exposure Score by 10-50% in phases."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable-one", "exposure-management", "executive-dashboard", "quick-wins", "vulnerability-prioritization", "ciso"]
 integrations: ["Tenable", "Anthropic"]
 date_added: 2026-06-30

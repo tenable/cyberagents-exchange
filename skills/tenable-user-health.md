@@ -4,7 +4,7 @@ author: "dstarks17"
 github_url: "https://github.com/dstarks17/tenable-user-health"
 description: "Audits Tenable user activity, authentication security, and maps findings to compliance frameworks"
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "compliance", "user-management", "authentication", "audit", "security"]
 integrations: ["Tenable"]
 date_added: 2026-07-08

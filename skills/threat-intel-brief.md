@@ -5,7 +5,7 @@ github_url: "https://github.com/meir-asiskovich/Brief-me-on-Hexa-skill"
 description: "Comprehensive cyber threat intelligence briefings for any CVE, advisory, threat actor, or product — in minutes."
 license: "MIT"
 type: "skill"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["threat-intelligence", "cve", "incident-response", "soc", "mitre-attack", "vulnerability-management", "tenable-one"]
 integrations: ["Tenable"]
 date_added: 2026-07-06

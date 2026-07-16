@@ -4,7 +4,7 @@ author: "ethodder"
 github_url: "https://github.com/ethodder/tenable-one-skill"
 description: "A token-optimized knowledge pack that makes AI coding assistants expert in the Tenable One exposure management platform API."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["tenable", "vulnerability-management", "pytenable", "api-skill", "exposure-management", "security-automation"]
 integrations: ["Tenable"]
 date_added: 2026-06-17

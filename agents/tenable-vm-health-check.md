@@ -4,7 +4,7 @@ author: "d-zito"
 github_url: "https://github.com/d-zito/tenable-healthcheck-agent"
 description: "Monitor Tenable VM scanning health, credentials, agents, scanners, and license usage with AI-powered insights."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["health-monitoring", "vulnerability-management", "tenable-vm", "credential-scanning", "agent-monitoring", "license-tracking", "cli-tool"]
 integrations: ["Tenable", "Anthropic"]
 date_added: 2026-06-15
