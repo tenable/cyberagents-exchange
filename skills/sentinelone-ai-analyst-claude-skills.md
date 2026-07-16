@@ -4,7 +4,8 @@ author: "Sentinel-One"
 github_url: "https://github.com/Sentinel-One/ai-siem/tree/main/plugins/s1-secops-skills"
 description: "A full-stack AI SOC analyst for SentinelOne: seven Claude skills, three bundled MCP servers, and an operating persona (CLAUDE.md) that hunt threats, triage alerts, author detections/dashboards/parsers, and build Hyperautomation workflows from natural language."
 license: "AGPL-3.0"
-tier: "unreviewed"
+tier: "contributed"
+contribution_agreement_date: "2026-07-16T17:02:20Z"
 tags: ["sentinelone", "soc", "threat-hunting", "powerquery", "singularity-data-lake", "hyperautomation", "claude-skills"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09

@@ -4,7 +4,8 @@ author: "Sentinel-One"
 github_url: "https://github.com/Sentinel-One/ai-siem/tree/main/mcp/s1-secops-mcp"
 description: "Zero-dependency Node.js MCP server orchestrating the SentinelOne Management Console, Singularity Data Lake, UAM Alert Interface, and Hyperautomation APIs — 26 tools over stdio or Streamable HTTP."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
+contribution_agreement_date: "2026-07-16T17:02:20Z"
 tags: ["sentinelone", "powerquery", "singularity-data-lake", "soc", "hyperautomation", "uam", "mcp"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09
