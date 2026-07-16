@@ -4,10 +4,11 @@ author: "packetchaos"
 github_url: "https://github.com/packetchaos/navi"
 description: "Command-line Swiss Army knife for Tenable Vulnerability Management that automates cyber exposure tasks via the Tenable.io API."
 license: "GPL-3.0-only"
-tier: "unreviewed"
+tier: "contributed"
 tags: [tenable, vulnerability-management, cli, tenable-io, cyber-exposure, automation, reporting]
 integrations: [Tenable]
 date_added: 2026-07-15
+contribution_agreement_date: 2026-07-15T18:27:56Z
 ---
 
 Navi is a command-line tool that leverages the Tenable.io API to automate common
