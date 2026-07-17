@@ -12,6 +12,7 @@ contribution_agreement_date: 2026-07-16T21:03:21Z
 works_with_tenable_hexa_mcp: false
 compatible_platforms: ["Claude Code", "Claude Desktop", "Claude Cowork"]
 invocation: "tenable-info-plugins"
+last_reviewed: 2026-07-16
 ---
 
 ## What it does
