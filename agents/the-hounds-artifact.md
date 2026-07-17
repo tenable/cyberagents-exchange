@@ -8,6 +8,7 @@ tier: "contributed"
 tags: [tenable, exposure-management, navi, artifact, console, vulnerability-management]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
+last_reviewed: 2026-07-17
 contribution_agreement_date: 2026-07-15T18:28:01Z
 ---
 
