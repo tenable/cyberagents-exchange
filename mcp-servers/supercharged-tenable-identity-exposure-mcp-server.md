@@ -8,6 +8,7 @@ tier: "contributed"
 tags: ["active-directory", "identity-security", "attack-paths", "indicators-of-exposure", "mcp", "tenable", "security", "identity-exposure", "identity exposure", "indicators-of-attack", "tie"]
 integrations: ["Tenable"]
 date_added: 2026-07-13
+last_reviewed: 2026-07-17
 contribution_agreement_date: 2026-07-14T15:27:08Z
 transport: "stdio"
 runtime: "node"
