@@ -8,6 +8,7 @@ tier: "contributed"
 tags: ["tenable-one", "exposure-management", "attack-path-analysis", "choke-points", "vuln-management", "threat-intelligence", "cisa-kev", "ransomware", "dashboard", "claude-code"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-10
+last_reviewed: 2026-07-17
 contribution_agreement_date: 2026-07-10T16:24:52Z
 works_with_tenable_hexa_mcp: true
 cta: "T1"
