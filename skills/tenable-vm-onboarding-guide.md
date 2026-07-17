@@ -11,6 +11,7 @@ date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T22:50:48Z
 compatible_platforms: ["Claude Code"]
 invocation: "Say things like \"I just signed up for Tenable,\" \"how do I get started,\" \"I ran a scan but don't see anything,\" or \"my scanner won't link\" — the skill activates automatically based on its description."
+last_reviewed: 2026-07-16
 ---
 
 ## What it does
