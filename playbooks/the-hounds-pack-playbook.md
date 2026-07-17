@@ -64,6 +64,7 @@ agents_used:
     role: "Enforces the AI Contract governance policy."
     type: "info"
 date_added: 2026-07-15
+last_reviewed: 2026-07-17
 contribution_agreement_date: 2026-07-15T18:28:14Z
 ---
 
