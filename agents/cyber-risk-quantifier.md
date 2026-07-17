@@ -9,6 +9,7 @@ tags: ["cyber-risk", "fair-model", "risk-quantification", "vulnerability-managem
 integrations: ["Tenable"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-16T12:44:04Z
+last_reviewed: 2026-07-16
 ---
 
 Cyber Risk Quantifier is a Python CLI that takes Tenable One Vulnerability Management scan exports and produces board-ready PDF reports with defensible, per-exposure financial risk estimates using the FAIR (Factor Analysis of Information Risk) framework.
