@@ -9,6 +9,7 @@ tags: [cloud-security, tenable, cdr, cspm, aispm, soc, posture, cnapp]
 integrations: ["Tenable", "AWS", "Azure", "GCP"]
 date_added: 2026-07-10
 contribution_agreement_date: 2026-07-10T14:56:42Z
+last_reviewed: 2026-07-16
 ---
 
 The Tenable CDR Playbook is a security-analyst agent for Cloud Detection & Response.
