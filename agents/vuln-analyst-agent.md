@@ -10,6 +10,7 @@ integrations: ["NVD", "Anthropic"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-17T01:35:42Z
 works_with_tenable_hexa_mcp: false
+last_reviewed: 2026-07-16
 ---
 
 An open-source AI agent for vulnerability research and triage. Point it at any CVE and it fetches live data from EPSS, CISA KEV, NVD, cvelistV5, OSV.dev, and public exploit indexes, walks the finding through the CISA SSVC decision tree, and produces a defensible verdict with its full evidence chain — not just a score.
