@@ -8,6 +8,7 @@ tier: "contributed"
 tags: [tenable, vulnerability-management, cli, tenable-io, cyber-exposure, automation, reporting]
 integrations: [Tenable]
 date_added: 2026-07-15
+last_reviewed: 2026-07-17
 contribution_agreement_date: 2026-07-15T18:27:56Z
 ---
 
