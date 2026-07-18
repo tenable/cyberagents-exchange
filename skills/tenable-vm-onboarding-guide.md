@@ -2,7 +2,7 @@
 name: "Tenable VM Onboarding Guide"
 author: "jdelong-tenb"
 github_url: "https://github.com/jdelong-tenb/tenable-vm-onboarding-guide"
-description: "Walks a new Tenable Vulnerability Management customer through onboarding — connectivity, scanner/agent linkage, first scan, the scan-to-findings milestone bridge, and tagging — by checking real account state instead of pointing at generic docs."
+description: "Walks a new Tenable Vulnerability Management user through onboarding — connectivity, scanner/agent linkage, first scan, the scan-to-findings milestone bridge, and tagging — by checking real account state instead of pointing at generic docs."
 license: "MIT"
 tier: "contributed"
 tags: ["onboarding", "vulnerability-management", "customer-success"]
@@ -16,17 +16,17 @@ last_reviewed: 2026-07-16
 
 ## What it does
 
-New Tenable Vulnerability Management (VM) customers drop off hard in the
-first 90 days per internal fleet-wide funnel analysis — the biggest cliff is
-scanner/agent linkage, the second-biggest is customers who scan but never look
-at results. This skill checks the customer's real VM account state via the
-Tenable public API and walks them through whichever of five steps they're
-stuck on: connectivity, scanner/agent linkage, first scan, reviewing scan
-status, or tagging setup — then points them at findings once everything else
-is working.
+Generic onboarding docs don't know where a new Tenable Vulnerability
+Management (VM) user actually is. In practice, the steps people get stuck on
+most are scanner/agent linkage, and — for those who do scan — actually
+looking at the results afterward (the "scan-to-findings" gap). This skill
+checks the user's real VM account state via the Tenable public API and walks
+them through whichever of five steps they're stuck on: connectivity,
+scanner/agent linkage, first scan, reviewing scan status, or tagging setup —
+then points them at findings once everything else is working.
 
-This is a community-built skill, not official Tenable support — it reads a
-customer's own account via the public API and gives best-effort guidance. It's
+This is a community-built skill, not official Tenable support — it reads your
+own account via the public API and gives best-effort guidance. It's
 calibrated for a brand-new account with a small scan history; see the repo's
 Known Limitations for the scale caveat on established accounts.
 
@@ -37,16 +37,16 @@ WAS, ASM, Identity Exposure, or Cloud Security onboarding.
 
 Install the skill into your Claude Code skills directory. When invoked, it:
 
-1. Runs `scripts/check_onboarding_status.py` against the customer's own Tenable
+1. Runs `scripts/check_onboarding_status.py` against your own Tenable
    Vulnerability Management API keys (`TIO_ACCESS_KEY` / `TIO_SECRET_KEY`).
 2. Checks connectivity, scanner/agent linkage, scan completion, findings, and
-   tag setup, and determines the earliest stage the customer hasn't cleared —
+   tag setup, and determines the earliest stage you haven't cleared —
    distinguishing a check that failed to run (surfaced as `*_check_error`)
    from one that ran and confirmed something is genuinely absent.
-3. Guides them through that specific step conversationally, re-checking real
+3. Guides you through that specific step conversationally, re-checking real
    account state rather than trusting "I did it" at face value. For tagging, it
    hands off to Hexa MCP tools when available rather than duplicating that
-   capability — and doesn't assume the customer knows what Hexa is just
+   capability — and doesn't assume you know what Hexa is just
    because it happens to be available in the session.
 
 Covered by 13 unit tests (stdlib `unittest`, mocked API responses) and
