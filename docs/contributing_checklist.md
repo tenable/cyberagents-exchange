@@ -77,7 +77,7 @@ The submission file must be congruent with the linked repository.
 - [ ] `github_url` and `author` match the actual repository remote and owner.
 - [ ] `name`, `description`, and `integrations` match what the repository actually is.
 - [ ] Type-specific fields are congruent with the repository:
-  - **Skill** — declared `compatible_platforms` and `invocation` are supported by repository signals (e.g., `SKILL.md`, platform rule files).
+  - **Skill** — the repository must be structured so that each declared `compatible_platform` can actually load the skill. At minimum, a `SKILL.md` with `name`/`description` YAML frontmatter must exist at the repo root. All files referenced within SKILL.md (e.g., `references/`) must exist. Installation instructions must be specific and actionable for each declared platform (not generic "install the skill"). Declared `invocation` must appear in SKILL.md or README.
   - **MCP server** — `runtime` matches the manifest (node → `package.json`, python → `pyproject.toml`, etc.); `transport` matches the code (a stdio/http server transport is actually present); `tools_exposed` and `auth_method` are congruent with the code.
   - **Playbook** — `agents_used` references resolve; vendor-type agents appear only in sponsored playbooks.
 - [ ] Any bundled archives in the repository (e.g., `.skill` packages, `.zip`, `.tar.gz`) are subject to content inspection. Reviewers will extract and read the contents of packaged artifacts to verify they contain only files appropriate to the submission's declared purpose, are congruent with the listing, and contain no hidden or unexpected functionality.
