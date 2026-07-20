@@ -13,6 +13,7 @@ works_with_tenable_hexa_mcp: true
 cta: "T1"
 compatible_platforms: ["Claude Code", "Claude Desktop"]
 invocation: "analyze auth failures on [hostname/IP/asset ID/scan ID]"
+last_reviewed: 2026-07-20
 ---
 
 A skill for diagnosing why Tenable Nessus credentialed scans succeed or fail on a given host. Provide a hostname, IP address, asset ID, scan ID, CSV scan results, or paste plugin information directly — the skill identifies all auth-relevant plugins, classifies the overall authentication status, pinpoints the root cause, and gives numbered remediation steps.
