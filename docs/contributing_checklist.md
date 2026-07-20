@@ -80,6 +80,7 @@ The submission file must be congruent with the linked repository.
   - **Skill** — declared `compatible_platforms` and `invocation` are supported by repository signals (e.g., `SKILL.md`, platform rule files).
   - **MCP server** — `runtime` matches the manifest (node → `package.json`, python → `pyproject.toml`, etc.); `transport` matches the code (a stdio/http server transport is actually present); `tools_exposed` and `auth_method` are congruent with the code.
   - **Playbook** — `agents_used` references resolve; vendor-type agents appear only in sponsored playbooks.
+- [ ] Any bundled archives in the repository (e.g., `.skill` packages, `.zip`, `.tar.gz`) are subject to content inspection. Reviewers will extract and read the contents of packaged artifacts to verify they contain only files appropriate to the submission's declared purpose, are congruent with the listing, and contain no hidden or unexpected functionality.
 - [ ] Claims in the listing body trace back to the README or repository content (no unsupported claims).
 
 ### Phase 4 — Baseline Behavioral Review
