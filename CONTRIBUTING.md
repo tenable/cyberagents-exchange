@@ -225,6 +225,10 @@ Reviewers will also verify:
 
 If anything needs attention, you'll receive specific feedback as a review comment on your PR.
 
+### How PRs Are Merged
+
+All pull requests are merged using **squash and merge** — the entire PR is combined into a single commit on `main`. Merge commits and rebase merges are disabled, so squash is the only option. The squash commit uses your PR title and description, so please keep them clear and descriptive. The source branch is deleted automatically after the merge.
+
 ## Things That Will Get Your Submission Rejected
 
 Regardless of how well-formatted your listing is, submissions are rejected outright if they involve:
