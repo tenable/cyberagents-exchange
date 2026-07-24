@@ -38,6 +38,7 @@ class Entry(BaseModel):
             "Palo Alto",
             "Qualys",
             "Rapid7",
+            "Recorded Future",
             "SentinelOne",
             "ServiceNow",
             "Snyk",
