@@ -11,6 +11,7 @@ date_added: 2026-07-16
 contribution_agreement_date: 2026-07-16T16:40:40Z
 works_with_tenable_hexa_mcp: true
 cta: "T1"
+last_reviewed: 2026-07-26
 compatible_platforms: ["Claude Code"]
 invocation: "/bod-26-04-risk-tiering"
 ---
