@@ -9,6 +9,7 @@ tags: ["tenable", "security-center", "health-check", "vulnerability-management",
 integrations: ["Tenable", "Anthropic"]
 date_added: 2026-07-23
 contribution_agreement_date: 2026-07-23T16:26:45Z
+last_reviewed: 2026-07-26
 ---
 
 An open-source Python tool that monitors the health of your on-prem Tenable Security Center — scans, credentials, scanners, scan zones, plugin feed, license usage, users, and system diagnostics — with AI-powered recommendations through Claude.
