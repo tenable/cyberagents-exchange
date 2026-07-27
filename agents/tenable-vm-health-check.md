@@ -6,11 +6,11 @@ description: "Monitor Tenable VM scanning health, credentials, agents, scanners,
 license: "MIT"
 tier: "contributed"
 tags: ["health-monitoring", "vulnerability-management", "tenable-vm", "credential-scanning", "agent-monitoring", "license-tracking", "cli-tool"]
-integrations: ["Tenable", "Anthropic"]
+integrations: ["Tenable"]
 date_added: 2026-06-15
 ---
 
-An open-source Python CLI tool that tracks Tenable Vulnerability Management health metrics over time and provides AI-powered recommendations through Claude.
+An open-source Python CLI tool that tracks Tenable Vulnerability Management health metrics over time and provides AI-powered recommendations through your choice of LLM.
 
 ## What it does
 
