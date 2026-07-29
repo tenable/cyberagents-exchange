@@ -26,6 +26,7 @@ class Entry(BaseModel):
             "Anthropic",
             "AWS",
             "Azure",
+            "Check Point",
             "Cisco",
             "CrowdStrike",
             "Fortinet",
