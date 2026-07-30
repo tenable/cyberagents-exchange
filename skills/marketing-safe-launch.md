@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-07-30
 name: "Marketing Safe Launch"
 author: "Meg-CMO"
 github_url: "https://github.com/Meg-CMO/marketing-safe-launch"
