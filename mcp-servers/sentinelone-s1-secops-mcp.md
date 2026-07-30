@@ -8,6 +8,7 @@ tier: "contributed"
 tags: ["sentinelone", "powerquery", "singularity-data-lake", "soc", "hyperautomation", "uam", "mcp"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-30T00:00:00Z
 transport: "both"
 runtime: "node"
 auth_method: "token"

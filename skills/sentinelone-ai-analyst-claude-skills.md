@@ -8,6 +8,7 @@ tier: "contributed"
 tags: ["sentinelone", "soc", "threat-hunting", "powerquery", "singularity-data-lake", "hyperautomation", "claude-skills"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09
+contribution_agreement_date: 2026-07-30T00:00:00Z
 compatible_platforms: ["Claude Code", "Claude Desktop", "Claude Cowork", "Windsurf"]
 invocation: "No slash command. Install the plugin (or point Claude Code/Cowork at the CLAUDE.md persona) and describe what you want in natural language — the matching skill (mgmt-console-api, powerquery, sdl-api, sdl-dashboard, sdl-log-parser, hyperautomation, or the sdl-solutions orchestrator) is invoked automatically."
 ---
