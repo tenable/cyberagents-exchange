@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-07-30
 name: "SentinelOne AI Analyst: Claude Skills"
 author: "Sentinel-One"
 github_url: "https://github.com/Sentinel-One/ai-siem/tree/main/plugins/s1-secops-skills"

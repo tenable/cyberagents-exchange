@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-07-30
 name: "Purple AI MCP Server"
 author: "Sentinel-One"
 github_url: "https://github.com/Sentinel-One/purple-mcp"
