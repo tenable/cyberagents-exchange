@@ -9,6 +9,7 @@ tags: ["vulnerability-management", "exposure-management", "tenable-one", "attack
 integrations: ["Tenable"]
 date_added: 2026-07-29
 contribution_agreement_date: 2026-07-29T08:02:47Z
+last_reviewed: 2026-07-31
 works_with_tenable_hexa_mcp: false
 transport: "both"
 runtime: "python"
