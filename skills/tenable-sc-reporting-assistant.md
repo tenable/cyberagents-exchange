@@ -9,6 +9,7 @@ tags: ["tenable-sc", "security-center", "vulnerability-management", "dashboards"
 integrations: ["Tenable"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T11:49:53Z
+last_reviewed: 2026-07-31
 compatible_platforms: ["Claude Code"]
 invocation: "/tenable-sc-reporting-assistant"
 ---
