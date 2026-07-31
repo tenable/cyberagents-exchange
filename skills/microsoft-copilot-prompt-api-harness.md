@@ -9,6 +9,7 @@ tags: ["microsoft-copilot", "m365", "security-testing", "ai-exposure", "prompt-t
 integrations: ["AWS", "Azure", "Tenable"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T19:50:32Z
+last_reviewed: 2026-07-31
 compatible_platforms: ["Claude Code", "Claude Desktop", "Claude Cowork", "Cline", "Codex", "Cursor", "Gemini CLI", "GitHub Copilot", "Windsurf"]
 invocation: "/copilot-prompt-harness"
 ---
