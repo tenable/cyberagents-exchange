@@ -17,11 +17,18 @@ and exploited from the internet right now, and how bad is it if they are?** It i
 for cloud security architects and incident responders who want a short, defensible list
 of genuine external attack paths — not a raw vulnerability dump.
 
-It ships in two editions: an **MCP edition** that runs through the Tenable Cloud Security
-(`tcs`) MCP connector's Explore/UDM data model for the richest results, and an
-**API-token edition** that uses the public GraphQL API with a Bearer token and no
-connector, for headless daily runs. Both editions share one self-testing detection spec
-and one report renderer, so their findings are identical by construction.
+It ships in two editions that share one self-testing detection spec and one report
+renderer. The **MCP edition** runs through the Tenable Cloud Security (`tcs`) MCP
+connector's Explore/UDM data model and enforces the **full** detection contract below —
+it is the authoritative edition, verified end-to-end against a live tenant. The
+**API-token edition** uses the public GraphQL API with a Bearer token and no connector
+for headless daily runs; because the GraphQL API exposes fewer signals, it enforces a
+**reduced subset** of the contract (internet-direct + wide/all exposure, open finding,
+network-exploitable, EPSS/exploit-maturity evidence) and **cannot** confirm running-state,
+an observed listening endpoint, low attack complexity, CISA-KEV membership, or workload
+privilege. The API edition therefore produces a **candidate list** and states that gap in
+every report — use the MCP edition for the definitive, de-noised result. (Both editions'
+field mappings were validated against a live Tenable Cloud Security tenant.)
 
 ## What makes a finding
 
@@ -68,9 +75,11 @@ self-contained two-tier HTML report (with per-finding attack-path diagrams, evid
 exposed IP:port, and a print stylesheet for clean PDF export).
 
 - **MCP edition** — pulls three datasets (inventory, validated endpoints, qualifying
-  CVEs) via the `tcs` MCP `udm_execute_query` tools.
-- **API-token edition** — introspects the GraphQL schema, maps each gate to concrete
-  fields, and pulls the same three datasets cursor-paginated with a Bearer token.
+  CVEs) via the `tcs` MCP `udm_execute_query` tools and enforces the full contract.
+- **API-token edition (reduced fidelity)** — pulls exposed-VM and open-vulnerability data
+  via the public GraphQL API (verified queries), enforces the subset of gates the API can
+  express, and has no observed-endpoint or privilege data, so it emits a candidate list
+  with the fidelity gap stated in the report.
 
 ## Run it daily
 
