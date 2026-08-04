@@ -9,7 +9,6 @@ tags: ["supabase", "firebase", "flutter", "security", "row-level-security"]
 integrations: ["Firebase", "Supabase"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T18:49:27Z
-last_reviewed: 2026-07-31
 ---
 
 Backend Security Checkers for Flutter is a pair of dependency-light bash scripts that externally verify whether your Supabase and Firebase backends are properly secured — the same checks an outside attacker or security researcher would run using only your app's public keys.
