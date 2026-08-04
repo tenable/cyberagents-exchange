@@ -9,6 +9,7 @@ tags: ["quality-assurance", "security-review", "pre-submission", "code-review", 
 integrations: ["Anthropic"]
 date_added: 2026-08-04
 contribution_agreement_date: 2026-08-04T02:23:11Z
+last_reviewed: 2026-08-04
 compatible_platforms: ["Claude Code"]
 invocation: "/cyberagents-exchange-quality-review"
 ---
