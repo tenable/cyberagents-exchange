@@ -9,6 +9,7 @@ tags: ["vulnerability-management", "vpr", "pentest", "exposure-management", "kev
 integrations: ["Tenable"]
 date_added: 2026-08-03
 contribution_agreement_date: 2026-08-03T06:30:08Z
+last_reviewed: 2026-08-04
 works_with_tenable_hexa_mcp: false
 compatible_clients: ["Claude Code", "Claude Desktop"]
 transport: "stdio"
