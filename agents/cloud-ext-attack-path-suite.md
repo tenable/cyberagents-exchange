@@ -7,8 +7,8 @@ license: "MIT"
 tier: "contributed"
 tags: [cloud-security, tenable, attack-path, cnapp, exposure, epss, cisa-kev, cspm]
 integrations: [Tenable, AWS, Azure, GCP]
-date_added: 2026-08-02
-contribution_agreement_date: 2026-08-02T20:51:53Z
+date_added: 2026-08-04
+contribution_agreement_date: 2026-08-04T02:33:29Z
 ---
 
 The Cloud External Attack-Path Suite is an autonomous agent for Tenable Cloud Security
