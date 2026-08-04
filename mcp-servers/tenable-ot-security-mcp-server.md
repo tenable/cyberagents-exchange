@@ -9,9 +9,10 @@ tags: ["mcp-server", "ot-security", "ics", "scada", "asset-inventory", "vulnerab
 integrations: ["Tenable"]
 date_added: 2026-08-01
 contribution_agreement_date: 2026-08-01T11:27:24Z
+last_reviewed: 2026-08-04
 transport: "both"
 runtime: "python"
-auth_method: "none"
+auth_method: "api-key"
 compatible_clients: ["Claude Desktop", "Claude Code"]
 tools_exposed:
   - name: "tenable_ot_status"
