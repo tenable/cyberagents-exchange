@@ -1,7 +1,7 @@
 ---
 name: "Patch Shepherd"
 author: "kstrycharz"
-github_url: "https://github.com/kstrycharz/tenable-swarm"
+github_url: "https://github.com/kstrycharz/patch-shepherd"
 description: "Clusters Tenable vulnerability findings into prioritized, trend-aware remediation campaigns for analysts, managers, and executives."
 license: "MIT"
 tier: "contributed"
