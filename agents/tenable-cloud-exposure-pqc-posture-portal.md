@@ -10,6 +10,8 @@ integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-08-04
 contribution_agreement_date: 2026-08-04T10:28:43Z
 works_with_tenable_hexa_mcp: true
+cta: "T1"
+last_reviewed: 2026-08-04
 ---
 
 A self-hosted web dashboard that answers a single critical question: *which of our internet-reachable cloud resources would survive a quantum adversary?*
