@@ -11,6 +11,7 @@ date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T18:49:27Z
 compatible_platforms: ["Claude Code", "Gemini CLI", "Codex"]
 invocation: "/vibe-check"
+last_reviewed: 2026-08-04
 ---
 
 Backend Security Checkers for Flutter is a skill for Claude Code, Gemini CLI, and Codex, backed by two dependency-light bash scripts, that externally verifies whether your Supabase and Firebase backends are properly secured — the same checks an outside attacker or security researcher would run using only your app's public keys.
