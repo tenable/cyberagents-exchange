@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-05
 name: "Chokepoint Remediation Playbook"
 author: "tarhou"
 github_url: "https://github.com/tarhou/chokepoint-finder-playbook"
