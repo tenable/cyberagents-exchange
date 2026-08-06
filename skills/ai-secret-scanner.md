@@ -1,6 +1,6 @@
 ---
 name: "AI Secret Scanner"
-author: "SDSicuritech"
+author: "Sapan Dhora, Rajesh Guttikonda, Madhusudahan Mergu"
 github_url: "https://github.com/SDSicuritech/TenableAITokenSearch"
 description: "Scans authorized web apps for exposed AI and cloud API keys in client-delivered HTML and JavaScript."
 license: "MIT"
