@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-05
 name: "Patch Shepherd"
 author: "kstrycharz"
 github_url: "https://github.com/kstrycharz/patch-shepherd"
