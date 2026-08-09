@@ -91,7 +91,7 @@ are kept out of version control.
 
 ## Requirements
 
-- **MCP edition:** the Tenable Cloud Security `tcs` MCP connector; Python 3.8+ (stdlib
+- **MCP edition:** the Tenable Cloud Security `tcs` MCP connector; Python 3.7+ (stdlib
   only).
 - **API-token edition:** a Tenable Cloud Security API token; `bash`, `curl`, `jq`;
-  Python 3.8+ (stdlib only).
+  Python 3.7+ (stdlib only).
