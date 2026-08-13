@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-13
 name: "Reins MCP Server"
 author: "amcdonnell-dot"
 github_url: "https://github.com/amcdonnell-dot/reins"
