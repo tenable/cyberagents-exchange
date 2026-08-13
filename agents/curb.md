@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-13
 name: "curb"
 author: "amcdonnell-dot"
 github_url: "https://github.com/amcdonnell-dot/CURB"
