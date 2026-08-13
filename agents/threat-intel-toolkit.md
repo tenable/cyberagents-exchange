@@ -4,12 +4,13 @@ author: "kevinmhorvath"
 github_url: "https://github.com/kevinmhorvath/threat-intel-toolkit"
 description: "Defensive IOC and CVE triage agent that rates indicators and exploit maturity from free, key-free open-source intelligence."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["threat-intelligence", "ioc", "cve", "vulnerability-triage", "exploit-maturity", "cisa-kev", "epss", "defensive"]
 integrations: ["NVD", "Rapid7"]
 date_added: 2026-08-13
 contribution_agreement_date: 2026-08-13T14:29:02Z
 works_with_tenable_hexa_mcp: false
+last_reviewed: 2026-08-13
 ---
 
 The Threat Intel Toolkit is a defensive triage agent for security operators who need a fast, defensible answer to two everyday questions: "is this indicator known-bad, and who says so?" and "how weaponized is this CVE right now?" It runs entirely on free, anonymously-fetched open-source intelligence — no API keys, no registration, no account — so a team can clone it and get answers in the first minute rather than after a procurement cycle.
