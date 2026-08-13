@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-12
 name: "Reins Audit Skill"
 author: "amcdonnell-dot"
 github_url: "https://github.com/amcdonnell-dot/reins-skill"
