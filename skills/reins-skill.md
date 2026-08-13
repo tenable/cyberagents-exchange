@@ -4,7 +4,7 @@ author: "amcdonnell-dot"
 github_url: "https://github.com/amcdonnell-dot/reins-skill"
 description: "Guided audit and cleanup of Claude Code standing permissions — works standalone, and drives the Reins MCP Server for deterministic classification and safe revocation when connected."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["ai-agent-security", "permissions", "claude-code", "least-privilege", "remediation"]
 integrations: ["Anthropic"]
 date_added: 2026-08-05
