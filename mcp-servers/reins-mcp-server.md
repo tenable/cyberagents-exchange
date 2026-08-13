@@ -4,7 +4,7 @@ author: "amcdonnell-dot"
 github_url: "https://github.com/amcdonnell-dot/reins"
 description: "Audits Claude Code standing permission grants, scores each grant's prompt-injection blast radius, and generates deny-rule guardrails — local, read-only by default, zero network egress."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["ai-agent-security", "permissions", "claude-code", "prompt-injection", "least-privilege", "governance", "python"]
 integrations: ["Anthropic"]
 date_added: 2026-08-05
