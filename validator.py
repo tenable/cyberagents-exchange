@@ -34,6 +34,7 @@ class Entry(BaseModel):
             "GCP",
             "KnowBe4",
             "Microsoft Sentinel",
+            "Mimecast",
             "Netskope",
             "NVD",
             "PagerDuty",
@@ -48,6 +49,8 @@ class Entry(BaseModel):
             "Supabase",
             "Tenable",
             "Tenable Hexa AI MCP",
+            "URLScan.io",
+            "VirusTotal",
             "Wiz",
         ]
     ]
