@@ -92,7 +92,7 @@ works_with_tenable_hexa_mcp: false
 - `tier` is always `contributed` for new submissions
 - `integrations` uses a controlled vocabulary — see `validator.py` for the full list
 - `contribution_agreement_date` — the ISO 8601 date and time when you accepted the Contribution Agreement (e.g., `2026-07-09T14:30:00Z`)
-- `works_with_tenable_hexa_mcp` — optional boolean; set to `true` if your submission integrates with Tenable products via the [Tenable Hexa MCP](https://github.com/tenable/hexa-mcp). Omit or set to `false` if it uses other Tenable APIs (VM, Security Center, etc.) or does not integrate with Tenable at all
+- `works_with_tenable_hexa_mcp` — optional boolean; set to `true` if your submission integrates with Tenable products via the [Tenable Hexa AI MCP Server](https://docs.tenable.com/vulnerability-management/Content/getting-started/hexa-AI-MCP.htm). Omit or set to `false` if it uses other Tenable APIs (VM, Security Center, etc.) or does not integrate with Tenable at all
 
 #### Skill
 
