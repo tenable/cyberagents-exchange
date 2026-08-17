@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-17
 name: "Splunk Tenable Cloud Security Skill"
 author: "rrossetti-splunk"
 github_url: "https://github.com/rrossetti-splunk/splunk-tenable-cloud-security-skill"
