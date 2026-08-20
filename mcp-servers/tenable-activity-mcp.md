@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-19
 name: "Tenable Activity MCP"
 author: "brendanong95"
 github_url: "https://github.com/brendanong95/tenable-activity-mcp"
