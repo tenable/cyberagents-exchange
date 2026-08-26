@@ -4,7 +4,7 @@ author: "nreynolds-pub-git"
 github_url: "https://github.com/nreynolds-pub-git/complyagent"
 description: "Turns a Tenable CIS/STIG/PCI compliance scan into a remediation runbook, exception register, and POA&M. Read-only."
 license: "MIT"
-tier: "unreviewed"
+tier: "contributed"
 tags: ["compliance", "cis-benchmark", "stig", "poam", "tenable", "remediation", "nist-800-53"]
 integrations: ["Tenable"]
 date_added: 2026-08-26
