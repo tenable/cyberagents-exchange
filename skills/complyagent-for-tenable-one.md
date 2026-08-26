@@ -6,7 +6,7 @@ description: "Turns a Tenable CIS/STIG/PCI compliance scan into a remediation ru
 license: "MIT"
 tier: "contributed"
 tags: ["compliance", "cis-benchmark", "stig", "poam", "tenable", "remediation", "nist-800-53"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-08-26
 contribution_agreement_date: 2026-08-26T19:20:37Z
 works_with_tenable_hexa_mcp: true
