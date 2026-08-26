@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-26
 name: "Tenable IaC Finding to PR"
 author: "tomabai"
 github_url: "https://github.com/tomabai/tenable-iac-finding-to-pr"
