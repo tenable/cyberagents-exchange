@@ -10,6 +10,7 @@ integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-08-26
 contribution_agreement_date: 2026-08-26T19:20:37Z
 works_with_tenable_hexa_mcp: true
+cta: "T1"
 compatible_platforms: ["Claude Code", "Claude Desktop", "Claude Cowork"]
 invocation: "Run ComplyAgent"
 ---
