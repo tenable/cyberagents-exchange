@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-08-27
 name: "ComplyAgent for Tenable One"
 author: "nreynolds-pub-git"
 github_url: "https://github.com/nreynolds-pub-git/complyagent"
