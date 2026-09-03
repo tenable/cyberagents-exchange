@@ -65,6 +65,27 @@ Before you start, your project needs:
 
 See the [Contribute page](https://exchange.tenable.com/contributing/) for a walkthrough.
 
+## Show It Off
+
+Once your listing goes live, add this badge to your README to showcase your contribution.
+
+[![Listed on CyberAgents Exchange](https://img.shields.io/badge/CyberAgents%20Exchange-Listed-E7FF00?style=flat-square&labelColor=1E2426)](https://exchange.tenable.com/)
+
+```markdown
+[![Listed on CyberAgents Exchange](https://img.shields.io/badge/CyberAgents%20Exchange-Listed-E7FF00?style=flat-square&labelColor=1E2426)](https://exchange.tenable.com/)
+```
+
+Also, every contributor gets a profile page at `exchange.tenable.com/contributors/<your-github-handle>`!
+
+<details>
+<summary>HTML variant</summary>
+
+```html
+<a href="https://exchange.tenable.com/"><img src="https://img.shields.io/badge/CyberAgents%20Exchange-Listed-E7FF00?style=flat-square&labelColor=1E2426" alt="Listed on CyberAgents Exchange"></a>
+```
+
+</details>
+
 ## Repository Layout
 
 ```

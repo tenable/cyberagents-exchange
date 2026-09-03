@@ -229,6 +229,14 @@ If anything needs attention, you'll receive specific feedback as a review commen
 
 All pull requests are merged using **squash and merge** — the entire PR is combined into a single commit on `main`. Merge commits and rebase merges are disabled, so squash is the only option. The squash commit uses your PR title and description, so please keep them clear and descriptive. The source branch is deleted automatically after the merge.
 
+### Add the Badge
+
+Once your listing is merged, add the "Listed on CyberAgents Exchange" badge to your own README — see [Show It Off](README.md#show-it-off) for the pitch and the profile page link.
+
+```markdown
+[![Listed on CyberAgents Exchange](https://img.shields.io/badge/CyberAgents%20Exchange-Listed-E7FF00?style=flat-square&labelColor=1E2426)](https://exchange.tenable.com/)
+```
+
 ## Things That Will Get Your Submission Rejected
 
 Regardless of how well-formatted your listing is, submissions are rejected outright if they involve:
