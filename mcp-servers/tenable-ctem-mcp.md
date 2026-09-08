@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-09-08
 name: "Tenable CTEM MCP"
 author: "mrovere1"
 github_url: "https://github.com/mrovere1/tenable-ctem-mcp"
