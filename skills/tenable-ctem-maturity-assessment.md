@@ -1,5 +1,6 @@
 ---
 name: "Tenable CTEM Maturity Assessment"
+last_reviewed: 2026-09-08
 author: "mrovere1"
 github_url: "https://github.com/mrovere1/tenable-ctem-mcp"
 description: "Classifies a Tenable One tenant across the five CTEM maturity stages and delivers a three-quarter roadmap"
@@ -13,6 +14,7 @@ compatible_platforms: ["Claude Code"]
 invocation: "/tenable-ctem-maturity-assessment"
 ---
 
+last_reviewed: 2026-09-08
 Measures a Tenable One tenant, classifies it across the five stages of the Exposure Management
 Maturity Model — Ad Hoc, Defined, Standardized, Advanced, Optimized — and delivers a three-quarter
 improvement roadmap plus a self-contained HTML dashboard. Read only: no write tool is ever called.
