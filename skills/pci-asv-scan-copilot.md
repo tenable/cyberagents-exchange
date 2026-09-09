@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-09-09
 name: "PCI ASV Scan Copilot"
 author: "jdelong-tenb"
 github_url: "https://github.com/jdelong-tenb/pci-asv-scan-copilot"
@@ -11,7 +12,6 @@ date_added: 2026-08-31
 contribution_agreement_date: 2026-08-31T00:00:00Z
 compatible_platforms: ["Claude Code"]
 invocation: "Say things like \"help me set up my quarterly PCI ASV scan,\" \"I need to run a PCI external vulnerability scan,\" \"which PCI findings can I dispute,\" or \"am I ready to submit my attestation\" — the skill activates automatically."
-last_reviewed: 2026-08-31
 ---
 
 ## What it does
