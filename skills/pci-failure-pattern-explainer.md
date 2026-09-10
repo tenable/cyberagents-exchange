@@ -11,8 +11,8 @@ date_added: 2026-08-31
 contribution_agreement_date: 2026-08-31T00:00:00Z
 compatible_platforms: ["Claude Code"]
 invocation: "Say things like \"explain my PCI scan failures,\" \"which PCI findings are critical to fix,\" \"which findings can I dispute vs. must fix,\" or \"help me prioritize my PCI remediation\" — the skill activates automatically."
----
 last_reviewed: 2026-09-10
+---
 
 ## What it does
 
