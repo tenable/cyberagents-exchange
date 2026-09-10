@@ -9,6 +9,7 @@ tags: ["appsec", "secure-code-review", "authorization", "bola", "idor", "busines
 integrations: ["Anthropic"]
 date_added: 2026-09-09
 contribution_agreement_date: 2026-09-09T00:00:00Z
+last_reviewed: 2026-09-10
 works_with_tenable_hexa_mcp: false
 compatible_platforms: ["Claude Code", "Codex", "Gemini CLI", "GitHub Copilot"]
 invocation: "sechelix"
