@@ -1,5 +1,5 @@
 ---
-last_reviewed: 2026-09-08
+last_reviewed: 2026-09-14
 name: "Tenable CTEM MCP"
 author: "mrovere1"
 github_url: "https://github.com/mrovere1/tenable-ctem-mcp"
@@ -20,7 +20,7 @@ tools_exposed:
   - name: "ctem_preflight"
     description: "Tests every filter the assessment uses live against the tenant, with discriminant pairs, and returns the deny-list with measured proof"
   - name: "ctem_scoping"
-    description: "Stage 1 indicators S1–S4: tag coverage, criticality and owner coverage, declared crown jewels"
+    description: "Stage 1 indicators S1–S4 over the licensed asset base: tag coverage, criticality and owner coverage, declared crown jewels"
   - name: "ctem_discovery"
     description: "Stage 2 indicators D1–D4: time since last assessment, licensed surface coverage, agent coverage, authenticated detection share"
   - name: "ctem_prioritization"
@@ -40,7 +40,7 @@ tools_exposed:
   - name: "mttr_cadence_guard"
     description: "Detects when an MTTR is really measuring the interval between scans rather than time to fix"
   - name: "ctem_diagnostics"
-    description: "Whether the server can reach the tenant. Separates a missing credential from an invalid one from intercepted TLS. Never prints the key"
+    description: "Whether the server can reach the tenant, which role the API key has, and whether the tag catalog is fully visible to it. Separates a missing credential from an invalid one from intercepted TLS. Never prints the key"
 resources_exposed: []
 prompts_exposed: []
 ---
@@ -82,3 +82,19 @@ forces you to manage.
 returns no error — the query looks filtered and returns the whole corpus. Those are rejected before
 the request leaves, each with the discriminant pair that proved it, and `ctem_preflight` re-tests
 everything live rather than trusting a recorded verdict.
+
+**Rates over the licensed base, not the whole inventory.** Asset-rate indicators divide by the assets
+that consume a licence (`asset_class` combined with `is_licensed`). The inventory also holds directory
+identities, accounts and groups loaded for attack paths; in one production tenant they were 94% of
+the corpus and dragged the tagging rate from 100% to 25%. The whole corpus and the per-class
+breakdown still travel beside every number.
+
+## What the API key needs
+
+A role alone is not enough, and too little permission is dangerous for a quiet reason: a missing
+per-object permission does not answer 403, it returns a shorter list. Give the key's user either the
+**Administrator** role, or **Scan Manager** plus `Can View` on all assets and on the scans used, and `Can Use` on all tags.
+`ctem_diagnostics` reports the role and flags a partially visible tag catalog before any indicator is
+collected, and the indicators that depend on the catalog become declared gaps naming the missing
+permission instead of numbers. The full endpoint-by-endpoint table, with sources, is in
+`docs/permissions.md` in the repository.

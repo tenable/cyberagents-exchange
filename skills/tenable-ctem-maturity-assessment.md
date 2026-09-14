@@ -1,6 +1,6 @@
 ---
 name: "Tenable CTEM Maturity Assessment"
-last_reviewed: 2026-09-08
+last_reviewed: 2026-09-14
 author: "mrovere1"
 github_url: "https://github.com/mrovere1/tenable-ctem-mcp"
 description: "Classifies a Tenable One tenant across the five CTEM maturity stages and delivers a three-quarter roadmap"
@@ -14,7 +14,6 @@ compatible_platforms: ["Claude Code"]
 invocation: "/tenable-ctem-maturity-assessment"
 ---
 
-last_reviewed: 2026-09-08
 Measures a Tenable One tenant, classifies it across the five stages of the Exposure Management
 Maturity Model — Ad Hoc, Defined, Standardized, Advanced, Optimized — and delivers a three-quarter
 improvement roadmap plus a self-contained HTML dashboard. Read only: no write tool is ever called.
@@ -36,6 +35,10 @@ Step 0 discovers the tenant and proposes a mapping — which tag category is cri
 owner, which scans represent the recurring assessment — then asks the operator to confirm before
 measuring anything. It never guesses from a keyword alone, because customers use their own
 nomenclature: `Tier`, `BIA`, `Classificação`, `Gold/Silver/Bronze`, or the name in another language.
+The proposal starts from a documented default mapping and shows everything it chose from — every tag
+category with all of its values, and every scan with its run history and schedule — so the operator
+sees what was picked and what was passed over. Licensed surfaces are always confirmed against the
+customer's contract, and the confirmed mapping is saved as a profile for reassessment.
 
 The report language is chosen at Step 0 — English, Portuguese or Spanish — and governs the operator
 dialogue, the report prose and the dashboard. Data read from the tenant is printed exactly as it
@@ -62,4 +65,8 @@ the report in prose, because it is worth more than the lost number.
 ## Requirements
 
 The `tenable-ctem-mcp` server registered and connected — see the repository README. Credentials live
-in the server's environment; the skill never asks for a key.
+in the server's environment; the skill never asks for a key. The key's user needs the Administrator
+role, or Scan Manager with `Can View` on all assets and on the scans used, and `Can Use` on all
+tags — see
+`docs/permissions.md` in the repository. With less, some indicators become declared gaps that name
+the missing permission.
