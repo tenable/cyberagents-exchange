@@ -24,9 +24,11 @@ A submission is rejected outright, at any tier, if it involves any of the follow
 
 ## Shared / Controlled Vocabularies
 
-Several frontmatter fields must use values from a controlled vocabulary. These fields are: `tier`, `integrations`, `compatible_platforms` (skills), `compatible_clients` / `transport` / `auth_method` / `runtime` (MCP servers), and the playbook `playbook_type` and `agents_used[].type`.
+Several frontmatter fields must use values from a controlled vocabulary. These fields are: `tier`, `integrations`, `domains`, `compatible_platforms` (skills), `compatible_clients` / `transport` / `auth_method` / `runtime` (MCP servers), and the playbook `playbook_type` and `agents_used[].type`.
 
 **Policy:** every controlled-vocabulary value must match the current vocabulary defined in [`validator.py`](../validator.py). A genuinely new value (e.g., a vendor or platform not yet listed) is allowed **only if the same pull request also updates `validator.py`** to add it, inserted alphabetically. Reviewers verify field values against the live `validator.py` at review time, so this document never lists the values themselves.
+
+`domains` is the exception to that addition path. The taxonomy is closed — the website mirrors it to build its browse filters and labels — so a submission PR may not introduce a new domain value. Route proposals to a GitHub issue and have the contributor pick the closest existing domain.
 
 ## Tier 1 — Contributed
 
@@ -59,6 +61,7 @@ Both reviewers confirm all of the following are present.
 - [ ] `date_added` is a real, plausible date (not the `2026-01-01` template default, not absurdly in the future).
 - [ ] `contribution_agreement_date` is present and is a valid ISO 8601 datetime (e.g., `2026-07-09T14:30:00Z`). Must not be the template default (`2026-01-01T00:00:00Z`), not absurdly in the future, and not before the repository was created.
 - [ ] If `works_with_tenable_hexa_mcp` is present, it is a boolean (`true` or `false`). If `true`, the linked repository should demonstrate integration with the Tenable Hexa MCP (not other Tenable APIs such as VM or Security Center).
+- [ ] `domains` is present with 1-2 unique values from the live vocabulary, first value primary. The schema treats the field as optional, but a listing merged without it is excluded from the website's domain filters — so it must be populated before merge. If the contributor omitted it, the reviewer proposes values and adds the field to the listing.
 - [ ] No leftover template placeholders remain (e.g., `your-github-username`, `tag1`/`tag2`, example URLs, stub body text).
 - [ ] The body contains real "What it does" / "How it works" content, not the template stub.
 - [ ] If `visibility: example` is present in frontmatter, this is flagged prominently for maintainer attention (example listings are hidden from browse, leaderboard, and home page — only accessible via direct link).
@@ -76,6 +79,7 @@ The submission file must be congruent with the linked repository.
 
 - [ ] `github_url` and `author` match the actual repository remote and owner.
 - [ ] `name`, `description`, and `integrations` match what the repository actually is.
+- [ ] The primary domain (first value in `domains`) reflects what the listing actually does — not a template leftover, and not a reflexive `vulnerability-management` or `platform-operations`.
 - [ ] Type-specific fields are congruent with the repository:
   - **Skill** — the repository must be structured so that each declared `compatible_platform` can actually load the skill. At minimum, a `SKILL.md` with `name`/`description` YAML frontmatter must exist at the repo root. All files referenced within SKILL.md (e.g., `references/`) must exist. Installation instructions must be specific and actionable for each declared platform (not generic "install the skill"). Declared `invocation` must appear in SKILL.md or README.
   - **MCP server** — `runtime` matches the manifest (node → `package.json`, python → `pyproject.toml`, etc.); `transport` matches the code (a stdio/http server transport is actually present); `tools_exposed` and `auth_method` are congruent with the code.

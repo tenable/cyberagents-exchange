@@ -82,6 +82,7 @@ description: "A one-line description of what it does."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T14:30:00Z
@@ -91,6 +92,7 @@ works_with_tenable_hexa_mcp: false
 
 - `tier` is always `contributed` for new submissions
 - `integrations` uses a controlled vocabulary — see `validator.py` for the full list
+- `domains` — one or two values from a controlled vocabulary; the first is the primary domain. See [Domains](#domains)
 - `contribution_agreement_date` — the ISO 8601 date and time when you accepted the Contribution Agreement (e.g., `2026-07-09T14:30:00Z`)
 - `works_with_tenable_hexa_mcp` — optional boolean; set to `true` if your submission integrates with Tenable products via the [Tenable Hexa AI MCP Server](https://docs.tenable.com/vulnerability-management/Content/getting-started/hexa-AI-MCP.htm). Omit or set to `false` if it uses other Tenable APIs (VM, Security Center, etc.) or does not integrate with Tenable at all
 
@@ -105,6 +107,7 @@ description: "A one-line description of what it does."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T14:30:00Z
@@ -116,6 +119,7 @@ invocation: "your-skill-name"
 
 - `compatible_platforms` uses a controlled vocabulary (e.g., `Claude Code`, `Cursor`, `Windsurf`) — see `validator.py` for the full list
 - `invocation` is the slash command or trigger name
+- `domains` — one or two values from a controlled vocabulary; the first is the primary domain. See [Domains](#domains)
 
 #### MCP Server
 
@@ -128,6 +132,7 @@ description: "A one-line description of what it does."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T14:30:00Z
@@ -148,6 +153,7 @@ prompts_exposed: []
 - `runtime` must be `binary`, `bun`, `go`, `node`, `python`, or `rust`
 - `auth_method` must be `api-key`, `none`, `oauth2`, or `token`
 - `compatible_clients` uses a controlled vocabulary — see `validator.py` for the full list
+- `domains` — one or two values from a controlled vocabulary; the first is the primary domain. See [Domains](#domains)
 
 #### Playbook
 
@@ -160,6 +166,7 @@ description: "A one-line description of what it does."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T14:30:00Z
@@ -176,6 +183,39 @@ agents_used:
 - `playbook_type` must be `standard`, `sponsored`, or `n8n`
 - `agents_used[].type` must be `exchange`, `github`, `info`, or `vendor` (only `sponsored` playbooks may include `vendor`-type agents)
 - `ref` links to an existing exchange listing or GitHub URL depending on the agent type
+- `domains` — one or two values from a controlled vocabulary; the first is the primary domain. See [Domains](#domains)
+
+#### Domains
+
+`domains` places your listing in the Exchange's security domain taxonomy. It powers the domain filters on the browse page, so a listing without it won't show up when someone filters by domain.
+
+The rules:
+
+- One or two values, no duplicates.
+- **The first value is the primary domain.** Pick the domain your listing's main job belongs to — not every domain it touches.
+- Add a second value only when the listing genuinely straddles two domains.
+
+| Value | Label | What belongs here |
+|-------|-------|-------------------|
+| `ai-security` | AI Security | Security *of* AI systems: agent and MCP security, AI-SPM, prompt-injection testing. Not "this is an AI agent" — nearly everything here is. |
+| `application-security` | Application Security | SAST/DAST, dependency and supply-chain risk, secrets in code, secure SDLC, API security. |
+| `cloud-security` | Cloud Security | CSPM/CNAPP, cloud misconfiguration, container and Kubernetes posture, cloud attack paths. |
+| `cryptography-pki` | Cryptography & PKI | TLS and certificate posture, post-quantum readiness, key management. |
+| `data-security` | Data Security | Data discovery and classification, DLP, database security, sensitive-data exposure. |
+| `email-collaboration-security` | Email & Collaboration Security | Phishing analysis, email gateway and header forensics, Slack/Teams/SaaS collaboration risk. |
+| `governance-risk-compliance` | Governance, Risk & Compliance | Framework and benchmark mapping, audit evidence, policy, risk quantification, reporting to leadership. |
+| `identity-access` | Identity & Access | IAM and entitlement review, privilege escalation paths, MFA and SSO posture, Active Directory and Entra ID. |
+| `network-security` | Network Security | Firewall and segmentation review, network device configuration, traffic and perimeter analysis. |
+| `ot-iot-security` | OT/IoT Security | ICS/SCADA, medical and embedded devices, industrial protocols. |
+| `platform-operations` | Platform Operations | **Not a security domain.** Platform health checks, licensing, scan operations, exports and reporting, API connectors, onboarding and setup helpers. Use it when the main job is operating or administering a security platform rather than performing a security function. |
+| `security-awareness` | Security Awareness | Training content, phishing simulation, secure-behavior coaching. |
+| `security-operations` | Security Operations | SIEM/EDR/NDR work, threat hunting, detection engineering, incident response, malware analysis, insider threat. |
+| `threat-intelligence` | Threat Intelligence | IOC and actor research, CVE and exploit intelligence enrichment, threat feeds, attribution. |
+| `vulnerability-management` | Vulnerability Management | Core VM workflows only: scanning, prioritization, remediation tracking, exposure and risk scoring for known vulnerabilities. |
+
+Two of these get over-claimed. Don't reach for `vulnerability-management` unless VM is genuinely your listing's primary function, and use `platform-operations` when your listing runs a platform rather than secures something.
+
+If you leave `domains` out, a reviewer will propose values during review — but you know your project better than we do, so pick them yourself.
 
 ### 4. Write the Body
 
@@ -252,6 +292,7 @@ Regardless of how well-formatted your listing is, submissions are rejected outri
 Several frontmatter fields only accept values from a controlled vocabulary defined in [`validator.py`](https://github.com/tenable/cyberagents-exchange/blob/main/validator.py). The controlled fields are:
 
 - `integrations` — vendor and platform names (e.g., `Tenable`, `AWS`, `Splunk`)
+- `domains` — security domain taxonomy (e.g., `cloud-security`, `identity-access`) — see [Domains](#domains)
 - `compatible_platforms` (skills) — AI coding platforms (e.g., `Claude Code`, `Cursor`)
 - `compatible_clients` (MCP servers) — MCP client applications (e.g., `Claude Desktop`, `VS Code Copilot`)
 - `transport` (MCP servers) — `stdio`, `http`, or `both`
@@ -267,6 +308,8 @@ If your submission needs a value that doesn't exist yet (for example, a new inte
 3. Include the `validator.py` change in the same pull request as your listing submission.
 
 Your proposed addition will be reviewed alongside your listing. We welcome genuine additions — if a vendor, platform, or client exists and is relevant, we'll accept it.
+
+**`domains` is the exception.** The domain taxonomy is closed: the Exchange website mirrors it to build its browse filters and display labels, so adding a domain takes a coordinated change across two repositories. Don't add a `domains` value in your submission PR — [open an issue](https://github.com/tenable/cyberagents-exchange/issues) to propose one, and pick the closest existing domain in the meantime.
 
 ## Updating an Existing Listing
 

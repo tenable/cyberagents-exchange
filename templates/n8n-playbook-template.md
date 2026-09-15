@@ -7,6 +7,7 @@ description: "A one-line description of what this n8n workflow does."
 license: "MIT"
 tier: "contributed"
 tags: ["n8n", "tag1", "tag2"]
+domains: ["vulnerability-management"] # 1-2 values, first is primary - see CONTRIBUTING.md#domains
 integrations: []
 workflow_diagram: |
   flowchart LR

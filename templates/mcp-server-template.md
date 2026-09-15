@@ -6,6 +6,7 @@ description: "A one-line description of what your MCP server exposes."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"] # 1-2 values, first is primary - see CONTRIBUTING.md#domains
 integrations: ["Tenable"]
 date_added: 2026-01-01
 contribution_agreement_date: 2026-01-01T00:00:00Z

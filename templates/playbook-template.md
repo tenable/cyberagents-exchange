@@ -7,6 +7,7 @@ description: "A one-line description of what this playbook automates."
 license: "MIT"
 tier: "contributed"
 tags: ["tag1", "tag2"]
+domains: ["vulnerability-management"] # 1-2 values, first is primary - see CONTRIBUTING.md#domains
 integrations: ["Tenable"]
 agents_used:
   - name: "First Agent"
