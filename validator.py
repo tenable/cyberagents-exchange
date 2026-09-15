@@ -238,19 +238,24 @@ def validate_markdown_frontmatter(filepath: Path, schema: Type[Entry] | TypeAdap
 
 def _extract_literals_from_field(model: Type[BaseModel], field_name: str) -> set[str]:
     """Extract the allowed Literal values for a field from a Pydantic model."""
-    field_info = model.model_fields[field_name]
-    annotation = field_info.annotation
-    # Handle list[Literal[...]]
-    if hasattr(annotation, "__args__"):
-        for arg in get_args(annotation):
-            literal_args = get_args(arg)
-            if literal_args:
-                return set(literal_args)
-    # Handle plain Literal[...]
-    literal_args = get_args(annotation)
-    if literal_args:
-        return set(literal_args)
-    return set()
+    return _literal_strings(model.model_fields[field_name].annotation)
+
+
+def _literal_strings(annotation) -> set[str]:
+    """Collect Literal string values from an annotation, descending through wrappers.
+
+    Handles plain Literal[...], list[Literal[...]], and optional forms such as
+    list[Literal[...]] | None.
+    """
+    args = get_args(annotation)
+    if not args:
+        return set()
+    if all(isinstance(arg, str) for arg in args):
+        return set(args)
+    values: set[str] = set()
+    for arg in args:
+        values |= _literal_strings(arg)
+    return values
 
 
 def _validate_contributing_md(path: Path) -> list[str]:
@@ -267,11 +272,14 @@ def _validate_contributing_md(path: Path) -> list[str]:
     for model in (StandardPlaybook, SponsoredPlaybook, N8nPlaybook):
         playbook_type_values |= _extract_literals_from_field(model, "playbook_type")
 
+    domain_values = _extract_literals_from_field(Entry, "domains")
+
     vocabulary_checks: list[tuple[str, set[str]]] = [
         ("transport", _extract_literals_from_field(MCPServer, "transport")),
         ("runtime", _extract_literals_from_field(MCPServer, "runtime")),
         ("auth_method", _extract_literals_from_field(MCPServer, "auth_method")),
         ("playbook_type", playbook_type_values),
+        ("domains", domain_values),
     ]
 
     for field, valid_values in vocabulary_checks:
@@ -303,6 +311,30 @@ def _validate_contributing_md(path: Path) -> list[str]:
                     f"but it is not in the validator vocabulary"
                 )
 
+    errors.extend(_validate_domains_table(content, domain_values))
+
+    return errors
+
+
+def _validate_domains_table(content: str, domain_values: set[str]) -> list[str]:
+    """Check that the Domains table in CONTRIBUTING.md covers the vocabulary exactly.
+
+    The table is the contributor-facing copy of the taxonomy, so it must not drift from
+    the `domains` Literal in either direction.
+    """
+    section = re.search(r"^#### Domains$(.*?)(?=^#{1,4} )", content, re.MULTILINE | re.DOTALL)
+    if not section:
+        return ["CONTRIBUTING.md is missing the `#### Domains` section documenting the taxonomy"]
+
+    documented = set(re.findall(r"^\| `([a-z0-9-]+)` \|", section.group(1), re.MULTILINE))
+    errors = []
+    for val in sorted(domain_values - documented):
+        errors.append(f"CONTRIBUTING.md Domains table is missing the `{val}` domain")
+    for val in sorted(documented - domain_values):
+        errors.append(
+            f"CONTRIBUTING.md Domains table lists `{val}` "
+            f"but it is not in the validator vocabulary"
+        )
     return errors
 
 
