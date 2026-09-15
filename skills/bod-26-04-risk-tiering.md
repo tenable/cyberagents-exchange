@@ -6,6 +6,7 @@ description: "Computes CISA BOD 26-04 remediation tiers for Tenable vulnerabilit
 license: "MIT"
 tier: "contributed"
 tags: ["bod-26-04", "cisa", "vulnerability-management", "compliance", "risk-tiering", "kev", "tenable"]
+domains: ["vulnerability-management", "governance-risk-compliance"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-16T16:40:40Z

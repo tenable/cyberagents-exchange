@@ -6,6 +6,7 @@ description: "Proactive, hypothesis-driven threat hunting using the LOCK pattern
 license: "MIT"
 tier: "contributed"
 tags: ["threat-hunting", "lock-pattern", "mitre-attack", "siem", "edr", "secops", "incident-response"]
+domains: ["security-operations", "threat-intelligence"]
 integrations: ["Splunk", "SentinelOne", "Tenable", "Netskope", "CrowdStrike"]
 date_added: 2026-07-08
 compatible_platforms: ["Claude Code"]

@@ -6,6 +6,7 @@ description: "A Chrome extension that adds an in-page AI vulnerability analyst t
 license: "BSD-3-Clause"
 tier: "contributed"
 tags: ["vulnerability-management", "browser-extension", "chatops", "triage", "remediation", "tenable"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable", "Anthropic"]
 date_added: 2026-07-06
 ---

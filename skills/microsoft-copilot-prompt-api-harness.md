@@ -6,6 +6,7 @@ description: "AWS Lambda harness that injects test prompts into M365 Copilot for
 license: "MIT"
 tier: "contributed"
 tags: ["microsoft-copilot", "m365", "security-testing", "ai-exposure", "prompt-testing", "aws-lambda", "graph-api"]
+domains: ["ai-security", "application-security"]
 integrations: ["AWS", "Azure", "Tenable"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T19:50:32Z

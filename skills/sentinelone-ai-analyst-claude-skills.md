@@ -7,6 +7,7 @@ description: "A full-stack AI SOC analyst for SentinelOne: seven Claude skills, 
 license: "AGPL-3.0"
 tier: "contributed"
 tags: ["sentinelone", "soc", "threat-hunting", "powerquery", "singularity-data-lake", "hyperautomation", "claude-skills"]
+domains: ["security-operations"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-30T00:00:00Z

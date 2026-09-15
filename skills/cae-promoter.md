@@ -6,6 +6,7 @@ description: "A Claude Code skill that coaches CyberAgents Exchange contributors
 license: "MIT"
 tier: "contributed"
 tags: ["claude-code", "exchange", "promotion", "marketing", "cybersecurity"]
+domains: ["platform-operations"]
 integrations: ["Anthropic"]
 date_added: 2026-07-20
 contribution_agreement_date: 2026-07-20T16:00:27Z

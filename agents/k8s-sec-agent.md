@@ -7,6 +7,7 @@ description: "Kubernetes security audit agent for kagent that checks CIS benchma
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["kubernetes", "security", "cis-benchmark", "kube-bench", "rbac", "network-policy", "audit", "mcp", "kagent"]
+domains: ["cloud-security"]
 integrations: []
 date_added: 2026-09-03
 contribution_agreement_date: 2026-09-03T17:58:45Z

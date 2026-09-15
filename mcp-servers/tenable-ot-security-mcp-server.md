@@ -6,6 +6,7 @@ description: "Tenable OT Security asset, vulnerability, event and policy tools, 
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["mcp-server", "ot-security", "ics", "scada", "asset-inventory", "vulnerability-management", "audit-logging"]
+domains: ["ot-iot-security"]
 integrations: ["Tenable"]
 date_added: 2026-08-01
 contribution_agreement_date: 2026-08-01T11:27:24Z

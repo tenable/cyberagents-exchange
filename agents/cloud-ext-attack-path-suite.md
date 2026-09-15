@@ -6,6 +6,7 @@ description: "High-fidelity external attack-path agent for Tenable Cloud Securit
 license: "MIT"
 tier: "contributed"
 tags: [cloud-security, tenable, attack-path, cnapp, exposure, epss, cisa-kev, cspm]
+domains: ["cloud-security", "vulnerability-management"]
 integrations: [Tenable, AWS, Azure, GCP]
 date_added: 2026-08-04
 contribution_agreement_date: 2026-08-04T02:33:29Z

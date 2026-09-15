@@ -6,6 +6,7 @@ description: "Turns Tenable Cloud Security findings into review-ready CLI and Op
 license: "MIT"
 tier: "contributed"
 tags: [cloud-security, tenable, remediation, cspm, aws, azure, opentofu, terraform]
+domains: ["cloud-security"]
 integrations: [Tenable, AWS, Azure]
 date_added: 2026-08-10
 contribution_agreement_date: 2026-08-10T12:50:12Z

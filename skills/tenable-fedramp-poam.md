@@ -7,6 +7,7 @@ description: "Build FedRAMP POA&M workbooks from Tenable.sc — a vulnerability 
 license: "MIT"
 tier: "contributed"
 tags: ["fedramp", "poam", "conmon", "tenable", "security-center", "stig", "cis", "kev", "vulnerability-remediation"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-07
 contribution_agreement_date: 2026-08-06T20:32:58Z

@@ -7,6 +7,7 @@ description: "Report Tenable Security Center license utilization — licensed IP
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "security-center", "license-management", "license-utilization", "capacity-planning", "compliance-reporting", "utilities"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-08-14
 contribution_agreement_date: 2026-08-14T16:39:56Z

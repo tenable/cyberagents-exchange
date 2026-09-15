@@ -6,6 +6,7 @@ description: "Externally verify Supabase RLS and Firebase Realtime Database secu
 license: "MIT"
 tier: "contributed"
 tags: ["supabase", "firebase", "flutter", "security", "row-level-security"]
+domains: ["application-security", "data-security"]
 integrations: ["Firebase", "Supabase"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T18:49:27Z

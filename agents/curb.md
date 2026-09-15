@@ -7,6 +7,7 @@ description: "Enumerates the Tenable Hexa AI MCP tool surface, classifies each t
 license: "MIT"
 tier: "contributed"
 tags: ["mcp", "least-privilege", "api-key-scoping", "governance", "tenable-one"]
+domains: ["ai-security", "identity-access"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-08-06
 contribution_agreement_date: 2026-08-06T14:54:48Z

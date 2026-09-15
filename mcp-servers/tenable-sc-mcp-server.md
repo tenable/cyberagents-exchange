@@ -6,6 +6,7 @@ description: "Production MCP bridge to Tenable Security Center with intelligent 
 license: "GPL-3.0-only"
 tier: "contributed"
 tags: ["security", "vulnerability-management", "tenable", "security-center", "vulnerability-scanning", "t.sc", "t.sc+", "tenable-security-center-plus-mcp"]
+domains: ["platform-operations", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-19
 transport: "both"

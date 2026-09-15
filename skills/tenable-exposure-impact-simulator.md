@@ -6,6 +6,7 @@ description: "What-if analysis engine for Tenable AES/CES remediation impact pre
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "simulation", "aes", "ces", "remediation", "prioritization", "optimization"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]

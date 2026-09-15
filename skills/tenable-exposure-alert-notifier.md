@@ -6,6 +6,7 @@ description: "Customizable email notification skill for Tenable VM with SMTPS se
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "vulnerability-management", "email-notifications", "alerts", "smtps", "crown-jewel", "cisa-kev"]
+domains: ["platform-operations", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]

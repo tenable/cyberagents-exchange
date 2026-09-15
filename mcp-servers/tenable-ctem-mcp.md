@@ -7,6 +7,7 @@ description: "Local MCP server delivering 19 CTEM maturity indicators already ag
 license: "MIT"
 tier: "contributed"
 tags: ["ctem", "exposure-management", "vulnerability-management", "maturity-assessment", "security-posture"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-09-04
 contribution_agreement_date: 2026-09-04T17:46:23Z

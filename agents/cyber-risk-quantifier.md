@@ -6,6 +6,7 @@ description: "FAIR-aligned cyber risk quantification — transforms Tenable vuln
 license: "MIT"
 tier: "contributed"
 tags: ["cyber-risk", "fair-model", "risk-quantification", "vulnerability-management", "pdf-reporting", "tenable"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-16T12:44:04Z

@@ -6,6 +6,7 @@ description: "Generate competitive company intelligence briefs with live HTML da
 license: "MIT"
 tier: "contributed"
 tags: ["company-intelligence", "competitive-analysis", "research", "dashboard", "pdf-generation", "briefing"]
+domains: ["platform-operations"]
 integrations: ["Anthropic"]
 date_added: 2026-06-22
 compatible_platforms: ["Claude Code"]

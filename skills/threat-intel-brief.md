@@ -7,6 +7,7 @@ license: "MIT"
 type: "skill"
 tier: "contributed"
 tags: ["threat-intelligence", "cve", "incident-response", "soc", "mitre-attack", "vulnerability-management", "tenable-one"]
+domains: ["threat-intelligence"]
 integrations: ["Tenable"]
 date_added: 2026-07-06
 compatible_platforms: ["Claude Code", "Claude Cowork"]

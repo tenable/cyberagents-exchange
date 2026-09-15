@@ -6,6 +6,7 @@ description: "Scans authorized web apps for exposed AI and cloud API keys in cli
 license: "MIT"
 tier: "contributed"
 tags: ["secrets-detection", "api-keys", "appsec", "exposure-management", "vulnerability-assessment"]
+domains: ["application-security", "data-security"]
 integrations: ["Anthropic", "AWS"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T19:02:31Z

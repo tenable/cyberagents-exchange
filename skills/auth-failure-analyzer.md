@@ -6,6 +6,7 @@ description: "Diagnoses Tenable Nessus authentication failures by analyzing plug
 license: "MIT"
 tier: "contributed"
 tags: ["authentication", "nessus", "credentialed-scanning", "troubleshooting", "windows", "smb", "wmi", "vulnerability-management"]
+domains: ["platform-operations"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-11
 contribution_agreement_date: 2026-07-11T15:22:16Z

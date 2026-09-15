@@ -7,6 +7,7 @@ description: "A skill-packaged playbook for The Hounds — 18 exposure-managemen
 license: "MIT"
 tier: "contributed"
 tags: [tenable, exposure-management, navi, playbook, claude-skills, asset-tagging, vulnerability-management]
+domains: ["vulnerability-management"]
 integrations: [Tenable, Anthropic]
 agents_used:
   - name: "Laelaps"

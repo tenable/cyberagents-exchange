@@ -7,6 +7,7 @@ description: "Records payload-free provenance for every retrieval an agent uses,
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "rag-security", "provenance", "data-poisoning", "audit", "supply-chain", "deterministic", "mcp"]
+domains: ["ai-security", "data-security"]
 integrations: []
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T21:33:55Z

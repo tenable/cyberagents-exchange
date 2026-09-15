@@ -6,6 +6,7 @@ description: "AI-powered tag recommendation skill that analyzes Tenable assets a
 license: "MIT"
 tier: "contributed"
 tags: ["asset-management", "tag-automation", "taxonomy", "pattern-recognition", "tenable", "compliance-scoping", "vulnerability-management"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]

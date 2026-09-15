@@ -6,6 +6,7 @@ description: "Turns Tenable One Attack Path Analysis data into a prioritized, se
 license: "MIT"
 tier: "contributed"
 tags: ["tenable-one", "exposure-management", "attack-path-analysis", "choke-points", "vuln-management", "threat-intelligence", "cisa-kev", "ransomware", "dashboard", "claude-code"]
+domains: ["vulnerability-management", "threat-intelligence"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-10
 last_reviewed: 2026-07-17

@@ -7,6 +7,7 @@ description: "Read-only MCP server for SentinelOne's Singularity Platform — qu
 license: "MIT"
 tier: "contributed"
 tags: ["sentinelone", "purple-ai", "alerts", "vulnerability-management", "asset-inventory", "power-query", "singularity-platform"]
+domains: ["security-operations", "vulnerability-management"]
 integrations: ["SentinelOne"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-30T00:00:00Z

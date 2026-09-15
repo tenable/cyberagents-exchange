@@ -6,6 +6,7 @@ description: "Evidence-first application-security review skill that sends every 
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["appsec", "secure-code-review", "authorization", "bola", "idor", "business-logic", "false-positive-reduction", "supply-chain", "ai-security", "devsecops"]
+domains: ["application-security", "ai-security"]
 integrations: ["Anthropic"]
 date_added: 2026-09-09
 contribution_agreement_date: 2026-09-09T00:00:00Z

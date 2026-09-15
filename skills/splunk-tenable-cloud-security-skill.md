@@ -7,6 +7,7 @@ description: "Query and triage Tenable Cloud Security posture findings in Splunk
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["splunk", "tenable", "cloud-security", "posture", "spl", "mcp"]
+domains: ["cloud-security", "security-operations"]
 integrations: ["Splunk", "Tenable"]
 date_added: 2026-08-17
 contribution_agreement_date: 2026-08-17T20:30:29Z

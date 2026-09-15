@@ -6,6 +6,7 @@ description: "AI-powered risk-based prioritization for Tenable VM compliance ben
 license: "MIT"
 tier: "contributed"
 tags: ["compliance", "vulnerability-management", "risk-assessment", "tenable", "prioritization", "reporting"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]

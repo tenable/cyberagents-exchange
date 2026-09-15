@@ -7,6 +7,7 @@ description: "SSL/TLS compliance dashboard from Tenable Hexa MCP: flags deprecat
 license: "MIT"
 tier: "contributed"
 tags: ["ssl-tls", "compliance", "certificate", "dashboard", "encryption", "tenable", "pci-dss"]
+domains: ["cryptography-pki"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-08-30T23:25:18Z

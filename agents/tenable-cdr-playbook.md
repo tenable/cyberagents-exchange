@@ -6,6 +6,7 @@ description: "Queries and triages Tenable Cloud Security Threat Stories into pri
 license: "MIT"
 tier: "contributed"
 tags: [cloud-security, tenable, cdr, cspm, aispm, soc, posture, cnapp]
+domains: ["cloud-security", "security-operations"]
 integrations: ["Tenable", "AWS", "Azure", "GCP"]
 date_added: 2026-07-10
 contribution_agreement_date: 2026-07-10T14:56:42Z

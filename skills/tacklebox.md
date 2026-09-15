@@ -7,6 +7,7 @@ description: "Multi-layered phishing email analysis skill for static analysis, t
 license: "MIT"
 tier: "contributed"
 tags: ["phishing", "email-analysis", "threat-intelligence", "soc", "ioc", "malware-detection"]
+domains: ["email-collaboration-security", "threat-intelligence"]
 integrations: ["Anthropic", "AWS", "Mimecast", "URLScan.io", "VirusTotal"]
 date_added: 2026-08-14
 contribution_agreement_date: 2026-08-14T19:45:44Z

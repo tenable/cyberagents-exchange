@@ -6,6 +6,7 @@ description: "Self-hosted web portal showing post-quantum cryptography readiness
 license: "MIT"
 tier: "contributed"
 tags: ["post-quantum-cryptography", "pqc", "tls", "cryptography", "cloud-security", "cloud-exposure", "network-exposure", "dashboard", "vulnerability-management"]
+domains: ["cryptography-pki", "cloud-security"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-08-04
 contribution_agreement_date: 2026-08-04T10:28:43Z

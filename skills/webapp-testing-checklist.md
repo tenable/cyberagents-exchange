@@ -7,6 +7,7 @@ description: "Structures an authorized web app pentest around the OWASP Web Secu
 license: "MIT"
 tier: "contributed"
 tags: ["pentest", "owasp", "wstg", "web-security", "security-testing", "checklist", "findings-report"]
+domains: ["application-security"]
 integrations: ["Anthropic"]
 date_added: 2026-09-03
 contribution_agreement_date: 2026-09-03T18:16:27Z

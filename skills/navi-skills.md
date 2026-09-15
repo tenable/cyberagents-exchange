@@ -6,6 +6,7 @@ description: "A 13-skill Claude skill set for driving the Tenable navi CLI and t
 license: "MIT"
 tier: "contributed"
 tags: [tenable, navi, vulnerability-management, claude-skills, mcp, asset-tagging, exposure-management]
+domains: ["platform-operations"]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
 last_reviewed: 2026-07-17

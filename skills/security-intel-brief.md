@@ -6,6 +6,7 @@ description: "Build a leadership-ready security intelligence brief (PDF) for sel
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-research", "cve", "security-reporting", "threat-intelligence", "pdf-reports"]
+domains: ["threat-intelligence", "vulnerability-management"]
 integrations: ["NVD"]
 date_added: 2026-06-15
 compatible_platforms: ["Claude Code"]

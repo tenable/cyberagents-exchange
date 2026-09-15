@@ -7,6 +7,7 @@ description: "Reconcile Nessus agents against a live AWS EC2 fleet and safely re
 license: "MIT"
 tier: "contributed"
 tags: ["nessus", "tenable", "aws", "ec2", "vulnerability-management", "agent-cleanup", "inventory-reconciliation"]
+domains: ["platform-operations"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-06
 contribution_agreement_date: 2026-08-06T20:32:58Z

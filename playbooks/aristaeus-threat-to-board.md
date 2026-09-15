@@ -7,6 +7,7 @@ description: "Delivers a continuously-updated security program maturity score wi
 license: "Proprietary"
 tier: "contributed"
 tags: ["security-program-maturity", "nist-csf", "cis-controls", "board-reporting", "threat-intelligence", "exposure-management"]
+domains: ["governance-risk-compliance", "threat-intelligence"]
 integrations: ["Tenable", "Anthropic"]
 logo: "https://raw.githubusercontent.com/jtbuchanan-tenb/aristaeus-playbook/main/aristaeus-agentic-ai-consulting-logo.png"
 agents_used:

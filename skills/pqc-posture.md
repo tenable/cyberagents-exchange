@@ -6,6 +6,7 @@ description: "Post-Quantum Cryptography readiness skill and dashboard for Tenabl
 license: "MIT"
 tier: "contributed"
 tags: ["pqc", "post-quantum", "cryptography", "vulnerability-management", "dashboard", "tenable"]
+domains: ["cryptography-pki"]
 integrations: ["Tenable"]
 date_added: 2026-06-22
 compatible_platforms: ["Claude Code"]

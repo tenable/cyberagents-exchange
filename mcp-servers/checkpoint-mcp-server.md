@@ -6,6 +6,7 @@ description: "Draft/publish/install access-rule lifecycle for compensating-contr
 license: "MIT"
 tier: "contributed"
 tags: ["firewall", "compensating-controls", "check-point", "network-security", "python"]
+domains: ["network-security"]
 integrations: ["Check Point"]
 date_added: 2026-07-29
 contribution_agreement_date: 2026-07-29T07:48:29Z

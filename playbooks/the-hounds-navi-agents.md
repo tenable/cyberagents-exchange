@@ -7,6 +7,7 @@ description: "The executable harness for The Hounds — a local console that run
 license: "MIT"
 tier: "contributed"
 tags: [tenable, exposure-management, navi, playbook, python, console, vulnerability-management]
+domains: ["vulnerability-management", "platform-operations"]
 integrations: [Tenable, Anthropic]
 agents_used:
   - name: "Laelaps"

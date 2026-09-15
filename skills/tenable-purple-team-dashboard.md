@@ -6,6 +6,7 @@ description: "Joins Tenable pentest/attack-path findings against Blue Team remed
 license: "MIT"
 tier: "contributed"
 tags: ["purple-team", "red-team", "blue-team", "mitre-attack", "residual-risk", "vulnerability-management", "dashboard"]
+domains: ["threat-intelligence", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T14:55:28Z

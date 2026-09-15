@@ -6,6 +6,7 @@ description: "Triages Tenable Identity Exposure IoA alerts as false positive, tr
 license: "MIT"
 tier: "contributed"
 tags: ["identity-exposure", "ioa", "false-positive", "active-directory", "triage", "kerberos", "dcsync"]
+domains: ["identity-access"]
 integrations: ["Tenable"]
 date_added: 2026-06-22
 compatible_platforms: ["Claude Code"]

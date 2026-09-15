@@ -6,6 +6,7 @@ description: "Walks a new Tenable Vulnerability Management user through onboardi
 license: "MIT"
 tier: "contributed"
 tags: ["onboarding", "vulnerability-management", "customer-success"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-07-09
 contribution_agreement_date: 2026-07-09T22:50:48Z

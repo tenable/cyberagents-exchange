@@ -6,6 +6,7 @@ description: "Build the FedRAMP Integrated Inventory Workbook (IIW) by reconcili
 license: "MIT"
 tier: "contributed"
 tags: ["fedramp", "fiiw", "iiw", "integrated-inventory", "inventory", "tenable", "security-center", "nessus", "conmon", "compliance-reporting"]
+domains: ["governance-risk-compliance"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-07
 contribution_agreement_date: 2026-08-06T20:32:58Z

@@ -6,6 +6,7 @@ description: "Command-line Swiss Army knife for Tenable Vulnerability Management
 license: "MIT"
 tier: "contributed"
 tags: [tenable, vulnerability-management, cli, tenable-io, cyber-exposure, automation, reporting]
+domains: ["platform-operations", "vulnerability-management"]
 integrations: [Tenable]
 date_added: 2026-07-15
 last_reviewed: 2026-07-17

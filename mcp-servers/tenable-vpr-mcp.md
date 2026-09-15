@@ -6,6 +6,7 @@ description: "Read-only Tenable.io / Tenable One MCP server with a VPR re-priori
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "vpr", "pentest", "exposure-management", "kev", "epss"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-08-03
 contribution_agreement_date: 2026-08-03T06:30:08Z

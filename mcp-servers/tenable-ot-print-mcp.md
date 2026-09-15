@@ -7,6 +7,7 @@ description: "MCP server that generates themed Markdown/HTML print reports (asse
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["tenable", "ot-security", "reporting", "ics", "risk-management"]
+domains: ["ot-iot-security", "platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-08-31
 contribution_agreement_date: 2026-08-31T18:19:08Z

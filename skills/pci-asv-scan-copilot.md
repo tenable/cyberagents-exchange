@@ -7,6 +7,7 @@ description: "Walks a PCI ASV user through the full quarterly external scan cycl
 license: "MIT"
 tier: "contributed"
 tags: ["pci-dss", "vulnerability-management", "asv-scanning", "compliance", "attestation"]
+domains: ["vulnerability-management", "governance-risk-compliance"]
 integrations: ["Tenable"]
 date_added: 2026-08-31
 contribution_agreement_date: 2026-08-31T00:00:00Z

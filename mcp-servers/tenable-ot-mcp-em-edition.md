@@ -7,6 +7,7 @@ description: "MCP server exposing Tenable OT Security data to AI clients; this E
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["tenable", "ot-security", "ics", "scada", "vulnerability-management"]
+domains: ["ot-iot-security"]
 integrations: ["Tenable"]
 date_added: 2026-08-31
 contribution_agreement_date: 2026-08-31T14:52:53Z

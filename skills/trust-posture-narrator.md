@@ -6,6 +6,7 @@ description: "Turns live Tenable exposure and remediation data into a quick-scan
 license: "MIT"
 tier: "contributed"
 tags: ["trust-center", "marketing", "reporting", "compliance", "vulnerability-management"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-22
 contribution_agreement_date: 2026-07-22T18:47:17Z

@@ -7,6 +7,7 @@ description: "Passive, read-only pre-launch attack-surface review of a marketing
 license: "MIT"
 tier: "contributed"
 tags: ["marketing-security", "attack-surface", "osint", "pre-launch", "lookalike-detection", "passive-recon"]
+domains: ["application-security", "threat-intelligence"]
 integrations: []
 date_added: 2026-07-30
 contribution_agreement_date: 2026-07-30T20:43:30Z

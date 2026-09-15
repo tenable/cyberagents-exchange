@@ -7,6 +7,7 @@ description: "Names the actor behind Tenable IE's Active Directory findings by c
 license: "MIT"
 tier: "contributed"
 tags: ["active-directory", "identity-exposure", "incident-response", "threat-hunting", "attribution", "windows-event-log", "mcp"]
+domains: ["identity-access", "security-operations"]
 integrations: ["Tenable"]
 date_added: 2026-09-02
 contribution_agreement_date: 2026-09-02T09:32:40Z

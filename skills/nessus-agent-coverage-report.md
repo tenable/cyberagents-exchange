@@ -7,6 +7,7 @@ description: "Report Nessus agent coverage by correlating AWS EC2, the Nessus Ma
 license: "MIT"
 tier: "contributed"
 tags: ["nessus", "tenable", "security-center", "aws", "ec2", "coverage-report", "compliance-reporting", "inventory"]
+domains: ["platform-operations"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-06
 contribution_agreement_date: 2026-08-06T20:32:58Z

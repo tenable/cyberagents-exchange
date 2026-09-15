@@ -6,6 +6,7 @@ description: "Prioritizes daily vulnerability fixes using Tenable exposure data,
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "exposure-management", "remediation-prioritization", "cisa-kev", "mitre-attack", "attack-path-analysis"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-06-18
 works_with_tenable_hexa_mcp: true

@@ -62,6 +62,34 @@ class Entry(BaseModel):
     last_reviewed: date | None = None
     works_with_tenable_hexa_mcp: bool | None = None
     cta: Literal["T1"] | None = None
+    domains: list[
+        Literal[
+            "ai-security",
+            "application-security",
+            "cloud-security",
+            "cryptography-pki",
+            "data-security",
+            "email-collaboration-security",
+            "governance-risk-compliance",
+            "identity-access",
+            "network-security",
+            "ot-iot-security",
+            "platform-operations",
+            "security-awareness",
+            "security-operations",
+            "threat-intelligence",
+            "vulnerability-management",
+        ]
+    ] | None = None
+
+    @model_validator(mode="after")
+    def domains_cardinality(self):
+        if self.domains is not None:
+            if not 1 <= len(self.domains) <= 2:
+                raise ValueError("domains must have 1-2 values (first is primary)")
+            if len(set(self.domains)) != len(self.domains):
+                raise ValueError("domains values must be unique")
+        return self
 
     @model_validator(mode="after")
     def cta_requires_hexa_mcp(self):

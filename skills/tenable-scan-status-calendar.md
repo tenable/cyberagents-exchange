@@ -6,6 +6,7 @@ description: "Puts upcoming Tenable VM scan jobs on Google Calendar and flags an
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "vulnerability-management", "calendar", "google-calendar", "scan-scheduling", "monitoring"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-08-14
 contribution_agreement_date: 2026-08-14T17:25:31Z

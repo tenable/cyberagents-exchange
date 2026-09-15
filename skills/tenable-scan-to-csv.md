@@ -12,6 +12,7 @@ tags:
   - nessus
   - csv
   - scan-export
+domains: ["platform-operations"]
 integrations:
   - Tenable
 date_added: 2026-08-14

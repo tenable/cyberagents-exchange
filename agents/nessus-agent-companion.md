@@ -6,6 +6,7 @@ description: "An autonomous AI agent that monitors the health of Tenable Nessus 
 license: "MIT"
 tier: "contributed"
 tags: ["monitoring", "nessus-agents", "slack", "vulnerability-management", "tenable", "ai-agent", "security"]
+domains: ["platform-operations"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-06-15
 works_with_tenable_hexa_mcp: true

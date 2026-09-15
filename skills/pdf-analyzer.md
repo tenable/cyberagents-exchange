@@ -7,6 +7,7 @@ description: "Multi-layered static analysis and sanitization for suspicious PDFs
 license: "MIT"
 tier: "contributed"
 tags: ["pdf-analysis", "malware-analysis", "static-analysis", "pdf-sanitization", "threat-intelligence", "incident-response", "ioc-extraction"]
+domains: ["security-operations", "threat-intelligence"]
 integrations: ["VirusTotal"]
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T18:06:45Z

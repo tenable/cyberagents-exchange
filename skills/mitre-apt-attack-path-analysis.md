@@ -13,6 +13,7 @@ tags:
   - apt
   - recorded-future
   - adversary-emulation
+domains: ["threat-intelligence", "vulnerability-management"]
 integrations:
   - Tenable
   - Tenable Hexa AI MCP

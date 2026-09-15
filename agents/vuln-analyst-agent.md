@@ -6,6 +6,7 @@ description: "AI agent that applies CISA SSVC to live CVE data (EPSS, KEV, NVD, 
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "ssvc", "cve-triage", "epss", "cisa-kev", "browser-extension", "security-research"]
+domains: ["vulnerability-management"]
 integrations: ["NVD", "Anthropic"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-17T01:35:42Z

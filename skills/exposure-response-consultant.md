@@ -6,6 +6,7 @@ description: "AI-powered vulnerability strategist that analyzes Tenable scan dat
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "exposure-management", "remediation", "risk-prioritization", "tenable", "initiative-planning", "strategic-analysis"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]

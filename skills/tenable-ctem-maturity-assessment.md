@@ -7,6 +7,7 @@ description: "Classifies a Tenable One tenant across the five CTEM maturity stag
 license: "MIT"
 tier: "contributed"
 tags: ["ctem", "exposure-management", "maturity-assessment", "security-posture", "vulnerability-management"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-09-04
 contribution_agreement_date: 2026-09-04T17:46:23Z

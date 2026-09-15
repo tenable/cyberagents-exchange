@@ -6,6 +6,7 @@ description: "Self-hosted web portal that syncs Tenable VM assets and tracks OS 
 license: "MIT"
 tier: "contributed"
 tags: ["eol", "vulnerability-management", "asset-management", "end-of-life", "tenable-vm", "python", "endoflife-date", "lifecycle", "patch-management", "dashboard", "software-inventory", "cpe", "os-lifecycle", "security-operations"]
+domains: ["vulnerability-management", "platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-20
 ---

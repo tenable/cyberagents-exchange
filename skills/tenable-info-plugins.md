@@ -6,6 +6,7 @@ description: "Discover, extract, and analyze Tenable INFO-severity plugin data â
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "vulnerability-management", "info-plugins", "asset-inventory", "forensics", "threat-hunting"]
+domains: ["security-operations", "platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-07-16
 contribution_agreement_date: 2026-07-16T21:03:21Z

@@ -7,6 +7,7 @@ description: "On-demand Nessus vulnerability and compliance/audit scans of speci
 license: "MIT"
 tier: "contributed"
 tags: ["nessus", "tenable", "stig", "cis", "compliance", "vulnerability-scanning", "aws", "ec2", "reporting"]
+domains: ["vulnerability-management", "platform-operations"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-06
 contribution_agreement_date: 2026-08-06T20:32:58Z

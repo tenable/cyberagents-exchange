@@ -6,6 +6,7 @@ description: "58 tools connecting LLMs to Tenable VM and Tenable One: assets, vu
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "exposure-management", "tenable-one", "attack-path-analysis", "cloud-security", "python"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-07-29
 contribution_agreement_date: 2026-07-29T08:02:47Z

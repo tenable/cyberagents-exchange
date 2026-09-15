@@ -7,6 +7,7 @@ description: "Finds the smallest set of remediation actions that removes the lar
 license: "MIT"
 tier: "contributed"
 tags: ["vuln-management", "exposure-management", "remediation", "prioritization", "attack-path-analysis", "set-cover", "change-management", "claude-code"]
+domains: ["vulnerability-management"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T02:04:27Z

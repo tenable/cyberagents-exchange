@@ -6,6 +6,7 @@ description: "A token-optimized knowledge pack that makes AI coding assistants e
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "vulnerability-management", "pytenable", "api-skill", "exposure-management", "security-automation"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-17
 compatible_platforms: ["Claude Code"]

@@ -7,6 +7,7 @@ description: "Turns the Tenable VM audit log into answered questions — per-act
 license: "MIT"
 tier: "contributed"
 tags: ["audit-log", "anomaly-detection", "insider-threat", "api-key-monitoring", "detection-engineering", "baselining"]
+domains: ["security-operations"]
 integrations: ["Tenable"]
 date_added: 2026-08-19
 contribution_agreement_date: 2026-08-19T15:34:46Z

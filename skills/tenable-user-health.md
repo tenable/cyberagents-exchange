@@ -6,6 +6,7 @@ description: "Audits Tenable user activity, authentication security, and maps fi
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "compliance", "user-management", "authentication", "audit", "security"]
+domains: ["governance-risk-compliance", "identity-access"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-07-08
 works_with_tenable_hexa_mcp: true

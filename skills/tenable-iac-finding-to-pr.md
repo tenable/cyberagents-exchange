@@ -7,6 +7,7 @@ description: "A Claude Code skill that turns open Tenable Cloud Security IaC fin
 license: "MIT"
 tier: "contributed"
 tags: ["claude-code", "tenable-cloud-security", "iac", "terraform", "remediation", "pull-request"]
+domains: ["cloud-security", "application-security"]
 integrations: ["Tenable"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T00:00:00Z

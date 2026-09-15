@@ -6,6 +6,7 @@ description: "MCP server exposing the Tenable navi CLI (Tenable VM / Tenable One
 license: "MIT"
 tier: "contributed"
 tags: [tenable, navi, mcp, vulnerability-management, exposure-management, asset-tagging, fastmcp]
+domains: ["platform-operations"]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
 last_reviewed: 2026-07-17

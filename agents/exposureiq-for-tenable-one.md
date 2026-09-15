@@ -6,6 +6,7 @@ description: "AI-powered mitigation guidance for Tenable One vulnerabilities wit
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "cve-enrichment", "tenable", "mitigation-guidance", "self-hosted", "privacy-preserving", "fastapi"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable", "Anthropic", "CrowdStrike", "SentinelOne", "Wiz"]
 date_added: 2026-06-30
 ---

@@ -6,6 +6,7 @@ description: "A reference guide explaining major security audits and compliance 
 license: "MIT"
 tier: "contributed"
 tags: ["compliance", "security-audits", "frameworks", "governance", "risk-management", "GRC"]
+domains: ["governance-risk-compliance"]
 integrations: ["Anthropic"]
 date_added: 2026-07-22
 contribution_agreement_date: 2026-07-22T00:00:00Z

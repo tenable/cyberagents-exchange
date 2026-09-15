@@ -6,6 +6,7 @@ description: "Generate weekly/monthly Fixed Vulnerability Trend reports directly
 license: "MIT"
 tier: "contributed"
 tags: ["tenable-sc", "vulnerability-management", "reporting", "remediation", "trend-analysis"]
+domains: ["platform-operations", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-21
 contribution_agreement_date: 2026-07-22T19:01:09Z

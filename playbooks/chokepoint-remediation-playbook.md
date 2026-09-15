@@ -6,6 +6,7 @@ github_url: "https://github.com/tarhou/chokepoint-finder-playbook"
 description: "An eight-stage remediation chain from thousands of findings to a handful of proven fixes, with a human checkpoint before every external mutation and a runner that enforces the contract offline."
 license: "MIT"
 tags: ["vuln-management", "exposure-management", "remediation", "change-management", "human-in-the-loop", "verification", "claude-code"]
+domains: ["vulnerability-management"]
 tier: "contributed"
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-05

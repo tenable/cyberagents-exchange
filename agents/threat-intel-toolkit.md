@@ -6,6 +6,7 @@ description: "Defensive IOC and CVE triage agent that rates indicators and explo
 license: "MIT"
 tier: "contributed"
 tags: ["threat-intelligence", "ioc", "cve", "vulnerability-triage", "exploit-maturity", "cisa-kev", "epss", "defensive"]
+domains: ["threat-intelligence", "vulnerability-management"]
 integrations: ["NVD", "Rapid7"]
 date_added: 2026-08-13
 contribution_agreement_date: 2026-08-13T14:29:02Z

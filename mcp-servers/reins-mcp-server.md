@@ -7,6 +7,7 @@ description: "Audits Claude Code standing permission grants, scores each grant's
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "permissions", "claude-code", "prompt-injection", "least-privilege", "governance", "python"]
+domains: ["ai-security"]
 integrations: ["Anthropic"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T13:58:00Z

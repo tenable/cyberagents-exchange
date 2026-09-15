@@ -6,6 +6,7 @@ description: "Query Tenable Security Center by plugin ID — deep per-host looku
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "security-center", "plugin-lookup", "vulnerability-lookup", "poam", "audit-qc", "aws", "ec2"]
+domains: ["platform-operations", "vulnerability-management"]
 integrations: ["AWS", "Tenable"]
 date_added: 2026-08-07
 contribution_agreement_date: 2026-08-06T20:32:58Z

@@ -6,6 +6,7 @@ description: "Single-file console artifact that runs The Hounds exposure-managem
 license: "MIT"
 tier: "contributed"
 tags: [tenable, exposure-management, navi, artifact, console, vulnerability-management]
+domains: ["vulnerability-management", "platform-operations"]
 integrations: [Tenable, Anthropic]
 date_added: 2026-07-15
 last_reviewed: 2026-07-17

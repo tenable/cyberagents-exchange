@@ -6,6 +6,7 @@ description: "A Claude Code skill that guides you through submitting agents, MCP
 license: "MIT"
 tier: "contributed"
 tags: ["claude-code", "exchange", "submission", "automation", "cybersecurity"]
+domains: ["platform-operations"]
 integrations: ["Anthropic"]
 date_added: 2026-05-28
 compatible_platforms: ["Claude Code"]

@@ -6,6 +6,7 @@ description: "Autonomous Tenable Cloud Security posture sweep: critical findings
 license: "MIT"
 tier: "contributed"
 tags: [cloud-security, tenable, cspm, ai-spm, soc, posture, cnapp]
+domains: ["cloud-security", "ai-security"]
 integrations: [Tenable, AWS, Azure, GCP]
 date_added: 2026-06-30
 ---

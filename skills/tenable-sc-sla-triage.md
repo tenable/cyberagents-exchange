@@ -12,6 +12,7 @@ tags:
   - vpr
   - kev
   - security-center
+domains: ["vulnerability-management", "governance-risk-compliance"]
 integrations:
   - Tenable
 date_added: 2026-07-18

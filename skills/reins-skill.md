@@ -7,6 +7,7 @@ description: "Guided audit and cleanup of Claude Code standing permissions — w
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "permissions", "claude-code", "least-privilege", "remediation"]
+domains: ["ai-security", "identity-access"]
 integrations: ["Anthropic"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T14:05:02Z

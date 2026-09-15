@@ -7,6 +7,7 @@ description: "Clusters Tenable vulnerability findings into prioritized, trend-aw
 license: "MIT"
 tier: "contributed"
 tags: ["vulnerability-management", "remediation", "tenable", "risk-prioritization", "exposure-management", "security-operations"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-08-05
 contribution_agreement_date: 2026-08-05T20:24:28Z

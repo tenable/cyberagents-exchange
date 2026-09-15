@@ -6,6 +6,7 @@ description: "Diagnoses why a single host failed a Tenable credentialed scan, fr
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "nessus", "vulnerability-management", "credentialed-scan", "troubleshooting"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-18
 ---

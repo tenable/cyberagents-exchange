@@ -7,6 +7,7 @@ description: "Agent-empowered n8n workflow that pulls outstanding reported email
 license: "MIT"
 tier: "contributed"
 tags: ["knowbe4", "phisher", "email-analysis", "n8n"]
+domains: ["email-collaboration-security"]
 integrations: ["KnowBe4"]
 workflow_diagram: |
   flowchart LR

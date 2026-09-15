@@ -7,6 +7,7 @@ description: "Auto-classifies Tenable credentialed scan auth failures by root ca
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "authentication", "credentialed-scan", "root-cause-analysis", "case-management", "dashboard"]
+domains: ["platform-operations"]
 integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-09-02
 contribution_agreement_date: 2026-09-02T01:46:22Z

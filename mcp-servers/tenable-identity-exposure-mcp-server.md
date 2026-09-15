@@ -6,6 +6,7 @@ description: "MCP server exposing the Tenable Identity Exposure (TIE) API as too
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "identity-exposure", "active-directory", "ioe", "ioa", "security"]
+domains: ["identity-access"]
 integrations: ["Tenable"]
 date_added: 2026-07-08
 transport: "both"

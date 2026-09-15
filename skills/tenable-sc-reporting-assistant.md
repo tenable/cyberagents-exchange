@@ -6,6 +6,7 @@ description: "Generate & upload Tenable SC dashboards, PDF reports, and CSV expo
 license: "MIT"
 tier: "contributed"
 tags: ["tenable-sc", "security-center", "vulnerability-management", "dashboards", "reporting", "compliance"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-07-27
 contribution_agreement_date: 2026-07-27T11:49:53Z

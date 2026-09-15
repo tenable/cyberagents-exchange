@@ -6,6 +6,7 @@ description: "Monitor Tenable VM scanning health, credentials, agents, scanners,
 license: "MIT"
 tier: "contributed"
 tags: ["health-monitoring", "vulnerability-management", "tenable-vm", "credential-scanning", "agent-monitoring", "license-tracking", "cli-tool"]
+domains: ["platform-operations"]
 integrations: ["Tenable"]
 date_added: 2026-06-15
 ---

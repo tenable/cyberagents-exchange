@@ -6,6 +6,7 @@ description: "Supercharged Tenable Identity Exposure MCP: AD search, ACL decodin
 license: "MIT"
 tier: "contributed"
 tags: ["active-directory", "identity-security", "attack-paths", "indicators-of-exposure", "mcp", "tenable", "security", "identity-exposure", "identity exposure", "indicators-of-attack", "tie"]
+domains: ["identity-access"]
 integrations: ["Tenable"]
 date_added: 2026-07-13
 last_reviewed: 2026-07-17

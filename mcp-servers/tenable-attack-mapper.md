@@ -6,6 +6,7 @@ description: "An MCP server that maps Tenable Security Center findings to MITRE 
 license: "MIT"
 tier: "contributed"
 tags: ["mitre-attack", "attack-mapping", "navigator", "vulnerability-management", "purple-team", "tenable", "mcp"]
+domains: ["threat-intelligence", "vulnerability-management"]
 integrations: ["Tenable", "NVD"]
 date_added: 2026-06-20
 transport: "stdio"

@@ -6,6 +6,7 @@ description: "An MCP server that turns Tenable Security Center into a conversati
 license: "MIT"
 tier: "contributed"
 tags: ["tenable", "security-center", "vulnerability-management", "vulnerability-analysis", "mcp"]
+domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-06-18
 transport: "stdio"

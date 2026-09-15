@@ -6,6 +6,7 @@ description: "AI-powered daily audit log analyzer for Tenable that detects anoma
 license: "MIT"
 tier: "contributed"
 tags: ["audit-log", "security-monitoring", "compliance", "anomaly-detection", "tenable", "soc2", "behavioral-analysis"]
+domains: ["security-operations", "governance-risk-compliance"]
 integrations: ["Tenable"]
 date_added: 2026-06-23
 compatible_platforms: ["Claude Code"]
