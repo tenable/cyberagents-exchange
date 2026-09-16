@@ -7,6 +7,7 @@ description: "Adjudicates candidate defensive changes against a sealed attack sc
 license: "MIT"
 tags: ["ai-agent-security", "detection-engineering", "regression-gate", "evidence", "change-control", "deterministic", "provenance", "mcp"]
 tier: "contributed"
+domains: ["ai-security", "security-operations"]
 integrations: []
 date_added: 2026-09-12
 contribution_agreement_date: 2026-09-12T01:50:00Z

@@ -7,6 +7,7 @@ description: "Signs and verifies delegation between agents so authority can only
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "least-privilege", "delegation", "multi-agent", "authorization", "attestation", "deterministic", "mcp"]
+domains: ["ai-security", "identity-access"]
 integrations: []
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T21:33:55Z

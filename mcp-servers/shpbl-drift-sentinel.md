@@ -7,6 +7,7 @@ description: "Signs a baseline of how an agent normally behaves, then reports di
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "drift-detection", "behavioural-baseline", "detection-engineering", "anomaly", "governance", "deterministic", "mcp"]
+domains: ["ai-security", "security-operations"]
 integrations: []
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T21:33:55Z

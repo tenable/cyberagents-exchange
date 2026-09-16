@@ -7,6 +7,7 @@ description: "Mints opaque canary markers into package-generated synthetic data,
 license: "MIT"
 tags: ["ai-agent-security", "data-leakage", "canary-tokens", "honeypot", "evidence", "detection-engineering", "deterministic", "mcp"]
 tier: "contributed"
+domains: ["ai-security", "data-security"]
 integrations: []
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T21:33:55Z

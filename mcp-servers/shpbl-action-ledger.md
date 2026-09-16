@@ -7,6 +7,7 @@ description: "Hash-linked, redaction-aware evidence ledger for agent actions: re
 license: "MIT"
 tier: "contributed"
 tags: ["ai-agent-security", "audit", "evidence", "tamper-evident", "incident-response", "governance", "deterministic", "mcp"]
+domains: ["ai-security", "governance-risk-compliance"]
 integrations: []
 date_added: 2026-09-11
 contribution_agreement_date: 2026-09-11T21:33:55Z
