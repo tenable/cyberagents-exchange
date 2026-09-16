@@ -6,6 +6,7 @@ description: "End-of-life dates, EOL Risk Scores, CISA KEV exposure, SBOM audits
 license: "MIT"
 tier: "contributed"
 tags: ["end-of-life", "eol", "end-of-support", "software-lifecycle", "cisa-kev", "risk-score", "sbom", "edge-devices", "bod-26-02", "exposure-management", "node"]
+domains: ["governance-risk-compliance", "vulnerability-management"]
 integrations: []
 date_added: 2026-09-14
 contribution_agreement_date: 2026-09-14T14:05:00Z
