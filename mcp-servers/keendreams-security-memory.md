@@ -16,7 +16,7 @@ tags:
     "prompt-injection",
     "cloudflare-workers",
   ]
-domains: ["vulnerability-management", "ai-security"]
+domains: ["ai-security", "vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-09-17
 contribution_agreement_date: 2026-09-22T16:37:44Z
