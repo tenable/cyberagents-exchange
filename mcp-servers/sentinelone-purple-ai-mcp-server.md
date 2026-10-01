@@ -6,6 +6,7 @@ github_url: "https://github.com/Sentinel-One/purple-mcp"
 description: "Read-only MCP server for SentinelOne's Singularity Platform — query Purple AI, alerts, vulnerabilities, misconfigurations, and asset inventory via natural language or PowerQuery."
 license: "MIT"
 tier: "contributed"
+partner_contribution: true
 tags: ["sentinelone", "purple-ai", "alerts", "vulnerability-management", "asset-inventory", "power-query", "singularity-platform"]
 domains: ["security-operations", "vulnerability-management"]
 integrations: ["SentinelOne"]

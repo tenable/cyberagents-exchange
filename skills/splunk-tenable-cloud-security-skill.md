@@ -6,6 +6,7 @@ github_url: "https://github.com/rrossetti-splunk/splunk-tenable-cloud-security-s
 description: "Query and triage Tenable Cloud Security posture findings in Splunk via the official Splunk MCP Server."
 license: "Apache-2.0"
 tier: "contributed"
+partner_contribution: true
 tags: ["splunk", "tenable", "cloud-security", "posture", "spl", "mcp"]
 domains: ["cloud-security", "security-operations"]
 integrations: ["Splunk", "Tenable"]

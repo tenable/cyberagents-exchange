@@ -91,6 +91,7 @@ works_with_tenable_hexa_mcp: false
 ```
 
 - `tier` is always `contributed` for new submissions
+- `partner_contribution`, `vetted_on` and `vetted_commit_sha` are set by Tenable during review — leave them out of your submission
 - `integrations` uses a controlled vocabulary — see `validator.py` for the full list
 - `domains` — one or two values from a controlled vocabulary; the first is the primary domain. See [Domains](#domains)
 - `contribution_agreement_date` — the ISO 8601 date and time when you accepted the Contribution Agreement (e.g., `2026-07-09T14:30:00Z`)

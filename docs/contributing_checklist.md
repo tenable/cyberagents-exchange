@@ -19,8 +19,11 @@ A submission is rejected outright, at any tier, if it involves any of the follow
 | Tier | Label | `tier` value in frontmatter | Status |
 |------|-------|------------------------------|--------|
 | 1 | Contributed | `contributed` | Active |
-| 2 | Community Reviewed | `community-reviewed` | Criteria TBD |
-| 3 | Tenable Vetted | `certified` | Criteria TBD |
+| 2 | Vetted | `vetted` | Criteria TBD |
+
+A tier 2 listing is additionally required to carry `vetted_on` and `vetted_commit_sha`, which
+anchor the review to the exact commit it covered. `validator.py` rejects a `vetted` listing
+missing either, and rejects both fields on a listing at any other tier.
 
 ## Shared / Controlled Vocabularies
 
@@ -58,6 +61,8 @@ Both reviewers confirm all of the following are present.
 - [ ] Frontmatter passes `validator.py` schema validation for its type (all required fields present and valid).
 - [ ] All controlled-vocabulary fields validate against the live `validator.py` (see Shared / Controlled Vocabularies).
 - [ ] `tier` is `contributed`.
+- [ ] `vetted_on` and `vetted_commit_sha` are absent. Both are set by Tenable when a listing is promoted to tier 2, never on a new submission.
+- [ ] `partner_contribution` is absent unless the reviewer is adding it. It is set by Tenable, not the submitter, and marks a listing from a Tenable partner so it surfaces under Ecosystem → Partner AI Listings on the website. A submitter-supplied value is removed.
 - [ ] `date_added` is a real, plausible date (not the `2026-01-01` template default, not absurdly in the future).
 - [ ] `contribution_agreement_date` is present and is a valid ISO 8601 datetime (e.g., `2026-07-09T14:30:00Z`). Must not be the template default (`2026-01-01T00:00:00Z`), not absurdly in the future, and not before the repository was created.
 - [ ] If `works_with_tenable_hexa_mcp` is present, it is a boolean (`true` or `false`). If `true`, the linked repository should demonstrate integration with the Tenable Hexa MCP (not other Tenable APIs such as VM or Security Center).
@@ -95,10 +100,6 @@ Human judgment, assisted by the reviewer skill. Records the disclaimer above.
 - [ ] The repository adheres to reasonable structural and coding standards.
 - [ ] No overtly malicious, deceptive, or unauthorized behavior is present.
 
-## Tier 2 — Community Reviewed
+## Tier 2 — Vetted
 
 *Criteria to be defined. Not yet active. When active, this tier's requirements are additive on top of Tier 1.*
-
-## Tier 3 — Tenable Vetted
-
-*Criteria to be defined. Not yet active. When active, this tier's requirements are additive on top of Tiers 1 and 2.*

@@ -5,6 +5,7 @@ github_url: "https://github.com/JHall-19/rf-tenable-attack-path-prioritization"
 description: "Pulls your Recorded Future threat map, maps an APT group's MITRE ATT&CK techniques, and cross-references against live Tenable findings to identify which attack path nodes are actively exploitable."
 license: "MIT"
 tier: "contributed"
+partner_contribution: true
 tags:
   - attack-path
   - mitre-attack

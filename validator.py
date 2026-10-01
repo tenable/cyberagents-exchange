@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Literal, Type, get_args
 
 import frontmatter
-from pydantic import AnyUrl, BaseModel, HttpUrl, TypeAdapter, model_validator
+from pydantic import AnyUrl, BaseModel, Field, HttpUrl, TypeAdapter, model_validator
 from rich.console import Console
 from typer import Typer
 
@@ -19,7 +19,7 @@ class Entry(BaseModel):
     github_url: HttpUrl
     description: str
     license: str
-    tier: Literal["contributed", "community-reviewed", "certified"]
+    tier: Literal["contributed", "vetted"]
     tags: list[str]
     integrations: list[
         Literal[
@@ -59,8 +59,16 @@ class Entry(BaseModel):
     date_added: date
     contribution_agreement_date: datetime | None = None
     visibility: Literal["example"] | None = None
+    # Baseline (tier 1) review date. Set at any tier.
     last_reviewed: date | None = None
+    # Exchange Inspector (tier 2) review. Anchored to an exact commit, so both
+    # fields travel together and only on a vetted listing.
+    vetted_on: date | None = None
+    vetted_commit_sha: str | None = Field(default=None, pattern=r"^[0-9a-fA-F]{7,40}$")
     works_with_tenable_hexa_mcp: bool | None = None
+    # Set by Tenable during review, not by the submitter. Drives the
+    # Ecosystem -> Partner AI Listings filter on the website.
+    partner_contribution: bool | None = None
     cta: Literal["T1"] | None = None
     domains: list[
         Literal[
@@ -95,6 +103,19 @@ class Entry(BaseModel):
     def cta_requires_hexa_mcp(self):
         if self.cta and not self.works_with_tenable_hexa_mcp:
             raise ValueError("cta requires works_with_tenable_hexa_mcp to be true")
+        return self
+
+    @model_validator(mode="after")
+    def vetted_review_fields_match_tier(self):
+        if self.tier == "vetted":
+            if self.vetted_on is None or self.vetted_commit_sha is None:
+                raise ValueError(
+                    "tier 'vetted' requires both vetted_on and vetted_commit_sha"
+                )
+        elif self.vetted_on is not None or self.vetted_commit_sha is not None:
+            raise ValueError(
+                "vetted_on and vetted_commit_sha are only valid when tier is 'vetted'"
+            )
         return self
 
     @model_validator(mode="after")

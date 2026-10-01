@@ -6,6 +6,7 @@ github_url: "https://github.com/AccessITGroup/webapp-testing-checklist"
 description: "Structures an authorized web app pentest around the OWASP Web Security Testing Guide (WSTG) methodology as a checklist, and turns tester-supplied evidence into a WSTG-numbered findings report — backseat mode only, it never sends payloads or runs scanners."
 license: "MIT"
 tier: "contributed"
+partner_contribution: true
 tags: ["pentest", "owasp", "wstg", "web-security", "security-testing", "checklist", "findings-report"]
 domains: ["application-security"]
 integrations: ["Anthropic"]
