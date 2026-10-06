@@ -1,11 +1,13 @@
 ---
-last_reviewed: 2026-08-17
+last_reviewed: 2026-09-23
 name: "Splunk Tenable Cloud Security Skill"
 author: "rrossetti-splunk"
 github_url: "https://github.com/rrossetti-splunk/splunk-tenable-cloud-security-skill"
 description: "Query and triage Tenable Cloud Security posture findings in Splunk via the official Splunk MCP Server."
 license: "Apache-2.0"
-tier: "contributed"
+tier: "vetted"
+vetted_on: 2026-09-23
+vetted_commit_sha: "ebae3496f5490c01006b1c783f0129649d762195"
 partner_contribution: true
 tags: ["splunk", "tenable", "cloud-security", "posture", "spl", "mcp"]
 domains: ["cloud-security", "security-operations"]
