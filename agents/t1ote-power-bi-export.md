@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-10-21
 name: "Tenable OT to Power BI Export (reference application)"
 author: "dpstorey"
 github_url: "https://github.com/dpstorey/T1OTE_POWER_BI"
