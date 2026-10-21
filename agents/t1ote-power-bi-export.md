@@ -6,7 +6,7 @@ description: "Reference app: exports Tenable One OT Exposure assets from Enterpr
 license: "Apache-2.0"
 tier: "contributed"
 tags: ["tenable", "ot-security", "power-bi", "asset-inventory", "reporting", "reference-implementation"]
-domains: ["ot-iot-security", "platform-operations"]
+domains: ["platform-operations", "ot-iot-security"]
 integrations: ["Tenable"]
 date_added: 2026-10-16
 contribution_agreement_date: 2026-10-16T16:09:19Z
