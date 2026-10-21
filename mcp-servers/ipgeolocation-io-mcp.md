@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-10-21
 name: "IPGeolocation.io MCP Server"
 author: "IPGeolocation"
 github_url: "https://github.com/IPGeolocation/ipgeolocation-io-mcp"
