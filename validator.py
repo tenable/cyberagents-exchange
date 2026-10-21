@@ -32,6 +32,7 @@ class Entry(BaseModel):
             "Firebase",
             "Fortinet",
             "GCP",
+            "IPGeolocation.io",
             "KnowBe4",
             "Microsoft Sentinel",
             "Mimecast",
