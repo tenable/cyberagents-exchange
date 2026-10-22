@@ -144,6 +144,7 @@ class Skill(Entry):
             "Cursor",
             "Gemini CLI",
             "GitHub Copilot",
+            "LibreChat",
             "Windsurf",
         ]
     ]
