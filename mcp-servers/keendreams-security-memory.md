@@ -17,10 +17,10 @@ tags:
     "cloudflare-workers",
   ]
 domains: ["ai-security", "vulnerability-management"]
-integrations: ["Tenable"]
+integrations: ["Tenable", "Tenable Hexa AI MCP"]
 date_added: 2026-09-17
 contribution_agreement_date: 2026-09-22T16:37:44Z
-works_with_tenable_hexa_mcp: false
+works_with_tenable_hexa_mcp: true
 transport: "http"
 runtime: "node"
 auth_method: "oauth2"
@@ -123,6 +123,20 @@ rather than copying a key.
 A companion Claude Code skill in the repository connects this memory to Tenable's Hexa AI
 MCP server: it pulls findings for a scoped query using an explicit allowlist of read tools,
 checks each one against what the team already decided, and records the difference as
-proposals for review. The allowlist is deliberate. Hexa exposes roughly ninety tools that
-mix reads with writes, including ones that launch scans and notify ticket assignees, so the
-skill names the tools it may call rather than letting a model choose.
+proposals for review. The allowlist is deliberate. Hexa exposed 95 tools in live discovery,
+mixing reads with writes, including ones that launch scans and notify ticket assignees, so
+the skill names the tools it may call rather than letting a model choose.
+
+## Verified Hexa workflow
+
+On October 10, 2026, one authorized partner-lab asset/plugin finding completed a live
+sequence: scoped Hexa retrieval, exact evidence recording, an unconfirmed proposal excluded
+from normal recall, a person's browser confirmation, and later recall returning the same
+fact, evidence and reviewer. A repeated Hexa read still reported the finding. No Tenable
+write tool ran.
+
+The [verification report](https://github.com/Agent9AI/keendreams-security/blob/main/docs/verification.md#live-tenable-hexa-check)
+and its machine-readable evidence record the tested clients, server versions and limits.
+This proves a bounded observed-finding workflow. Risk acceptance, remediation and
+false-positive scenarios have not yet been run live, and Tenable remains optional for the
+core memory layer.
