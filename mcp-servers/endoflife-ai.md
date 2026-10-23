@@ -1,9 +1,9 @@
 ---
-last_reviewed: 2026-09-16
+last_reviewed: 2026-10-21
 name: "endoflife.ai - Software Lifecycle Intelligence"
 author: "endoflife-ai"
 github_url: "https://github.com/endoflife-ai/endoflife-mcp"
-description: "End-of-life dates, EOL Risk Scores, CISA KEV exposure, SBOM audits and edge-device end-of-support status for 500+ products, read-only, no key required."
+description: "End-of-life dates, EOL Risk Scores, CISA KEV exposure, SBOM audits and edge-device end-of-support status for 700+ products, read-only, no key required."
 license: "MIT"
 tier: "contributed"
 tags: ["end-of-life", "eol", "end-of-support", "software-lifecycle", "cisa-kev", "risk-score", "sbom", "edge-devices", "bod-26-02", "exposure-management", "node"]
@@ -24,7 +24,7 @@ tools_exposed:
   - name: "scan_stack"
     description: "Score a whole stack of product/version pairs in one call."
   - name: "list_products"
-    description: "Search the 500+ tracked products and resolve names to slugs."
+    description: "Search the 700+ tracked products and resolve names to slugs."
   - name: "get_product_lifecycle"
     description: "Full version history and lifecycle dates for one product."
   - name: "get_kev_exposure"
@@ -65,7 +65,7 @@ Vulnerability scanners find the CVEs you have. This server answers the question 
 
 ## What it does
 
-endoflife.ai keeps lifecycle dates for 500+ products (operating systems, runtimes, databases, frameworks, network appliances and AI models), reconciled against the vendors' own lifecycle pages and the endoflife.date community dataset, with the source returned on every answer. The MCP server exposes that data read-only, with no key required:
+endoflife.ai keeps lifecycle dates for 700+ products (operating systems, runtimes, databases, frameworks, network appliances and AI models), reconciled against the vendors' own lifecycle pages and the endoflife.date community dataset, with the source returned on every answer. The MCP server exposes that data read-only, with no key required:
 
 - **Status and dates** for a product version, and the full lifecycle of a product.
 - **EOL Risk Score**, 0 to 100, from how long a version has been unpatched, its attack surface, whether CISA lists it as actively exploited, and whether extended support can still be bought. The methodology is public at endoflife.ai/risk-score.
@@ -88,5 +88,5 @@ Typical agent use: pull an asset or package inventory from Tenable VM or a CMDB,
 
 - Hosted endpoint needs only outbound HTTPS; the stdio server runs on a current Node.js (the container image ships Node 22).
 - No authentication and no write operations; nothing is stored between calls.
-- Coverage is 500+ products; a product not in the catalog returns "not tracked" with suggestions, never a guessed date.
+- Coverage is 700+ products; a product not in the catalog returns "not tracked" with suggestions, never a guessed date.
 - Not yet tested against Tenable Hexa AI's MCP support, so `works_with_tenable_hexa_mcp` is false until it is.
