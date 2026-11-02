@@ -85,6 +85,11 @@ silently becoming unverifiable.
 Alert ingestion normalizes generic JSON as well as Splunk, Microsoft Sentinel and Wazuh shaped alerts; an
 unrecognized shape is rejected explicitly rather than guessed.
 
+The listing's `integrations` field is about **alert-format interop, not API integration**: Swordholder
+parses Splunk and Microsoft Sentinel shaped alert JSON into its normalized record so that a verdict can be
+sealed over it. It does not call either product's API, holds no credentials for them, sends them nothing, and
+requires no agent or app installed on those platforms.
+
 The **default** triage engine is `rules-v1`, a small deterministic rules engine behind a stable interface.
 It needs no model and no network, and it is what every default entry point uses: `swordholder triage`,
 `POST /v1/triage`, and the MCP `seal_record` workflow. Two optional paths layer an LLM on top and both are
