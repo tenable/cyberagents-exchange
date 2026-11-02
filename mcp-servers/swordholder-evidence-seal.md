@@ -83,17 +83,45 @@ revoked with overlapping windows, and existing seals are re-evaluated against re
 silently becoming unverifiable.
 
 Alert ingestion normalizes generic JSON as well as Splunk, Microsoft Sentinel and Wazuh shaped alerts; an
-unrecognized shape is rejected explicitly rather than guessed. The triage stage ships as a small rules
-engine (`rules-v1`) behind a stable interface, so an LLM or an external model can be substituted without
-changing the seal/verify path. Records and verdicts are indexed in a local SQLite file for `query`
-lookups; nothing is uploaded.
+unrecognized shape is rejected explicitly rather than guessed.
+
+The **default** triage engine is `rules-v1`, a small deterministic rules engine behind a stable interface.
+It needs no model and no network, and it is what every default entry point uses: `swordholder triage`,
+`POST /v1/triage`, and the MCP `seal_record` workflow. Two optional paths layer an LLM on top and both are
+off unless an operator selects them: (`swordholder triage --llm`, or `swordholder serve` with LLM enabled)
+uses a model only to add a hypothesis and suggested actions while `rules-v1` keeps verdict and severity;
+and the separate `swordholder agent` loop hands verdict selection to the model, with `rules-v1` as its
+fallback when the guardrail rejects an answer or the steps are exhausted. Neither is required for
+seal/verify. Records and verdicts are indexed in a local SQLite file for `query` lookups; nothing is
+uploaded.
 
 ## Data flows
 
-There are no outbound network calls at runtime. Key generation, sealing, verification and the SQLite
-index are all local. The only network access in the project's life cycle is `git clone` and `pip install`
-of the two runtime dependencies (`cryptography`, `pyyaml`). The optional LLM stages documented in the
-repository run against a local model server on localhost and are not required for seal/verify.
+The five MCP tools (`keygen`, `seal_record`, `verify_seal`, `verify_proof`, `list_trusted_keys`) make no
+network calls at all. Key generation, sealing, verification and the SQLite index are local file
+operations, and the MCP server never opens an outbound socket. The default CLI paths are equally offline:
+`swordholder triage` runs `rules-v1` only, and `verify` / `query` / `trust` never talk to a network.
+
+Two opt-in paths can reach a model endpoint. Both are off unless an operator selects them.
+
+1. **Rule enrichment** — `swordholder triage --llm`, or `swordholder serve` started with LLM enabled.
+   `rules-v1` still fixes verdict and severity; the model is only asked for a hypothesis and suggested
+   actions. The request is `POST {SWORDHOLDER_OLLAMA}/api/generate` carrying the normalized alert JSON,
+   where `SWORDHOLDER_OLLAMA` defaults to `http://127.0.0.1:11434` (a local Ollama server). Nothing leaves
+   the host unless that variable is repointed at a non-loopback address. If the model server is
+   unreachable the run degrades to `rules-v1 (llm-not-running)` and the seal is still produced.
+2. **Autonomous agent loop** — `swordholder agent` (demonstrated by `scripts/demo_agent_loop.py`). This is
+   a separate entry point, not the path the MCP server or the default triage command takes. The provider is
+   selected by `SWORDHOLDER_LLM_PROVIDER`, which defaults to `ollama` → `http://127.0.0.1:11434` (local).
+   A remote endpoint is contacted only when the operator sets the variable explicitly: `anthropic` →
+   `https://api.anthropic.com` (requires `ANTHROPIC_API_KEY`), `openai` → `https://api.openai.com/v1`
+   (requires `OPENAI_API_KEY`, overridable with `SWORDHOLDER_OPENAI_BASE`). With a remote provider, the
+   full normalized alert JSON and the accumulated tool observations are sent as the model prompt at each
+   reasoning step, so alert content leaves the host once per LLM call, and only to the endpoint the
+   operator configured. With the default local provider, nothing leaves the host.
+
+Outside those two opt-in paths, the only network traffic in the project's life cycle is `git clone` and
+`pip install` of the two runtime dependencies (`cryptography`, `pyyaml`).
 
 ## What it deliberately does not do
 
