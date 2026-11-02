@@ -1,5 +1,5 @@
 ---
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-02
 name: "PHP2Shell Coverage Check"
 author: "Lance Duvall"
 github_url: "https://github.com/lanz/php2shell-coverage-check"
