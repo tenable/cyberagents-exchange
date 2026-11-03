@@ -70,5 +70,7 @@ Without `--learn` the server makes no network calls.
 On an Android 15 emulator, scripted attack plans succeed with the guard off and are stopped with it
 on, in three attack types and in a messaging app the policy does not know. A real local model
 (`llama3.2:3b`) followed a hidden web instruction with the guard off. With the guard on, the
-instruction never reached it. The repository also ships a Python SDK, an adb proxy and an
+instruction never reached it. In a matrix of 52 pages opened in real Chrome, covering 16 ways of
+hiding an instruction and 7 attacker goals mapped to the OWASP Agentic Top 10, all 41 hijacked
+actions were stopped and no text was removed from the 6 normal pages. The repository also ships a Python SDK, an adb proxy and an
 Ollama-compatible gateway for agents that cannot use MCP.
