@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-03
 name: "AuthRecon Suite"
 author: "AuthRecon"
 github_url: "https://github.com/AuthRecon/AuthRecon"
