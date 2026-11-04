@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "ScreenWarden"
 author: "the-cyberlayer"
 github_url: "https://github.com/the-cyberlayer/screenwarden"
