@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "RBVM Agent"
 author: "Team Triple R (Rennier Mazuco, Rafael Codeceira and Rebeca Ribeiro)"
 github_url: "https://github.com/SadyBeca/RBVM-Agent_TenableSWARM"
