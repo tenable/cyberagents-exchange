@@ -1,5 +1,5 @@
 ---
-name: "RBVM Agent (Tenable SWARM)"
+name: "RBVM Agent"
 author: "Team Triple R (Rennier Mazuco, Rafael Codeceira and Rebeca Ribeiro)"
 github_url: "https://github.com/SadyBeca/RBVM-Agent_TenableSWARM"
 description: "Claude-based RBVM agent: groups Tenable findings by policy, stores them in SQLite, manages Azure DevOps cards."
