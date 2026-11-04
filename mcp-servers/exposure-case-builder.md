@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "Exposure Case Builder"
 author: "SpookyFox9"
 github_url: "https://github.com/SpookyFox9/exposure-case-builder"
