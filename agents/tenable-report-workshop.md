@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "Tenable Report Workshop"
 author: "blckdvc"
 github_url: "https://github.com/blckdvc/Tenable-Report-Workshop"
