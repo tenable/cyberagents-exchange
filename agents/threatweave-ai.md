@@ -46,7 +46,9 @@ The separate [enterprise contextual-policy demonstration](https://github.com/sre
 ~~~bash
 git clone https://github.com/sreedhar51/threatweave-ai.git
 cd threatweave-ai
-python -m pip install -e '.[dev,ui]'
+python -m venv .venv
+source .venv/bin/activate                    # macOS/Linux; Windows steps are in the README
+python -m pip install -e '.[dev,ui,mcp]'
 
 # Offline evidence-to-decision workflow
 threatweave --db runtime/demo.db demo
@@ -64,7 +66,7 @@ threatweave --db runtime/demo.db ask "Which fix group should we investigate firs
 streamlit run dashboard/app.py
 ~~~
 
-To use it from Claude Code, open the repository as the project: it ships `.mcp.json` and a `threatweave` subagent limited to the six read-only MCP tools.
+To use it from Claude Code, launch `claude` from the repository root in the same shell where you activated the Python environment used for installation (see the [Claude Code setup](https://github.com/sreedhar51/threatweave-ai#claude-code-agent-and-mcp-server)): it ships `.mcp.json` and a `threatweave` subagent limited to the six read-only MCP tools.
 
 **Source and documentation:** [ThreatWeave AI](https://github.com/sreedhar51/threatweave-ai) · [Setup and How to Run](https://github.com/sreedhar51/threatweave-ai#setup-and-how-to-run) · [How Claude fits](https://github.com/sreedhar51/threatweave-ai#how-claude-fits) · [Architecture](https://github.com/sreedhar51/threatweave-ai/blob/main/docs/ARCHITECTURE.md)
 
