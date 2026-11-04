@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "RiskProof"
 author: "creimer808"
 github_url: "https://github.com/creimer808/RiskProof"
