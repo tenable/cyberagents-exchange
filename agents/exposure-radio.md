@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "Exposure Radio"
 author: "Agent9AI"
 github_url: "https://github.com/Agent9AI/exposure-radio"
