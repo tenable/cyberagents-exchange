@@ -1,5 +1,5 @@
 ---
-last_reviewed: 2026-11-03
+last_reviewed: 2026-11-04
 name: "Swordholder Evidence Seal"
 author: "mzymazy"
 github_url: "https://github.com/mzymazy/swordholder"
@@ -147,6 +147,6 @@ swordholder demo
 swordholder verify .demo_out/<seal>.json --keys trusted_keys.json
 ```
 
-`pytest -q` reports 61 passing tests, and `python mcp_server/selftest.py` reports 10/10 for the MCP
+`pytest -q` reports 90 passing tests, and `python mcp_server/selftest.py` reports 10/10 for the MCP
 transport and tool surface. To wire it into an MCP client, point the client at
 `python mcp_server/server.py` with the repository root as the working directory.
