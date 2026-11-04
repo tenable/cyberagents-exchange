@@ -92,8 +92,9 @@ sealed over it. It does not call either product's API, holds no credentials for 
 requires no agent or app installed on those platforms.
 
 The **default** triage engine is `rules-v1`, a small deterministic rules engine behind a stable interface.
-It needs no model and no network, and it is what every default entry point uses: `swordholder triage`,
-`POST /v1/triage`, and the MCP `seal_record` workflow. Two optional paths layer an LLM on top and both are
+It needs no model and no network, and it is what the default triage entry points use: `swordholder triage`
+and `POST /v1/triage`. The MCP tools do not triage at all: `seal_record` signs whatever record the caller
+hands it, so it stays neutral about which engine produced that verdict. Two optional paths layer an LLM on top and both are
 off unless an operator selects them: (`swordholder triage --llm`, or `swordholder serve` with LLM enabled)
 uses a model only to add a hypothesis and suggested actions while `rules-v1` keeps verdict and severity;
 and the separate `swordholder agent` loop hands verdict selection to the model, with `rules-v1` as its
