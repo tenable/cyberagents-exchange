@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "Tabletop GM"
 author: "eshin087"
 github_url: "https://github.com/eshin087/tabletop-gm"
