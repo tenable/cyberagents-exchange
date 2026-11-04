@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 playbook_type: "standard"
 name: "Exception Guardian"
 author: "Alien0ne"
