@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "SecOps Autopilot"
 author: "sword0x00"
 github_url: "https://github.com/sword0x00/SecOps-Autopilot"
