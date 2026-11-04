@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-04
 name: "Email-Analyst-in-a-box"
 author: "austinsr1"
 github_url: "https://github.com/austinsr1/assay"
