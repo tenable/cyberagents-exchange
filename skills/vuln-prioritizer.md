@@ -1,7 +1,7 @@
 ---
 name: "Vuln Prioritizer"
 author: "alkaf499"
-github_url: "https://github.com/alkaf499/vuln_prioritizer"
+github_url: "https://github.com/alkaf499/vuln-prioritizer"
 description: "Turns a Tenable scan dump into a ranked, evidence-backed remediation worklist with defensible SLAs, using a deterministic two-layer model over CVSS, VPR, EPSS, CISA KEV and asset context."
 license: "MIT"
 tier: "contributed"
@@ -25,9 +25,10 @@ sits on an internet-facing firewall or a developer's laptop.
 Vuln Prioritizer reads an existing Tenable inventory (a `navi.db` produced by
 [navi](https://github.com/packetchaos/navi)), enriches it with open exploit intelligence, conditions
 it on asset context from the CMDB, and emits a **tiered remediation worklist** where every row carries
-its evidence, its tier, its SLA and its due date. On a 19,052-finding reference tenant it reduced the
-starting list to **102 urgent items** and separated 8,769 scanner-informational artifacts out of the
-remediation ranking altogether.
+its evidence, its tier, its SLA and its due date. On a 20,522-finding reference tenant it surfaced
+**25 Tier 0 emergencies** — internet-exposed assets carrying actively exploited CVEs — plus 161 further
+items due within 24 hours, and separated 9,399 scanner-informational artifacts out of the remediation
+ranking altogether.
 
 Alongside the worklist it writes an executive report (findings by tier, SLA compliance measured from
 first-found, per-role breakdown, divergence highlights), a per-finding CSV with every resolved input
@@ -69,7 +70,7 @@ aggregators. Lookups are gated to findings worth enriching and memoized per dist
 500 assets costs one fetch. Evidence text states exactly which sources were consulted, so a CVE found
 in no feed never reads as a false "no public exploit found." A `vpr_low_but_exploited` divergence flag
 marks findings the vendor score rated Low that are on KEV or weaponized — nine of them in the
-reference run, including a Cisco IOS CVE on KEV since 2022, lifted from Tier 4 to Tier 2.
+reference run.
 
 **The optional AI layer.** For the long tail of assets no deterministic rule resolves, an LLM reads
 scanner evidence (device type, OS fingerprint, CPE, open ports) and *proposes* classifications. It is
