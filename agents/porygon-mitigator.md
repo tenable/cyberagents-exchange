@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-05
 name: "Porygon Mitigator"
 author: "ori-astsec"
 github_url: "https://github.com/ori-astsec/tenable-porygon-mitigator"
