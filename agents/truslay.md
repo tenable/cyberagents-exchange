@@ -2,7 +2,7 @@ last_reviewed	2026-11-06
 name	truslay
 author	cochinoraptor
 github_url	https://github.com/cochinoraptor/Truslay-Showcase
-description	An AI Agent Firewall that intercepts agent intents at the OS level to enforce deterministic spending policies and prevent unauthorized transactions.
+description	An AI Agent Firewall that intercepts agent intents at the OS level to enforce deterministic security policies (financial, data access, and command execution) and prevent unauthorized actions.
 license	AGPL-3.0
 tier	contributed
 tags	
@@ -11,6 +11,7 @@ agent-firewall
 zero-trust
 sui
 prompt-injection
+action-control
 domains	
 ai-security
 web3
@@ -24,7 +25,7 @@ cta	T2
 # Truslay
 
 ## What it does
-Truslay is an AI Agent Firewall designed to protect autonomous AI agents from making unauthorized payments, falling victim to prompt injection, or violating spending policies. It sits between the agent and the blockchain/API, evaluating intent at the OS level in milliseconds. If an action violates the user's whitelist or spending limits, Truslay blocks it deterministically (fail-closed) and generates a cryptographic audit trail of the decision.
+Truslay is an AI Agent Firewall designed to protect autonomous AI agents from making unauthorized actions. It doesn't just block payments; it intercepts the agent's intent at the OS level and evaluates it against a strict security policy before execution. This covers financial transactions (whitelists, spending limits), data access (preventing exfiltration), and command execution. If an action is deemed risky or violates the policy, Truslay blocks it deterministically (fail-closed) and generates a cryptographic audit trail of the decision.
 
 ## How it works
-Truslay operates on a local-first architecture using a highly optimized INT4 Decision Engine. When an AI agent requests an action (e.g., a USDC transfer), Truslay intercepts the payload before it reaches the network. The engine evaluates the intent against strict policies (allowed recipients, max per transaction, daily budgets). If the action is safe, Truslay signs the decision cryptographically and allows the execution. If it is risky, it blocks the action and logs the reason. The system provides a dashboard (Trust Console) for developers to manage whitelists and view real-time audit logs, and it integrates with Sui Move contracts for on-chain enforcement.
+Truslay operates on a local-first architecture using a highly optimized INT4 Decision Engine. When an AI agent requests any real-world action (e.g., a USDC transfer, an API call, or a system command), Truslay intercepts the payload before it reaches the network or OS. The engine evaluates the intent against strict policies. If the action is safe, Truslay signs the decision cryptographically and allows execution. If it is risky (e.g., prompt injection, unknown recipient, excessive data access), it blocks the action and logs the reason. The system provides a dashboard (Trust Console) for developers to manage policies and view real-time audit logs, and it integrates with Sui Move contracts for on-chain enforcement of agent identity and spending rules.
