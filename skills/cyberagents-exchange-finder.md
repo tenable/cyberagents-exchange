@@ -35,7 +35,7 @@ A finder for the CyberAgents Exchange itself. Describe the security job you're d
 
 The skill itself is a single `SKILL.md` with no runtime code; the repo's one script only builds the Claude apps zip. It reads the Exchange manifest (`/api/index.json`), fetches every per-type index file it lists in one call, then fetches the detail records for its shortlist. Repo health comes from the Exchange's published snapshot, so a normal search makes no GitHub calls; it checks GitHub's public API only for a pick with no snapshot. It uses `curl` and `jq` where available, other JSON tools or web fetch otherwise, and nothing you type goes into any request.
 
-In Claude Code, `/cyberagents-exchange-finder` runs it on Claude Haiku: typically 45–95 seconds and 1–2 cents per search, with only its own fetches pre-approved. In Claude Desktop and Cowork, upload `dist/cyberagents-exchange-finder.zip`, which a GitHub Action keeps in step with the repo.
+In Claude Code, `/cyberagents-exchange-finder` runs it on Claude Haiku: typically 45–95 seconds and 1–2 cents per search, with `curl` commands that start with an Exchange or GitHub API URL pre-approved. In Claude Desktop and Cowork, upload `dist/cyberagents-exchange-finder.zip`, which a GitHub Action keeps in step with the repo.
 
 Listing data is treated as untrusted: slugs, repo URLs and commit IDs are pattern-checked before they go into any command, links are built rather than copied, and instructions embedded in listings are ignored. A local copy of the index works on locked-down networks.
 
