@@ -3,14 +3,14 @@ last_reviewed: 2026-11-02
 name: "PHP2Shell Coverage Check"
 author: "Lance Duvall"
 github_url: "https://github.com/lanz/php2shell-coverage-check"
-description: "Checks that Tenable scanning is set up to detect PHP2Shell on every PHP host: plugin feed, credentials and scan settings. Lists the hosts that need a rescan, and flags end-of-life PHP. Works from Tenable Vulnerability Management, Security Center or .nessus files, without Hexa."
+description: "Checks that Tenable scanning is set up to detect PHP2Shell on every PHP host: plugin feed, credentials, and scan settings. Lists the hosts that need a rescan, and flags end-of-life PHP. Works from Tenable Vulnerability Management, Security Center or .nessus files, without Hexa."
 license: "MIT"
 tier: "contributed"
 tags: ["php2shell", "php", "cve-2026-109618", "cve-2026-109619", "scan-coverage", "rescan", "tenable", "tenable-vm", "security-center", "nessus", "pytenable", "claude-code"]
 domains: ["vulnerability-management"]
 integrations: ["Tenable"]
 date_added: 2026-10-27
-contribution_agreement_date: 2026-10-27T03:00:09Z
+contribution_agreement_date: 2026-11-06T05:56:52Z
 works_with_tenable_hexa_mcp: false
 compatible_platforms: ["Claude Code"]
 invocation: "/php2shell-coverage-check"
@@ -37,7 +37,7 @@ many hosts are vulnerable. This check shows which is which:
 - **Turns "no finding" into a next step:** each PHP host is sorted into vulnerable, needs a
   rescan, or done, with the reason and the fix.
 - **Finds the scan settings that matter:** plugin feed, credentials, "Assess component
-  installs" and "Scan for Unpatched Vulnerabilities", read from each host's last scan.
+  installs", and "Scan for Unpatched Vulnerabilities", read from each host's last scan.
 - **Flags end-of-life PHP** (8.1 and older, with no fixed release) from the detected
   version, even before a CVE finding exists for it.
 - **Avoids false alarms on distro PHP**, whose backported fixes don't change the version
@@ -55,7 +55,7 @@ many hosts are vulnerable. This check shows which is which:
 - **Explains why a host needs a rescan:** a plugin feed from before the plugins existed, no
   credentials with only remote PHP detection, missing scan information, or "Assess
   component installs" off for PHP bundled in another product.
-- Reports as markdown, CSV or JSON, and includes Tenable Research's fixed versions and
+- Reports as markdown, CSV, or JSON, and includes Tenable Research's fixed versions and
   interim mitigations.
 
 ## How it fits with the other PHP2Shell listings
