@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-06
 name: "Vuln Prioritizer"
 author: "alkaf499"
 github_url: "https://github.com/alkaf499/vuln-prioritizer"
