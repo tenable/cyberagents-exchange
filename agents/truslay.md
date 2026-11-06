@@ -33,6 +33,8 @@ contribution_agreement_date	2026-11-06 12:00:00 UTC
 
 works_with_tenable_hexa_mcp	false
 
+playbook_type: "firewall"
+
 cta	T2
 
 # Truslay
