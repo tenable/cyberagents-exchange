@@ -38,13 +38,13 @@ The server gives any MCP-compatible AI agent direct access to three signals:
 
 ## How it works
 
-The server is a thin, stateless Python layer over three ICHI public API endpoints: `/api/index`, `/api/alerts` (RSS), and `/api/health`. It runs locally via `uvx ichi-mcp` or `python -m ichi_mcp` (stdio transport), or inside a container using the included Dockerfile. All calls are outbound read-only HTTPS; nothing is stored between calls.
+The server is a thin, stateless Python layer over three ICHI public API endpoints: `/api/current-index`, `/api/alerts` (RSS), and `/api/health`. It runs locally via `uvx --from git+https://github.com/bernik-bot/ichi-mcp ichi-mcp` (stdio transport), or inside a container using the included Dockerfile. All calls are outbound read-only HTTPS; nothing is stored between calls.
 
-ICHI aggregates external signals from public authoritative sources — CISA KEV, NVD, internet scanning platforms, threat-feed aggregators — and normalizes them into a single outside-in directional signal. The index reflects the internet threat landscape as a whole, not any organization's specific risk posture. It is designed to answer the question "is today a normal day or a high-threat day on the internet?" — a useful morning briefing signal for SOC analysts and a threat-context gate for CI/CD pipelines (see also: `bernik-bot/ichi-threat-level-action`).
+ICHI aggregates external signals from public authoritative sources — CISA KEV, NVD, internet scanning platforms, threat-feed aggregators — and normalizes them into a single outside-in directional signal. The methodology is documented at [ichi.global/methodology](https://ichi.global/methodology). The index reflects the internet threat landscape as a whole, not any organization's specific risk posture. It is designed to answer the question "is today a normal day or a high-threat day on the internet?" — a useful morning briefing signal for SOC analysts and a threat-context gate for CI/CD pipelines (see also: `bernik-bot/ichi-threat-level-action`).
 
 ## Prerequisites and limits
 
 - Outbound HTTPS to `ichi.global` only. No authentication, no write operations, no data stored.
-- Python 3.11+ or the included Dockerfile. Install via `pip install ichi-mcp` or `uvx ichi-mcp`.
+- Python 3.10+ or the included Dockerfile. Install via `pip install git+https://github.com/bernik-bot/ichi-mcp` then run `ichi-mcp`, or use `uvx --from git+https://github.com/bernik-bot/ichi-mcp ichi-mcp` directly (no install needed). The package is not on PyPI.
 - The index is an internet-wide directional signal; it is not a vulnerability scanner, not an org-specific risk score, and not a deterministic forecast.
 - Not tested against Tenable Hexa AI's MCP support; `works_with_tenable_hexa_mcp` is false.
