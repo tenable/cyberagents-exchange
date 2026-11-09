@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-09
 name: "CyberAgents Exchange Submit for Claude Desktop & Cowork"
 author: "jtbuchanan-tenb"
 github_url: "https://github.com/jtbuchanan-tenb/cyberagent-exchange-submission-builder-claude-desktop"
