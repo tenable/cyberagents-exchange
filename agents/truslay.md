@@ -1,41 +1,28 @@
-last_reviewed	2026-11-06
-
-name	truslay
-
-author	cochinoraptor
-
-github_url	https://github.com/cochinoraptor/Truslay-Showcase
-
-website	https://truslay.com
-
-description	An AI Agent Firewall that intercepts agent intents at the OS level to enforce deterministic security policies and prevent unauthorized actions (payments, data exfiltration, and command execution).
-
-license	AGPL-3.0
-
-tier	contributed
-tags	
-ai-security
-agent-firewall
-zero-trust
-sui
-prompt-injection
-action-control
-domains	
-ai-security
-web3
-
-integrations	
-Sui
-
-date_added	2026-11-06
-
-contribution_agreement_date	2026-11-06 12:00:00 UTC
-
-works_with_tenable_hexa_mcp	false
-
-playbook_type: "firewall"
-
-cta	T2
+---
+name: truslay
+author: cochinoraptor
+github_url: https://github.com/cochinoraptor/Truslay-Showcase
+website: https://truslay.com
+description: An AI Agent Firewall that intercepts agent intents at the OS level to enforce deterministic security policies and prevent unauthorized actions (payments, data exfiltration, and command execution).
+license: AGPL-3.0
+tier: contributed
+tags:
+  - ai-security
+  - agent-firewall
+  - zero-trust
+  - sui
+  - prompt-injection
+  - action-control
+domains:
+  - ai-security
+  - web3
+integrations:
+  - Sui
+date_added: 2026-11-06
+contribution_agreement_date: 2026-11-06T12:00:00Z
+works_with_tenable_hexa_mcp: false
+cta: T2
+---
 
 # Truslay
 
