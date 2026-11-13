@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-13
 name: "Tenable Docs MCP"
 author: "Lance Duvall"
 github_url: "https://github.com/lanz/tenable-docs-mcp"
