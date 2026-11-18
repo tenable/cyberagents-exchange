@@ -32,6 +32,8 @@ class Entry(BaseModel):
             "Firebase",
             "Fortinet",
             "GCP",
+            "GitHub",
+            "Google OSV",
             "IPGeolocation.io",
             "KnowBe4",
             "Microsoft Sentinel",
