@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-18
 name: "CrowdStrike CQL Query Writer"
 author: "Nicholas-devsec"
 github_url: "https://github.com/Nicholas-devsec/CrowdStrike-CQL-Skill"
