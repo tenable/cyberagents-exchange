@@ -1,4 +1,5 @@
 ---
+last_reviewed: 2026-11-18
 name: "Java4Shell Tenable Skill"
 author: "securibee"
 github_url: "https://github.com/securibee/java4shell-tenable-skill"
