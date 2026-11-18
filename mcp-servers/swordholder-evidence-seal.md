@@ -1,5 +1,4 @@
 ---
-last_reviewed: 2026-11-04
 name: "Swordholder Evidence Seal"
 author: "mzymazy"
 github_url: "https://github.com/mzymazy/swordholder"
