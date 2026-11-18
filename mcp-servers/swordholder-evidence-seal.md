@@ -122,22 +122,29 @@ Four paths can leave the host. All four are opt-in, and each is off unless an op
    form the model prompt at each reasoning step, so alert content leaves the host once per LLM call, and
    only to the endpoint that was configured.
 3. **External timestamping — RFC 3161.** `swordholder/timestamp.py` obtains an RFC 3161 `TimeStampResp`
-   for a detached seal. There is no default TSA and no automatic stamping: `stamp_digest` and
-   `stamp_bytes` take a `timestamp_url` argument, and nothing in the MCP tool surface, `swordholder seal`
-   or `swordholder triage` supplies one. When a caller does pass an authority, the project holds three
-   public endpoints as examples — `https://freetsa.org/tsr`, `http://timestamp.digicert.com`,
-   `http://timestamp.sectigo.com` — with a 15 s timeout. What crosses the wire is a DER-encoded
-   `TimeStampReq` (message imprint over a SHA-256 digest of the seal payload, plus a nonce); the alert
-   record itself is never sent. `probe_authorities(urls)` is a reachability check over an explicit URL
-   list, used by `scripts/stage11/compliance_probe.py`; it is not reached from the default paths either.
+   for a detached seal. In the package itself there is no default TSA and no automatic stamping:
+   `stamp_digest` and `stamp_bytes` take a `timestamp_url` argument, and nothing in the MCP tool surface,
+   `swordholder seal` or `swordholder triage` supplies one. The package carries `KNOWN_TSAS` as examples —
+   `https://freetsa.org/tsr`, `http://timestamp.digicert.com`, `http://timestamp.sectigo.com` — each with a
+   15 s timeout. What crosses the wire is a DER-encoded `TimeStampReq` (message imprint over a SHA-256
+   digest of the seal payload, plus a nonce); the alert record itself is never sent. The helper
+   `probe_authorities(urls=None, timeout=6.0)` walks `KNOWN_TSAS` when called without arguments and is not
+   called anywhere in the repository. One carve-out worth naming: `scripts/stage11/compliance_probe.py` —
+   a research/CI probe rather than a shipped path — does stamp for real. It carries its own candidate list
+   (`https://freetsa.org/tsr`, `http://timestamp.digicert.com`, `https://rfc3161.ai.moda`), tries each
+   twice at 20 s per attempt, stops at the first success, and takes `SWORDHOLDER_TSA_URL` as an override;
+   if every candidate fails it records the failures and reports an unanchored stub instead of claiming an
+   anchor it did not obtain.
 4. **Transparency-log anchoring — Sigstore Rekor.** `swordholder/transparency.py` can anchor a seal in a
    public transparency log. `make_backend()` defaults to `none` — anchoring is disabled unless chosen
    explicitly, and an explicit `rekor` request that cannot be met fails loudly instead of silently
    downgrading. When enabled, the default base is `https://rekor.sigstore.dev` (25 s timeout) and the
    submission is a signed anchor statement carrying `trace_id`, `seal_sha256` and `tsa_token_sha256`:
    digests and identifiers only, not the alert payload. Anything submitted to a public log is publicly
-   readable by design. Only `scripts/stage11/compliance_probe.py` selects this backend; the MCP tools and
-   the default CLI do not.
+   readable by design. The same `scripts/stage11/compliance_probe.py` probe is what selects this backend,
+   and it does so by default: its log spec falls back to `rekor` and is overridable with
+   `SWORDHOLDER_TLOG` (including `none`). The MCP tools and the default CLI never construct a Rekor
+   backend.
 
 Outside those four opt-in paths, the only network traffic in the project's life cycle is `git clone` and
 `pip install` of the runtime dependencies (`cryptography`, `pyyaml`).
