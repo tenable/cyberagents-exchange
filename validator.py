@@ -34,6 +34,7 @@ class Entry(BaseModel):
             "GCP",
             "GitHub",
             "Google OSV",
+            "IPGeolocation.io",
             "KnowBe4",
             "Microsoft Sentinel",
             "Mimecast",
@@ -146,6 +147,7 @@ class Skill(Entry):
             "Cursor",
             "Gemini CLI",
             "GitHub Copilot",
+            "LibreChat",
             "Windsurf",
         ]
     ]

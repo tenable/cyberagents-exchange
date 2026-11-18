@@ -19,7 +19,7 @@ A submission is rejected outright, at any tier, if it involves any of the follow
 | Tier | Label | `tier` value in frontmatter | Status |
 |------|-------|------------------------------|--------|
 | 1 | Contributed | `contributed` | Active |
-| 2 | Vetted | `vetted` | Criteria TBD |
+| 2 | Vetted | `vetted` | Active — Tenable-initiated, not contributor-submitted |
 
 A tier 2 listing is additionally required to carry `vetted_on` and `vetted_commit_sha`, which
 anchor the review to the exact commit it covered. `validator.py` rejects a `vetted` listing
@@ -102,4 +102,120 @@ Human judgment, assisted by the reviewer skill. Records the disclaimer above.
 
 ## Tier 2 — Vetted
 
-*Criteria to be defined. Not yet active. When active, this tier's requirements are additive on top of Tier 1.*
+**What it signals:** this listing passed a review by the CyberAgents Exchange AI Inspector — the
+highest level of review a listing can receive on the Exchange. The requirements below are
+**additive on top of Tier 1**, which must already be satisfied.
+
+Vetting is a **promotion review for a listing already live at Tier 1**, not a separate submission
+path. Tenable selects listings for review at its discretion as the Exchange grows, and each review
+is pinned to an exact commit.
+
+**Tier 2 is not contributor-initiated, and promotion is not a contributor task.** `tier`,
+`vetted_on` and `vetted_commit_sha` are Tenable-set, as recorded in `CONTRIBUTING.md`. On approval
+Tenable writes all three into the listing's frontmatter itself, using its push access — the
+contributor is not asked to make the edit, and promotion is not held open as a change request.
+This is the same mechanism that already records `last_reviewed` at Tier 1. `validator.py` enforces
+the pairing: it rejects a `vetted` listing missing either field, and rejects either field on a
+listing at any other tier.
+
+> **Vetted review disclaimer (recorded verbatim in every Tier 2 promotion):**
+> This listing passed the CyberAgents Exchange AI Inspector security review at the commit recorded
+> in `vetted_commit_sha`. The review covers that commit only. It is not a standing approval of a
+> branch, a future release, or the repository as a whole, and it is not a warranty, a
+> certification, or an endorsement of the contributor.
+
+### Eligibility
+
+- [ ] The listing is already live at Tier 1, with both Tier 1 approvals on record.
+- [ ] Tenable has selected the listing for Exchange Inspector review.
+- [ ] The exact commit under review is identified, and the review is pinned to it.
+- [ ] The contributor has a completed contributor profile on the Exchange.
+- [ ] A contact route exists — an email address, or a linked account in the Exchange Discord server — so the contributor can be reached if issues arise.
+- [ ] **Independence:** the security reviewer and the promotion approver have each neither authored the contribution, nor own the repository, nor hold any other conflict of interest. This applies identically to Tenable's own listings and to partner listings.
+
+### Stage 1 — Automated inspection (Tenable One AI Exposure)
+
+The skills inspection engine parses the component's instructions, the tools it can invoke, and the
+data it can reach. It clears the obviously safe, blocks the obviously unsafe, and passes everything
+else forward with its findings attached.
+
+- [ ] The component has been through the inspection engine, and its findings are attached to the review record. The engine covers, at minimum:
+  - prompt injection and jailbreak attempts
+  - hidden or invisible instructions
+  - hardcoded secrets
+  - PII exposure
+  - sensitive data access
+
+### Stage 2 — Frontier assessment (OpenAI GPT Cyber models)
+
+Reasoning about how the component could be abused, not whether it matches a known signature.
+
+- [ ] The source has been assessed for how untrusted content could reach the model, what a hijacked agent could do with its tool permissions, and where a chain of individually harmless actions becomes a harmful one.
+- [ ] Higher-risk and dual-use submissions were routed to more capable, purpose-trained models.
+- [ ] Any model refusal is recorded as a review signal. A refusal is never treated as a clean pass.
+
+### Stage 3 — Expert review and runtime verification (Tenable security researchers)
+
+- [ ] Stage 1 and Stage 2 findings are validated rather than taken at face value.
+- [ ] A threat model is written for the component.
+- [ ] Every security-relevant surface in the source is reviewed.
+- [ ] The dependency and build chain is assessed.
+- [ ] The trustworthiness of the repository owner and maintainers is assessed.
+- [ ] The component is installed and run in a clean, isolated environment, using only its documented setup steps.
+- [ ] Observed behavior is compared against what the documentation claims. Any discrepancy is recorded as a finding.
+
+### Coverage — the fifteen security issue classes
+
+Every Tier 2 review tests all fifteen, across three layers. These are the floor, not the ceiling.
+
+- [ ] All fifteen classes are tested and their results recorded:
+  - **Model** — prompt injection; excessive agency; memory and context integrity; approval and intent failures
+  - **Application** — tool and MCP server security; secrets handling; data exfiltration; output handling; conventional application flaws
+  - **Infrastructure** — filesystem safety; code and command execution; network and web security; supply chain; denial of service
+
+### Findings disposition
+
+- [ ] Every **critical** and **high** severity finding is fixed and revalidated before promotion.
+- [ ] Every **medium** and **low** severity finding is either fixed, or explicitly accepted with a named owner, a written rationale, and a follow-up date.
+- [ ] No accepted residual risk overrides a "Rejected at Submission" criterion. Those are re-checked against the actual code at this tier and cannot be waived at any severity.
+- [ ] Findings were worked through with the contributor directly. The goal is to promote strong listings, not to run an opaque rejection gate.
+
+### The review record
+
+Promotion requires a dated security review report. Reviewers confirm it records:
+
+- [ ] The reviewed commit and artifact provenance.
+- [ ] The threat model and data flows.
+- [ ] The dependency and build assessment.
+- [ ] The source review.
+- [ ] The runtime verification steps and the behavior observed.
+- [ ] Every finding, and how it was resolved.
+- [ ] The promotion decision.
+- [ ] The conditions that would trigger a re-review.
+
+This record is what separates a vetted tag from a one-time automated pass.
+
+### Decision
+
+- [ ] The review ends in exactly one of: **approve**, **request changes**, or **decline promotion**.
+- [ ] On approval, Tenable writes `tier: "vetted"`, `vetted_on` and `vetted_commit_sha` into the listing's frontmatter in a single change, using Tenable's push access rather than a change request to the contributor.
+- [ ] The promotion is approved by someone independent of both the contribution and the review.
+
+### Re-review on material change
+
+A Tier 2 review covers one commit. Contributors keep their code and may change it at any time; when
+a vetted listing changes materially from its reviewed commit, the new version may require another
+review before the vetted tag continues to apply. Material changes include, but are not limited to:
+
+- Authentication or authorization behavior, or required permissions and API scopes
+- Network destinations, telemetry, or data handling
+- Prompts, system instructions, tools, resources, or playbook steps
+- Dependencies, lockfiles, build scripts, install scripts, or release artifacts
+- Filesystem access, process execution, or export behavior
+- Tenable product integration, or read versus write capability
+- Any security finding that changes the previous risk decision
+
+The public description of this process, written for people evaluating a listing rather than for
+reviewers executing one, is on the Exchange at
+<https://exchange.tenable.com/security-review-process>. The two must stay in step: that page is
+where this tier is explained to the people who rely on it.

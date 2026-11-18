@@ -42,6 +42,11 @@ The exchange indexes four types of content:
 
 Browse everything at **[exchange.tenable.com/browse](https://exchange.tenable.com/browse/)**.
 
+**For AI agents and tools:** start at [`llms.txt`](https://exchange.tenable.com/llms.txt). The
+machine-readable index is the manifest at
+[`/api/index.json`](https://exchange.tenable.com/api/index.json), which lists one JSONL file per
+listing type. Every listing also has a JSON record and a Markdown version of its page.
+
 ## How It Works
 
 Each listing is a single markdown file: YAML frontmatter holding the metadata, and a markdown body describing the project. Contributors submit listings via pull request. Agents are vendor-neutral and run anywhere — not locked to a single platform or license.

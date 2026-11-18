@@ -4,7 +4,10 @@ author: "sherlon1"
 github_url: "https://github.com/sherlon1/soc-hunter"
 description: "Proactive, hypothesis-driven threat hunting using the LOCK pattern across SIEM, EDR, VM, CSPM, CASB, and code search"
 license: "MIT"
-tier: "contributed"
+tier: "vetted"
+vetted_on: 2026-10-07
+vetted_commit_sha: "5eea59b39817d9710ef89ec1abe550293ad2d71b"
+last_reviewed: 2026-10-07
 tags: ["threat-hunting", "lock-pattern", "mitre-attack", "siem", "edr", "secops", "incident-response"]
 domains: ["security-operations", "threat-intelligence"]
 integrations: ["Splunk", "SentinelOne", "Tenable", "Netskope", "CrowdStrike"]
