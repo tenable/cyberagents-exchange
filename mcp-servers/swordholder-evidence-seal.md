@@ -104,38 +104,46 @@ uploaded.
 ## Data flows
 
 The five MCP tools (`keygen`, `seal_record`, `verify_seal`, `verify_proof`, `list_trusted_keys`) make no
-network calls at all. Key generation, sealing, verification and the SQLite index are local file
-operations, and the MCP server never opens an outbound socket. The default CLI paths are equally offline:
-`swordholder triage` runs `rules-v1` only, and `verify` / `query` / `trust` never talk to a network.
+network calls: key generation, sealing, verification and the local index are file operations, and the MCP
+server opens no outbound socket. The default CLI paths are offline as well — `swordholder triage` runs
+`rules-v1` only, and `verify`, `query` and `trust` never reach a network.
 
-Two opt-in paths can reach a model endpoint. Both are off unless an operator selects them.
+Four paths can leave the host. All four are opt-in, and each is off unless an operator switches it on.
 
-1. **Rule enrichment** — `swordholder triage --llm`, or `swordholder serve` started with LLM enabled.
-   `rules-v1` still fixes verdict and severity; the model is only asked for a hypothesis and suggested
-   actions. The request is `POST {SWORDHOLDER_OLLAMA}/api/generate` carrying the normalized alert JSON,
-   where `SWORDHOLDER_OLLAMA` defaults to `http://127.0.0.1:11434` (a local Ollama server). Nothing leaves
-   the host unless that variable is repointed at a non-loopback address. If the model server is
-   unreachable the run degrades to `rules-v1 (llm-not-running)` and the seal is still produced.
-2. **Autonomous agent loop** — `swordholder agent` (demonstrated by `scripts/demo_agent_loop.py`). This is
-   a separate entry point, not the path the MCP server or the default triage command takes. The provider is
-   selected by `SWORDHOLDER_LLM_PROVIDER`, which defaults to `ollama` → `http://127.0.0.1:11434` (local).
-   A remote endpoint is contacted only when the operator sets the variable explicitly: `anthropic` →
-   `https://api.anthropic.com` (requires `ANTHROPIC_API_KEY`), `openai` → `https://api.openai.com/v1`
-   (requires `OPENAI_API_KEY`, overridable with `SWORDHOLDER_OPENAI_BASE`). With a remote provider, the
-   full normalized alert JSON and the accumulated tool observations are sent as the model prompt at each
-   reasoning step, so alert content leaves the host once per LLM call, and only to the endpoint the
-   operator configured. With the default local provider, nothing leaves the host.
+1. **Rule enrichment — LLM.** `swordholder triage --llm`, or `swordholder serve` with the LLM switch
+   enabled. `requests` POSTs the normalized alert JSON to `{SWORDHOLDER_OLLAMA}/api/generate`;
+   `SWORDHOLDER_OLLAMA` defaults to `http://127.0.0.1:11434`, i.e. loopback. If the endpoint is
+   unreachable the run degrades to `rules-v1` and records `llm-not-running`.
+2. **Autonomous agent loop — LLM.** `swordholder agent` (`scripts/demo_agent_loop.py`). The provider comes
+   from `SWORDHOLDER_LLM_PROVIDER`, defaulting to `ollama` → `http://127.0.0.1:11434`. A remote endpoint
+   is contacted only if the operator names one: `anthropic` → `https://api.anthropic.com` (needs
+   `ANTHROPIC_API_KEY`), `openai` → `https://api.openai.com/v1` (needs `OPENAI_API_KEY`, base
+   overridable with `SWORDHOLDER_OPENAI_BASE`). The full normalized alert JSON and the tool observations
+   form the model prompt at each reasoning step, so alert content leaves the host once per LLM call, and
+   only to the endpoint that was configured.
+3. **External timestamping — RFC 3161.** `swordholder/timestamp.py` obtains an RFC 3161 `TimeStampResp`
+   for a detached seal. There is no default TSA and no automatic stamping: `stamp_digest` and
+   `stamp_bytes` take a `timestamp_url` argument, and nothing in the MCP tool surface, `swordholder seal`
+   or `swordholder triage` supplies one. When a caller does pass an authority, the project holds three
+   public endpoints as examples — `https://freetsa.org/tsr`, `http://timestamp.digicert.com`,
+   `http://timestamp.sectigo.com` — with a 15 s timeout. What crosses the wire is a DER-encoded
+   `TimeStampReq` (message imprint over a SHA-256 digest of the seal payload, plus a nonce); the alert
+   record itself is never sent. `probe_authorities(urls)` is a reachability check over an explicit URL
+   list, used by `scripts/stage11/compliance_probe.py`; it is not reached from the default paths either.
+4. **Transparency-log anchoring — Sigstore Rekor.** `swordholder/transparency.py` can anchor a seal in a
+   public transparency log. `make_backend()` defaults to `none` — anchoring is disabled unless chosen
+   explicitly, and an explicit `rekor` request that cannot be met fails loudly instead of silently
+   downgrading. When enabled, the default base is `https://rekor.sigstore.dev` (25 s timeout) and the
+   submission is a signed anchor statement carrying `trace_id`, `seal_sha256` and `tsa_token_sha256`:
+   digests and identifiers only, not the alert payload. Anything submitted to a public log is publicly
+   readable by design. Only `scripts/stage11/compliance_probe.py` selects this backend; the MCP tools and
+   the default CLI do not.
 
-Outside those two opt-in paths, the only network traffic in the project's life cycle is `git clone` and
-`pip install` of the two runtime dependencies (`cryptography`, `pyyaml`).
+Outside those four opt-in paths, the only network traffic in the project's life cycle is `git clone` and
+`pip install` of the runtime dependencies (`cryptography`, `pyyaml`).
 
-## What it deliberately does not do
-
-- It does not score or second-guess the verdict. Bad judgement seals as happily as good judgement.
-- It does not provide a PKI, a CA, or key distribution. The anchor registry is a local JSON file that an
-  operator populates out of band.
-- It does not sandbox or contain the agent that produces the verdict.
-- It is not on PyPI; installation is from source (`pip install -e .`), Python 3.11+.
+What it does not do: does not score or second-guess the verdict; does not provide PKI/CA/key distribution;
+does not sandbox the agent; not on PyPI; installation from source (`pip install -e .`), Python 3.11+.
 
 ## Reproducing
 
@@ -146,6 +154,7 @@ swordholder demo
 swordholder verify .demo_out/<seal>.json --keys trusted_keys.json
 ```
 
-`pytest -q` reports 90 passing tests, and `python mcp_server/selftest.py` reports 10/10 for the MCP
-transport and tool surface. To wire it into an MCP client, point the client at
+`pytest -q` covers the seal/verify/trust, timestamp and transparency paths; the count grows with each
+release, so take the current figure from the repository's CI status rather than a number frozen here.
+`python mcp_server/selftest.py` prints a per-check summary for MCP transport and tool surface. To wire it into an MCP client, point the client at
 `python mcp_server/server.py` with the repository root as the working directory.
